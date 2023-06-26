@@ -1,29 +1,17 @@
-div {
-    text-align: center;
-}
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-* {
-    color: cyan;
-    background-color: rgb(63, 72, 86);
-    font-family: "Montserrat";
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-.buttons {
-    background-color: black;
-    border-color: teal;
-    color: rgb(19, 36, 54, );
-    margin: 1em 1em;
-    transition-duration: 0.4s;
-    border-radius: 0.4em;
-    box-shadow: 2px 1px 10px;
-}
+@layer base {
+    body {
+        font-family: 'Montserrat', sans-serif;
+    }
 
-.buttons:hover {
-    background-color: rgb(140, 201, 239);
-    color: black;
-}
-
-#guess {
-    text-align: center;
-    cursor: none;
+    li {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        cursor: pointer;
+    }
 }
