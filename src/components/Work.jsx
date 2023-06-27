@@ -7,7 +7,7 @@ const Work = () => {
   return (
     <div name="work" className="w-full lg:h-full  text-gray-300 bg-[#0a192f]">
       {/* main container */}
-      <div className="max-w-[850px] mx-auto p-4 flex flex-col justify-center w-full h-screen">
+      <div className="max-w-[53.125rem] mx-auto p-4 flex flex-col justify-center w-full h-screen">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-[#5a87a5]">
             Work
