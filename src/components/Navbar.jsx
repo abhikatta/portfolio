@@ -59,7 +59,6 @@ const Navbar = () => {
           </Link>
         </li>
         <li className="py-6 text-4xl">
-          {" "}
           <Link onClick={handleclick} to="about" smooth={true} duration={500}>
             About
           </Link>
@@ -86,7 +85,7 @@ const Navbar = () => {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300">
             <a
               className="flex justify-between items-center w-full text-gray-300"
-              href="/">
+              href="https://www.linkedin.com/in/abhinaykatta/">
               LinkedIn
               <FaLinkedin size={30} />
             </a>
@@ -94,18 +93,20 @@ const Navbar = () => {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300">
             <a
               className="flex justify-between items-center w-full text-gray-300"
-              href="/">
+              href="https://github.com/abhikatta">
               Github
               <FaGithub size={30} />
             </a>
           </li>
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300">
-            <a
+            <Link
               className="flex justify-between items-center w-full text-gray-300"
-              href="/">
+              to="contact"
+              smooth={true}
+              duration={500}>
               Gmail
               <HiOutlineMail size={30} />
-            </a>
+            </Link>
           </li>
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300">
             <a
