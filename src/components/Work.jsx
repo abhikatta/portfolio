@@ -1,4 +1,6 @@
 import React from "react";
+import Project1 from "../assets/project1.png";
+import Project2 from "../assets/project2.png";
 // Workimg from assets
 const Work = () => {
   const WorkImg = "https://icons8.com/icon/W0Dx3yX712sZ/add-bookmark";
@@ -17,12 +19,12 @@ const Work = () => {
           {/* grid container */}
           {/* project1 */}
           <div
-            style={{ backgroundImage: `url(${WorkImg})` }}
+            style={{ backgroundImage: `url(${Project1})` }}
             className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div">
             {/* hover effects */}
             <div className="opacity-0 group-hover:opacity-100">
               <span className="text-2xl font-bold text-white tracking-wider">
-                ReactJS Application
+                TimeTableTuner
               </span>
               <div className="pt-8 text-center">
                 <a href="/">
@@ -40,12 +42,12 @@ const Work = () => {
           </div>
           {/* project2 */}
           <div
-            style={{ backgroundImage: `url(${WorkImg})` }}
+            style={{ backgroundImage: `url(${Project2})` }}
             className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div">
             {/* hover effects */}
             <div className="opacity-0 group-hover:opacity-100">
               <span className="text-2xl font-bold text-white tracking-wider">
-                ReactJS Application
+                Webber
               </span>
               <div className="pt-8 text-center">
                 <a href="/">
@@ -68,7 +70,7 @@ const Work = () => {
             {/* hover effects */}
             <div className="opacity-0 group-hover:opacity-100">
               <span className="text-2xl font-bold text-white tracking-wider">
-                ReactJS Application
+                Project 3
               </span>
               <div className="pt-8 text-center">
                 <a href="/">
@@ -91,7 +93,7 @@ const Work = () => {
             {/* hover effects */}
             <div className="opacity-0 group-hover:opacity-100">
               <span className="text-2xl font-bold text-white tracking-wider">
-                ReactJS Application
+                Project 4
               </span>
               <div className="pt-8 text-center">
                 <a href="/">

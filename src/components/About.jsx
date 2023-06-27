@@ -7,30 +7,21 @@ const About = () => {
         {/* Container */}
         <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
           <div className="sm:text-right pb-8 pl-4">
-            <p className="text-4xl font-bold inline border-b-4 border- border-[#5a87a5]">
+            <p className="text-4xl font-bold inline border-b-4  border-[#5a87a5]">
               About
             </p>
           </div>
           <div></div>
         </div>
-        <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 pl-11">
-          <div className="sm:text-right text-4xl font-bold">
+        <div className="max-w-[1000px] w-full grid sm:grid-cols-1 gap-8 pl-10">
+          <div className="sm:text-left text-4xl font-bold">
             <p>
               {/* Further description */}
-              Hi, I'm abhinay, nice to meet you. Please take a look around. Hi,
-              Hi, I'm abhinay, nice to meet you. Please take a look around. I'm
-              Hi, I'm abhinay, nice to meet you. Please take a look around. Hi,
-              I'm abhinay, nice to meet you. Please take a look around. Hi, I'm
-              abhinay, nice to meet you. Please take a look around. abhinay, Hi,
-              I'm abhinay, nice to meet you. Ple .
-            </p>
-          </div>
-          <div>
-            <p>
-              Some random bsSome random bsSome random bsSome random bsSome
-              random bs Some random bsSome random bsSome random bs Some random
-              bsSome random bs Some random bs Some random bs Some random bs Some
-              bs Some random bs Some random bsSome random bs Some random bs
+              Hello, I'm [Abhinay Katta], an experienced Python Developer
+              specializing in React and Python libraries. My expertise is backed
+              by certifications from Microsoft, including AI-900, AZ-900, and
+              PL-900, which demonstrate my proficiency in Artificial
+              Intelligence, Cloud Computing, and Power Platform.
             </p>
           </div>
         </div>
