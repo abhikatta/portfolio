@@ -5,9 +5,9 @@ import Project2 from "../assets/project2.png";
 const Work = () => {
   const WorkImg = "https://icons8.com/icon/W0Dx3yX712sZ/add-bookmark";
   return (
-    <div name="work" className="w-full md:h-screen  text-gray-300 bg-[#0a192f]">
+    <div name="work" className="w-full lg:h-full  text-gray-300 bg-[#0a192f]">
       {/* main container */}
-      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
+      <div className="max-w-[850px] mx-auto p-4 flex flex-col justify-center w-full h-screen">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-[#5a87a5]">
             Work
@@ -15,7 +15,7 @@ const Work = () => {
           <p className="py-6 ">||This is some of my work</p>
         </div>
         {/* items container */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid sm:grid-cols-2 md:grid-cols-2 gap-4">
           {/* grid container */}
           {/* project1 */}
           <div

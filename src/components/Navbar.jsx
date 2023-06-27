@@ -9,12 +9,13 @@ const Navbar = () => {
   const handleclick = () => {
     setNav(!nav);
   };
+
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300">
+    <div className="fixed w-full h-100px flex justify-between items-center px-10 py-4 bg-[#0a192f] text-gray-300">
       <div>
-        <img src={Logo} alt="logo" style={{ width: "80px" }}></img>
+        <img src={Logo} alt="logo" style={{ width: "90px" }}></img>
       </div>
-      <ul className="hidden sm:flex">
+      <ul className="hidden lg:flex">
         {/*if size > medium its flex else hidden */}
         <li>
           <Link to="home" smooth={true} duration={500}>
@@ -43,8 +44,8 @@ const Navbar = () => {
         </li>
       </ul>
       {/* on minimized/phone screen */}
-      <div onClick={handleclick} className="sm:hidden z-10">
-        {!nav ? <FaBars /> : <FaTimes />}
+      <div onClick={handleclick} className="lg:hidden z-10">
+        {!nav ? <FaBars size={40} /> : <FaTimes size={40} />}
       </div>
       {/* on minimized/phone screen */}
       <ul
@@ -80,7 +81,7 @@ const Navbar = () => {
         </li>
       </ul>
       {/* socials */}
-      <div className="hidden md:flex fixed flex-col top-[35%] left-0">
+      <div className="hidden sm:flex fixed flex-col top-[35%] left-0">
         <ul>
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300">
             <a

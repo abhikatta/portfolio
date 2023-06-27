@@ -3,9 +3,9 @@ import { HiArrowNarrowRight } from "react-icons/hi";
 import { Link } from "react-scroll";
 const Home = () => {
   return (
-    <div name="home" className="w-full h-screen bg-[#0a192f]">
+    <div name="home" className="w-full h-full bg-[#0a192f]">
       {/* Text */}
-      <div className="max-w-[1000px] mx-auto px-20 flex flex-col justify-center h-full">
+      <div className="max-w-[850px] mx-auto px-20 flex flex-col justify-center w-full h-screen">
         <p className="text-xl text-[#5a87a5]">hi, my name is </p>
         <h1 className="text-4xl sm:text-7xl font-bold text-[#ccd6f6]">
           Abhinay Katta

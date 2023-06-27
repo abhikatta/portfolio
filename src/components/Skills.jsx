@@ -7,8 +7,8 @@ import Tailwind from "../assets/tailwind.png";
 import Flask from "../assets/flask.png";
 const Skills = () => {
   return (
-    <div name="skills" className="w-full h-screen bg-[#0a192f]  text-gray-300 ">
-      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
+    <div name="skills" className="w-full h-full bg-[#0a192f]  text-gray-300 ">
+      <div className="max-w-[850px] mx-auto p-4 flex flex-col justify-center w-full h-screen">
         <div>
           <p className="text-4xl font-bold inline border-b-4 border-[#5a87a5] ">
             Skills
@@ -31,7 +31,7 @@ const Skills = () => {
           </div>
           <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
             <img src={HTML} alt="skill-icon" className="w-20 mx-auto "></img>
-            <p className="my-4">{"{HTML}"}</p>
+            <p className="my-4">{"{HTML5}"}</p>
           </div>
           <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
             <img
