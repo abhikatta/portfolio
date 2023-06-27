@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed w-full h-[5rem] flex justify-between items-center px-10 py-4 text-gray-300">
+    <div className="fixed w-full h-[5rem] flex justify-between items-center px-10 py-4  text-gray-300">
       <div>
         <a href="/">
           <img src={Logo} alt="logo" style={{ width: "5rem" }}></img>
