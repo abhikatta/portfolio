@@ -11,9 +11,11 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed w-full h-100px flex justify-between items-center px-10 py-4 bg-[#0a192f] text-gray-300">
+    <div className="fixed w-full h-[5rem] flex justify-between items-center px-10 py-4 bg-transparent text-gray-300">
       <div>
-        <img src={Logo} alt="logo" style={{ width: "90px" }}></img>
+        <a href="/">
+          <img src={Logo} alt="logo" style={{ width: "5rem" }}></img>
+        </a>
       </div>
       <ul className="hidden lg:flex">
         {/*if size > medium its flex else hidden */}
@@ -113,7 +115,7 @@ const Navbar = () => {
             <a
               className="flex justify-between items-center w-full text-gray-300"
               href="/">
-              Resūme
+              Résumé
               <BsFillPersonLinesFill size={30} />
             </a>
           </li>

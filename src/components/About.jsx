@@ -6,7 +6,7 @@ const About = () => {
       <div className="flex flex-col justify-center items-center w-full h-screen">
         {/* Container */}
         <div className=" w-full max-w-[53.125rem] grid grid-cols-2 gap-8">
-          <div className="md:text-right pb-8 pl-4">
+          <div className="md:text-left pb-8 pl-4">
             <p className="text-4xl font-bold inline border-b-4 border-[#be4d95]">
               About
             </p>
