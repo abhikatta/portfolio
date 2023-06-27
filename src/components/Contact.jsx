@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Contact = () => {
+  const [senderName, setSenderName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [sendButton, setSendButton] = useState(false);
+  const sendButtonSender = () => {
+    return "text-white hover:text-[#453C67] border-2 hover:bg-[#bca9ff] hover:border-[#bca9ff] px-4 py-3 my-8 mx-auto flex items-center";
+  };
   return (
     <div
       name="contact"
@@ -23,18 +30,27 @@ const Contact = () => {
             className=" bg-[#ccd6f6] p-2"
             type="text"
             placeholder="Name"
-            name="name"></input>
+            onChange={(e) => setSenderName(e.target.value)}
+            name="name"
+            value={senderName}></input>
           <input
             className="my-4 p-2 bg-[#ccd6f6]"
             type="text"
+            name="email"
             placeholder="Email"
-            name="email"></input>
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}></input>
           <textarea
             className=" bg-[#ccd6f6] p-2"
+            value={message}
             name="message"
             rows={10}
+            onChange={(e) => setMessage(e.target.value)}
             placeholder="Message"></textarea>
-          <button className="text-white border-2 hover:bg-[#5a87a5] hover:border-[#5a87a5] px-4 py-3 my-8 mx-auto flex items-center">
+          <button
+            className={
+              !message || !email || !senderName ? "hidden" : sendButtonSender()
+            }>
             Send
           </button>
         </div>
