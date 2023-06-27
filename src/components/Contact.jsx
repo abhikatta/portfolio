@@ -4,14 +4,14 @@ const Contact = () => {
   return (
     <div
       name="contact"
-      className="w-full h-full bg-[#0a192f] flex justify-center items-center p-4">
+      className="w-full h-full bg-[#453C67] flex justify-center items-center p-4">
       <form
         method="POST"
         action="https://getform.io/f/36ce7206-7251-4f1c-8850-6109a00ac661"
         className="flex flex-col max-w-[53.125rem] w-full h-screen">
         <div className="max-w-[53.125rem] mx-auto p-4 flex flex-col justify-center w-full h-screen">
           <div className="pb-8">
-            <p className="text-4xl font-bold inline border-b-4 border-[#5a87a5] text-gray-300">
+            <p className="text-4xl font-bold inline border-b-4 border-[#bca9ff] text-gray-300">
               Contact
             </p>
             <p className="text-gray-300 py-4">

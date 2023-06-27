@@ -5,11 +5,11 @@ import Project2 from "../assets/project2.png";
 const Work = () => {
   const WorkImg = "https://icons8.com/icon/W0Dx3yX712sZ/add-bookmark";
   return (
-    <div name="work" className="w-full lg:h-full  text-gray-300 bg-[#0a192f]">
+    <div name="work" className="w-full lg:h-full  text-gray-300 bg-[#115173]">
       {/* main container */}
       <div className="max-w-[53.125rem] mx-auto p-4 flex flex-col justify-center w-full h-screen">
         <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-[#5a87a5]">
+          <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-[#27c24e]">
             Work
           </p>
           <p className="py-6 ">||This is some of my work</p>
