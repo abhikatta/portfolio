@@ -5,11 +5,11 @@ import Project2 from "../assets/project2.png";
 const Work = () => {
   const WorkImg = "https://icons8.com/icon/W0Dx3yX712sZ/add-bookmark";
   return (
-    <div name="work" className="w-full lg:h-full  text-gray-300 bg-[#115173]">
+    <div name="work" className="w-full lg:h-full  text-gray-300 bg-[#166e29]">
       {/* main container */}
       <div className="max-w-[53.125rem] mx-auto p-4 flex flex-col justify-center w-full h-screen">
         <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-[#27c24e]">
+          <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-[#3ad889]">
             Work
           </p>
           <p className="py-6 ">||This is some of my work</p>
@@ -27,12 +27,12 @@ const Work = () => {
                 TimeTableTuner
               </span>
               <div className="pt-8 text-center">
-                <a href="/">
+                <a href="https://github.com/abhikatta/TimeTableTuner">
                   <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
                     Demo
                   </button>
                 </a>
-                <a href="/">
+                <a href="https://github.com/abhikatta/TimeTableTuner">
                   <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
                     Code
                   </button>
@@ -50,12 +50,12 @@ const Work = () => {
                 Webber
               </span>
               <div className="pt-8 text-center">
-                <a href="/">
+                <a href="https://github.com/abhikatta/Webber">
                   <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
                     Demo
                   </button>
                 </a>
-                <a href="/">
+                <a href="https://github.com/abhikatta/Webber">
                   <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
                     Code
                   </button>

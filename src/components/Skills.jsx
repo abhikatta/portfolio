@@ -7,7 +7,7 @@ import Tailwind from "../assets/tailwind.png";
 import Flask from "../assets/flask.png";
 const Skills = () => {
   return (
-    <div name="skills" className="w-full h-full bg-[#690ba0]  text-gray-300 ">
+    <div name="skills" className="w-full h-full bg-[#1e1666]  text-gray-300 ">
       <div className="max-w-[53.125rem] mx-auto p-4 flex flex-col justify-center w-full h-screen">
         <div>
           <p className="text-4xl font-bold inline border-b-4 border-[#5f4dff] ">
