@@ -22,7 +22,7 @@ const Work = () => {
           {/* project2 */}
           <div
             style={{ backgroundImage: `url(${Project2})` }}
-            className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div">
+            className="shadow-lg shadow-[#040c16] group container hover:scale-105 duration-300 rounded-md flex justify-center items-center mx-auto content-div">
             {/* hover effects */}
             <div className="opacity-0 group-hover:opacity-100">
               <span className="text-2xl font-bold text-white tracking-wider">
@@ -45,7 +45,7 @@ const Work = () => {
           {/* project1 */}
           <div
             style={{ backgroundImage: `url(${Project1})` }}
-            className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div">
+            className="shadow-lg shadow-[#040c16] group  hover:scale-105 duration-300 container rounded-md flex justify-center items-center mx-auto content-div">
             {/* hover effects */}
             <div className="opacity-0 group-hover:opacity-100">
               <span className="text-2xl font-bold text-white tracking-wider">
@@ -68,14 +68,14 @@ const Work = () => {
           {/* project3 */}
           <div
             style={{ backgroundImage: `url(${Project3})` }}
-            className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div">
+            className="shadow-lg shadow-[#040c16] group container hover:scale-105 duration-300 rounded-md flex justify-center items-center mx-auto content-div">
             {/* hover effects */}
-            <div className="opacity-0 group-hover:opacity-100">
+            <div className="opacity-0 group-hover:opacity-100 ">
               <span className="text-2xl font-bold text-white tracking-wider">
                 Portfolio Website
               </span>
               <div className="pt-8 text-center">
-                <a href="/">
+                <a href="https://abhikatta.github.io/portfolio">
                   <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
                     Demo
                   </button>
@@ -93,7 +93,7 @@ const Work = () => {
             style={{
               backgroundImage: `url(${Project4})`,
             }}
-            className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div">
+            className="shadow-lg shadow-[#040c16] group container rounded-md flex hover:scale-105 duration-300 justify-center items-center mx-auto content-div">
             {/* hover effects */}
             <div className="opacity-0 group-hover:opacity-100">
               <span className="text-2xl font-bold text-white tracking-wider">
