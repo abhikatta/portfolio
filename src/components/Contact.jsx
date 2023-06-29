@@ -4,10 +4,10 @@ const Contact = () => {
   const [senderName, setSenderName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [sendButton, setSendButton] = useState(false);
   const sendButtonSender = () => {
     return "text-white hover:text-[#453C67] border-2 hover:bg-[#bca9ff] hover:border-[#bca9ff] px-4 py-3 my-8 mx-auto flex items-center";
   };
+
   return (
     <div
       name="contact"
@@ -47,6 +47,7 @@ const Contact = () => {
             rows={10}
             onChange={(e) => setMessage(e.target.value)}
             placeholder="Message"></textarea>
+
           <button
             className={
               !message || !email || !senderName ? "hidden" : sendButtonSender()
