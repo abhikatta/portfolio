@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <div
       name="contact"
-      className="w-full h-full bg-[#453C67] flex justify-center items-center p-4">
+      className="w-full h-full+10% bg-[#453C67] flex justify-center items-center p-4">
       <form
         method="POST"
         action="https://getform.io/f/36ce7206-7251-4f1c-8850-6109a00ac661"

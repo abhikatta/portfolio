@@ -4,7 +4,7 @@ import HTML from "../assets/html.png";
 import Tensorflow from "../assets/tensorflow.png";
 import ReactIcon from "../assets/react.png";
 import Tailwind from "../assets/tailwind.png";
-import Flask from "../assets/flask.png";
+import Flask from "../assets/flask.jpg";
 const Skills = () => {
   return (
     <div name="skills" className="w-full h-full bg-[#1e1666]  text-gray-300 ">
@@ -48,7 +48,10 @@ const Skills = () => {
             <p className="my-4">{"{Tailwind}"}</p>
           </div>
           <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img src={Flask} alt="skill-icon" className="w-20 mx-auto "></img>
+            <img
+              src={Flask}
+              alt="skill-icon"
+              className="w-20 mx-auto rounded-[0.55rem] "></img>
             <p className="my-4">{"{Flask}"}</p>
           </div>
         </div>
