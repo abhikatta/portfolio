@@ -14,10 +14,10 @@ const Home = () => {
           {"{python}+{frontend} developer"}
         </h2>
         <p className="text-[#747c96] py-4 max-w-[780px]">
-          I have a genuine passion for both game development and web
-          development, with a specific focus on utilizing React for web
-          projects. Additionally, I have achieved a high level of proficiency in
-          Python development.
+          I have achieved a high level of proficiency in Python development.
+          Additionally,I have a genuine passion for both game development and
+          web development, with a specific focus on utilizing React for web
+          projects.
         </p>
         {/* bs Text */}
         <div>
