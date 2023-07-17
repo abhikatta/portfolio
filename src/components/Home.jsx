@@ -11,22 +11,24 @@ const Home = () => {
           Abhinay Katta
         </h1>
         <h2 className="text-3xl sm:text-5xl font-bold text-[#747c96]">
-          {"{frontend}+{python} developer"}
+          {"{python}+{frontend} developer"}
         </h2>
         <p className="text-[#747c96] py-4 max-w-[780px]">
-          I am interested in game development, python development and proficient
-          in web development with react
+          I have a genuine passion for both game development and web
+          development, with a specific focus on utilizing React for web
+          projects. Additionally, I have achieved a high level of proficiency in
+          Python development.
         </p>
         {/* bs Text */}
         <div>
-          <button className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-[#5a87a5] hover:border-[#5a87a5]">
-            <Link className="group" to="work" smooth={true} duration={500}>
+          <Link className="group" to="work" smooth={true} duration={500}>
+            <button className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-[#5a87a5] hover:border-[#5a87a5]">
               View Work
-            </Link>
-            <span className="group-hover:rotate-90 duration-300">
-              <HiArrowNarrowRight className="ml-3" />
-            </span>
-          </button>
+              <span className=" group-hover:translate-y-1 w-3 duration-300">
+                <HiArrowNarrowRight className="ml-3 rotate-90" />
+              </span>
+            </button>
+          </Link>
         </div>
       </div>
     </div>

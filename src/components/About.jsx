@@ -2,26 +2,30 @@ import React from "react";
 
 const About = () => {
   return (
-    <div name="about" className="w-full h-full bg-[#5F264A] text-gray-300">
+    <div name="about" className="w-full  h-full bg-[#5F264A] text-gray-300">
       <div className="flex flex-col justify-center items-center w-full h-screen">
         {/* Container */}
         <div className=" w-full max-w-[53.125rem] grid grid-cols-2 gap-8">
           <div className="md:text-left pb-8 pl-4">
-            <p className="text-4xl font-bold inline border-b-4 border-[#be4d95]">
+            <p className="text-4xl sm:text-7xl font-bold inline border-b-4 border-[#be4d95]">
               About
             </p>
           </div>
           <div></div>
         </div>
         <div className="max-w-[850px] w-full grid sm:grid-cols-1 gap-8 pl-10">
-          <div className="sm:text-left text-4xl font-bold">
+          <div className="text-4xl font-bold">
             <p>
               {/* Further description */}
-              Hello, I'm [Abhinay Katta], an experienced Python Developer
-              specializing in React and Python libraries. My expertise is backed
-              by certifications from Microsoft, including AI-900, AZ-900, and
-              PL-900, which demonstrate my proficiency in Artificial
-              Intelligence, Cloud Computing, and Power Platform.
+              Hello, I'm [Abhinay Katta], Passionate and dedicated computer
+              science student having good amount of development knowledge in
+              python. I have minor to mid-level projects on my GitHub. I got
+              into programming because of my interest in gaming which turned
+              into interest in game development which turned into interest in
+              Artificial Intelligence and software development. Learned game
+              development with unity but soon got into machine learning and AI.
+              Currently learning frontend development with React and
+              React-Native for mobile application development.
             </p>
           </div>
         </div>
