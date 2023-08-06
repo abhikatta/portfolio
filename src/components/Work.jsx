@@ -1,4 +1,5 @@
 import React from "react";
+import Project0 from "../assets/JoBo.png";
 import Project1 from "../assets/project1.png";
 import Project2 from "../assets/project2.png";
 import Project3 from "../assets/project3.png";
@@ -16,9 +17,31 @@ const Work = () => {
           <p className="py-6 ">||This is some of my work</p>
         </div>
         {/* items container */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-2 gap-4">
+        <div className="grid sm:grid-cols-2 my-auto md:grid-cols-3 gap-4">
           {/* grid container */}
-
+          {/* project 0 */}
+          <div
+            style={{ backgroundImage: `url(${Project0})` }}
+            className="shadow-lg shadow-[#040c16] group container hover:scale-105 duration-300 rounded-md flex justify-center items-center mx-auto content-div">
+            {/* hover effects */}
+            <div className="opacity-0 group-hover:opacity-100">
+              <span className="text-2xl font-bold text-white tracking-wider">
+                JoBo
+              </span>
+              <div className="pt-8 text-center">
+                <a href="https://github.com/abhikatta/JoBo">
+                  <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
+                    Demo
+                  </button>
+                </a>
+                <a href="https://github.com/abhikatta/JoBo">
+                  <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
+                    Code
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
           {/* project2 */}
           <div
             style={{ backgroundImage: `url(${Project2})` }}
