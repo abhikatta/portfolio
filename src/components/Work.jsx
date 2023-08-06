@@ -17,7 +17,7 @@ const Work = () => {
           <p className="py-6 ">||This is some of my work</p>
         </div>
         {/* items container */}
-        <div className="grid sm:grid-cols-2 my-auto md:grid-cols-3 gap-4">
+        <div className="grid sm:grid-cols-2  md:grid-cols-3 gap-4">
           {/* grid container */}
           {/* project 0 */}
           <div
