@@ -10,19 +10,18 @@ const Home = () => {
         <h1 className="text-4xl sm:text-7xl font-bold text-[#ccd6f6]">
           Abhinay Katta
         </h1>
-        <h2 className="text-3xl sm:text-5xl font-bold text-[#747c96]">
+        <h2 className="text-3xl sm:text-5xl font-bold animate-pulse text-[#747c96]">
           {"{python}+{frontend} developer"}
         </h2>
         <p className="text-[#747c96] py-4 max-w-[780px]">
-          I have achieved a high level of proficiency in Python development.
-          Additionally,I have a genuine passion for both game development and
-          web development, with a specific focus on utilizing React for web
-          projects.
+          I have good level of proficiency in Python development. Additionally,I
+          have a genuine passion for both game development and web development,
+          with a specific focus on utilizing React for web projects.
         </p>
         {/* bs Text */}
         <div>
           <Link className="group" to="work" smooth={true} duration={500}>
-            <button className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-[#5a87a5] hover:border-[#5a87a5]">
+            <button className="text-white group border-[#5a87a5] border-2 rounded-xl px-6 py-3 my-2 flex items-center transition-colors duration-500 hover:bg-[#5a87a5] hover:border-[#5a87a5]">
               View Work
               <span className=" group-hover:translate-y-1 w-3 duration-300">
                 <HiArrowNarrowRight className="ml-3 rotate-90" />
