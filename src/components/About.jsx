@@ -7,14 +7,14 @@ const About = () => {
         {/* Container */}
         <div className=" w-full max-w-[53.125rem] grid grid-cols-2 gap-8">
           <div className="md:text-left pb-8 pl-4">
-            <p className="text-4xl sm:text-4xl font-bold inline border-b-4 border-[#be4d95]">
+            <p className="lg:text-4xl text-6xl font-bold inline border-b-4 border-[#be4d95]">
               About
             </p>
           </div>
           <div></div>
         </div>
         <div className="max-w-[850px] w-full grid sm:grid-cols-1 gap-8 pl-10 md:pr-10 sm:pr-10 pr-10">
-          <div className="text-3xl font-bold">
+          <div className="lg:text-3xl text-5xl font-bold">
             <p>
               {/* Further description */}
               Hello, I'm [Abhinay Katta], Passionate and dedicated computer

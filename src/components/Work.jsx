@@ -15,10 +15,12 @@ const Work = () => {
       {/* main container */}
       <div className="max-w-[53.125rem] mx-auto p-4 flex flex-col justify-center w-full h-screen">
         <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-[#3ad889]">
+          <p className="lg:text-4xl text-5xl font-bold inline border-b-4 text-gray-300 border-[#3ad889]">
             Work
           </p>
-          <p className="py-6 ">||This is some of my work</p>
+          <p className="py-6 lg:text-xl text-4xl text-white  ">
+            ||This is some of my work
+          </p>
         </div>
         {/* items container */}
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">

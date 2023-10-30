@@ -15,33 +15,33 @@ const Contact = () => {
         className="flex flex-col max-w-[53.125rem] w-full h-screen">
         <div className="max-w-[53.125rem] mx-auto p-4 flex flex-col justify-center w-full h-full">
           <div className="pb-8">
-            <p className="text-4xl font-bold inline border-b-4 border-[#bca9ff] text-gray-300">
+            <p className="lg:text-4xl text-6xl font-bold inline border-b-4 border-[#bca9ff] text-gray-300">
               Contact
             </p>
-            <p className="text-gray-300 py-4">
+            <p className="text-gray-300 lg:text-xl text-4xl py-4">
               || Submit the form below or write me an email -
               abhinaykatta97@gmail.com
             </p>
           </div>
           <input
-            className=" bg-[#ccd6f6] p-2"
+            className=" bg-[#ccd6f6] p-2 lg:text-xl text-5xl"
             type="text"
             placeholder="Name"
             onChange={(e) => setSenderName(e.target.value)}
             name="name"
             value={senderName}></input>
           <input
-            className="my-4 p-2 bg-[#ccd6f6]"
+            className="my-4 p-2 bg-[#ccd6f6] lg:text-xl text-5xl"
             type="text"
             name="email"
             placeholder="Email"
             onChange={(e) => setEmail(e.target.value)}
             value={email}></input>
           <textarea
-            className=" bg-[#ccd6f6] p-2"
+            className=" bg-[#ccd6f6] p-2 lg:text-xl text-5xl"
             value={message}
             name="message"
-            rows={10}
+            rows={8}
             onChange={(e) => setMessage(e.target.value)}
             placeholder="Message"></textarea>
 
