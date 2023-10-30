@@ -19,27 +19,27 @@ const Navbar = () => {
       </div>
       <ul className="hidden lg:flex">
         {/*if size > medium its flex else hidden */}
-        <li>
+        <li className="hover:underline hover:underline-offset-4">
           <Link to="home" smooth={true} duration={500}>
             Home
           </Link>
         </li>
-        <li>
+        <li className="hover:underline hover:underline-offset-4">
           <Link to="about" smooth={true} duration={500}>
             About
           </Link>
         </li>
-        <li>
+        <li className="hover:underline hover:underline-offset-4">
           <Link to="skills" smooth={true} duration={500}>
             Skills
           </Link>
         </li>
-        <li>
+        <li className="hover:underline hover:underline-offset-4">
           <Link to="work" smooth={true} duration={500}>
             Work
           </Link>
         </li>
-        <li>
+        <li className="hover:underline hover:underline-offset-4">
           <Link to="contact" smooth={true} duration={500}>
             Contact
           </Link>
@@ -83,7 +83,7 @@ const Navbar = () => {
         </li>
       </ul>
       {/* socials */}
-      <div className="hidden sm:flex fixed flex-col top-[35%] left-0">
+      <div className="hidden fixed md:flex lg:flex sm:hidden flex-col top-[35%] left-0">
         <ul>
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300">
             <a

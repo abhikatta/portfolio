@@ -13,7 +13,7 @@ const About = () => {
           </div>
           <div></div>
         </div>
-        <div className="max-w-[850px] w-full grid sm:grid-cols-1 gap-8 pl-10">
+        <div className="max-w-[850px] w-full grid sm:grid-cols-1 gap-8 pl-10 md:pr-10 sm:pr-10 pr-10">
           <div className="text-3xl font-bold">
             <p>
               {/* Further description */}
