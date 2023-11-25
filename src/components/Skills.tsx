@@ -1,4 +1,3 @@
-import React from "react";
 import Python from "../assets/python.png";
 import HTML from "../assets/html.png";
 import Tensorflow from "../assets/tensorflow.png";
@@ -11,7 +10,7 @@ import Firebase from "../assets/firebase.png";
 import C_Sharp from "../assets/c_sharp.png";
 const Skills = () => {
   return (
-    <div name="skills" className="w-full h-full bg-[#1e1666]  text-gray-300 ">
+    <div id="skills" className="w-full h-full bg-[#1e1666]  text-gray-300 ">
       <div className="max-w-[53.125rem] mx-auto p-4 flex flex-col justify-center w-full h-screen">
         <div>
           <p className="lg:text-4xl text-5xl font-bold inline border-b-4 border-[#5f4dff] ">

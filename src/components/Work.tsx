@@ -10,7 +10,7 @@ const Work = () => {
     // <div name="work" className="w-full lg:h-full text-gray-300 bg-[#166e29]">
 
     <div
-      name="work"
+      id="work"
       className="w-full h-screen bg-[#ac3c67] flex justify-center items-center p-4">
       {/* main container */}
       <div className="max-w-[53.125rem] mx-auto p-4 flex flex-col justify-center w-full h-screen">

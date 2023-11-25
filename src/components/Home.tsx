@@ -1,9 +1,8 @@
-import React from "react";
 import "../index.css";
 import { Link } from "react-scroll";
 const Home = () => {
   return (
-    <div name="home" className="w-full h-full bg-[#0a192f]">
+    <div id="home" className="w-full h-full bg-[#0a192f]">
       {/* Text */}
       <div className="max-w-[53.125rem] mx-auto px-20 flex flex-col justify-center w-full h-screen">
         <p className="lg:text-xl text-4xl text-[#5a87a5]">hi, my name is </p>

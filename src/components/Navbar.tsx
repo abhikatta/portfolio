@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { useState } from "react";
 import Logo from "../assets/logo.png";
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed w-full h-[5rem] flex justify-between items-center px-10 py-4  text-gray-300">
+    <div className="fixed w-full h-[5rem] flex justify-between items-center px-10 py-4 text-gray-300">
       <div>
         <a href="/portfolio">
           <img src={Logo} alt="logo" style={{ width: "5rem" }}></img>
