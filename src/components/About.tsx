@@ -1,21 +1,24 @@
+import React from "react";
 const About = () => {
   return (
-    <div id="about" className="w-full  h-full bg-[#5F264A] text-gray-300">
+    <div
+      id="about"
+      className="w-full min-h-screen h-full bg-[#5F264A] text-gray-300">
       <div className="flex flex-col justify-center items-center w-full h-screen">
         {/* Container */}
         <div className=" w-full max-w-[53.125rem] grid grid-cols-2 gap-8">
           <div className="md:text-left pb-8 pl-4">
-            <p className="lg:text-4xl text-6xl font-bold inline border-b-4 border-[#be4d95]">
+            <p className=" font-bold inline border-b-4 border-[#be4d95]">
               About
             </p>
           </div>
           <div></div>
         </div>
         <div className="max-w-[850px] w-full grid sm:grid-cols-1 gap-8 pl-10 md:pr-10 sm:pr-10 pr-10">
-          <div className="lg:text-3xl text-5xl font-bold">
+          <div className=" font-extrabold">
             <p>
               {/* Further description */}
-              Hello, I'm [Abhinay Katta], Passionate and dedicated computer
+              Hello, I'm Abhinay Katta, Passionate and dedicated computer
               science student having good amount of development knowledge in
               python. I have minor to mid-level projects on my GitHub. I got
               into programming because of my interest in gaming which turned

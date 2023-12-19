@@ -46,7 +46,7 @@ const Navbar = () => {
         </li>
       </ul>
       {/* on minimized/phone screen */}
-      <div onClick={handleclick} className="lg:hidden z-10">
+      <div onClick={handleclick} className="lg:hidden">
         {!nav ? <FaBars size={40} /> : <FaTimes size={40} />}
       </div>
       {/* on minimized/phone screen */}
