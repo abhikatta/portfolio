@@ -9,14 +9,16 @@ const Work = () => {
   return (
     <div
       id="work"
-      className="w-full min-h-screen h-auto bg-[#ac3c67] flex justify-center items-center p-[40px]">
+      className="w-full min-h-screen h-auto md:py-[100px] py-[150px]  bg-[#ac3c67] flex justify-center items-center">
       {/* main container */}
       <div className="max-w-[53.125rem] mx-auto p-4 flex flex-col justify-center w-full h-screen">
         <div className="pb-8">
-          <p className=" font-bold inline border-b-4 text-gray-300 border-[#3ad889]">
+          <p className=" font-bold inline border-b-4 text-gray-300 border-[#3ad889] component-title">
             Work
           </p>
-          <p className="py-6 text-white">||This is some of my work</p>
+          <p className="py-6 text-white component-caption">
+            ||This is some of my work
+          </p>
         </div>
         {/* items container */}
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
@@ -30,7 +32,7 @@ const Work = () => {
               <span className="text-2xl font-bold text-white tracking-wider">
                 JoBo
               </span>
-              <p className=" font-bold text-white tracking-wider">
+              <p className="font-bold text-white tracking-wider">
                 A mobile application written in react native that converts
                 handwritten text to digital text using hugging face's TrOCR
                 model.

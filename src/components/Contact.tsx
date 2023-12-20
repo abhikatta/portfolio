@@ -15,10 +15,10 @@ const Contact = () => {
         className="flex flex-col max-w-[53.125rem] w-full h-screen">
         <div className="max-w-[53.125rem] mx-auto p-4 flex flex-col justify-center w-full h-full">
           <div className="pb-8">
-            <p className=" font-bold inline border-b-4 border-[#bca9ff] text-gray-300">
+            <p className="font-bold inline border-b-4 border-[#bca9ff] text-gray-300 component-title">
               Contact
             </p>
-            <p className="text-gray-300 py-4">
+            <p className="text-gray-300 py-4 component-caption">
               || Submit the form below or write me an email -
               abhinaykatta97@gmail.com
             </p>

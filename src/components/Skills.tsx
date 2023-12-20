@@ -10,13 +10,15 @@ import Firebase from "../assets/firebase.png";
 import C_Sharp from "../assets/c_sharp.png";
 const Skills = () => {
   return (
-    <div id="skills" className="w-full h-full bg-[#1e1666]  text-gray-300 ">
+    <div
+      id="skills"
+      className="w-full min-h-screen h-auto py-[100px] bg-[#1e1666]  text-gray-300 ">
       <div className="max-w-[53.125rem] mx-auto p-4 flex flex-col justify-center w-full h-screen">
         <div>
-          <p className="font-bold inline border-b-4 border-[#5f4dff] ">
+          <p className="font-bold inline border-b-4 border-[#5f4dff] component-title">
             Skills
           </p>
-          <p className="py-4 ">
+          <p className="py-4 component-caption">
             || These are the technologies I've worked with
           </p>
         </div>

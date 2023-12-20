@@ -9,7 +9,7 @@ function Maintainence() {
         alt="rotating-gear-icon"
       />
       <img
-        className="mb-[40px]"
+        className="mb-[40px] z-10"
         src={MaintainenceIcon}
         alt="maintainence-icon"
       />

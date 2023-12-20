@@ -49,16 +49,67 @@
   animation: rotateAnimation 3s linear infinite; /* Adjust the duration as needed */
 }
 
-/* md:mx-[60px] lg:mx-[100px] sm:mx-[100px] mx-[200px] */
 .text-width {
   margin-left: 100px;
   margin-right: 100px;
-  font-size: 20px;
 }
 @media screen and (max-width: 768px) {
   .text-width {
     margin-left: 60px;
     margin-right: 60px;
-    font-size: 30px;
+    font-size: 23px;
+  }
+}
+
+/* --------------- */
+
+/* font sizes: */
+/* ----------- */
+/* required font sizes for: */
+/* .component-title{}
+.component-caption{}
+.component-text{}
+.component-subheading{} */
+/* ----------- */
+
+/* Default font sizes for components */
+.component-title {
+  font-size: 3rem; /* Adjust based on design preferences */
+}
+
+.component-subheading {
+  font-weight: 400;
+
+  font-size: 2rem; /* Adjust based on design preferences */
+}
+
+.component-caption {
+  font-weight: 400;
+
+  font-size: 1.35rem; /* Adjust based on design preferences */
+}
+
+.component-text {
+  font-weight: 400;
+
+  font-size: 1.25rem; /* Adjust based on design preferences */
+}
+
+/* Responsive font sizes for mobile views */
+@media screen and (max-width: 768px) {
+  .component-title {
+    font-size: 2.5rem; /* Adjust for mobile views */
+  }
+
+  .component-subheading {
+    font-size: 1.25rem; /* Adjust for mobile views */
+  }
+
+  .component-caption {
+    font-size: 1.2rem; /* Adjust for mobile views */
+  }
+
+  .component-text {
+    font-size: 1.35rem; /* Adjust for mobile views */
   }
 }
