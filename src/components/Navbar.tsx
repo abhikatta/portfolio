@@ -13,11 +13,11 @@ const Navbar = () => {
   return (
     <div className="fixed w-full h-[5rem] flex justify-between items-center px-10 py-4 text-gray-300">
       <div className="z-10">
-        <a href="/portfolio">
+        <a className="md:flex hidden" href="/portfolio">
           <img src={Logo} alt="logo" style={{ width: "5rem" }}></img>
         </a>
       </div>
-      <ul className="hidden z-10 lg:flex">
+      <ul className="hidden z-10 md:flex">
         {/*if size > medium its flex else hidden */}
         <li className="hover:underline hover:underline-offset-4">
           <Link to="home" smooth={true} duration={500}>
@@ -46,7 +46,7 @@ const Navbar = () => {
         </li>
       </ul>
       {/* on minimized/phone screen */}
-      <div onClick={handleclick} className="lg:hidden z-10">
+      <div onClick={handleclick} className="md:hidden z-10">
         {!nav ? <FaBars size={40} /> : <FaTimes size={40} />}
       </div>
       {/* on minimized/phone screen */}

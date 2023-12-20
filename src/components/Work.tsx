@@ -9,7 +9,7 @@ const Work = () => {
   return (
     <div
       id="work"
-      className="w-full min-h-screen h-auto md:py-[100px] py-[150px]  bg-[#ac3c67] flex justify-center items-center">
+      className="w-full min-h-screen h-auto md:py-[100px] py-[200px]  bg-[#ac3c67] flex justify-center items-center">
       {/* main container */}
       <div className="max-w-[53.125rem] mx-auto p-4 flex flex-col justify-center w-full h-screen">
         <div className="pb-8">
@@ -32,7 +32,7 @@ const Work = () => {
               <span className="text-2xl font-bold text-white tracking-wider">
                 JoBo
               </span>
-              <p className="font-bold text-white tracking-wider">
+              <p className="font-bold px-2 text-white tracking-wider">
                 A mobile application written in react native that converts
                 handwritten text to digital text using hugging face's TrOCR
                 model.
@@ -84,11 +84,11 @@ const Work = () => {
             style={{ backgroundImage: `url(${Project1})` }}
             className="shadow-lg shadow-[#040c16] group  hover:scale-105 duration-300 container rounded-md flex justify-center items-center mx-auto content-div">
             {/* hover effects */}
-            <div className="opacity-0 group-hover:opacity-100 px-2">
-              <span className="text-2xl font-bold text-white tracking-wider">
+            <div className="opacity-0 group-hover:opacity-100 ">
+              <span className="text-2xl font-bold  text-white tracking-wider">
                 TimeTableTuner
               </span>
-              <p className="text-sm font-bold text-white tracking-wider">
+              <p className="text-sm font-bold px-2 text-white tracking-wider">
                 A flask app that shows current time and class from a
                 auto-cleaned excel sheet.
               </p>
