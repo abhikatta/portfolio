@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import "../index.css";
 import projects from "./data/Projects";
 // bg - [#ac3c67];
@@ -52,14 +51,14 @@ const Work = () => {
                       </h1>
                       <div className="flex flex-row md:my-0 my-4">
                         <a
-                          className="rounded-md hover:bg-[#dc81a4] bg-inherit
-                       hover:opacity-100 opacity-60 bg-slate-200 text-white font-bold h-min w-min mr-2 px-2 py-1"
+                          className="rounded-md md:hover:bg-[#dc81a4] md:bg-inherit bg-[#dc81a4] md:text-base text-xl
+                       hover:opacity-100 md:opacity-60 opacity-100 text-white font-bold h-min w-min mr-2 px-2 py-1"
                           href={`${v.link.download}`}>
                           Demo
                         </a>
                         <a
-                          className="rounded-md hover:bg-[#dc81a4] bg-inherit
-                       hover:opacity-100 opacity-60 bg-slate-200 text-white font-bold h-min w-min ml-2 px-2 py-1"
+                          className="rounded-md md:hover:bg-[#dc81a4] md:bg-inherit bg-[#dc81a4] md:text-base text-xl
+                       hover:opacity-100 md:opacity-60 opacity-100 text-white font-bold h-min w-min ml-2 px-2 py-1"
                           href={`${v.link.github}`}>
                           Github
                         </a>

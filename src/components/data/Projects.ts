@@ -25,7 +25,8 @@ const projects: Projects[] = [
   },
   {
     name: "Webber",
-    description: "A simple voice assistant for windows written in python.",
+    description:
+      "A simple voice assistant for windows written in python with the infi.systray and speech recognition libraries.",
     link: {
       github: "https://github.com/abhikatta/Webber",
       download:
@@ -36,8 +37,9 @@ const projects: Projects[] = [
   },
   {
     name: "TimeTableTuner",
-    description:
-      "A flask app that shows current time and class from a auto-cleaned excel sheet.",
+    description: `A Flask application that displays the current time and class
+       information retrieved from an Excel sheet cleaned using python and pandas and numPy libraries.`,
+
     link: {
       github: "https://github.com/abhikatta/TimeTableTuner",
       download: "https://github.com/abhikatta/TimeTableTuner",
@@ -56,7 +58,7 @@ const projects: Projects[] = [
   },
   {
     name: "Portfolio Website",
-    description: "Portfolio website written in React and TailwindCSS.",
+    description: "Portfolio website made using React and TailwindCSS.",
     link: {
       github: "https://github.com/portfolio",
       download: "https://abhikatta.github.io/portfolio",
@@ -67,7 +69,7 @@ const projects: Projects[] = [
   {
     name: "Spamde",
     description:
-      "A windows widget app that can spam a given text in any chat app or anywhere where a text can be typed.",
+      "A Windows widget application that can repeatedly input a specified text in any chat application or text-entry interface.",
     link: {
       github: "https://github.com/abhikatta/spamde",
       download:
