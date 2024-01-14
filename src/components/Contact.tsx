@@ -1,9 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Contact = () => {
   const [senderName, setSenderName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [copied, setCopied] = useState(false);
+  useEffect(() => {
+    if (copied) {
+      setTimeout(() => {
+        setCopied(false);
+      }, 2500);
+    }
+  }, [copied]);
 
   return (
     <div
@@ -20,7 +28,25 @@ const Contact = () => {
             </p>
             <p className="text-gray-300 py-4 component-caption">
               || Submit the form below or write me an email -
-              abhinaykatta97@gmail.com
+              <p
+                onClick={() => {
+                  // document.execCommand("copy"); // bad but works :)
+                  navigator.clipboard.writeText("abhinaykatta97@gmail.com");
+                  setCopied(true);
+                }}
+                className="cursor-pointer select-all hover:bg-[#112100]
+                transition-colors duration-100 w-min px-1 hover:selection:bg-black py-1 rounded-md selection:bg-none">
+                abhinaykatta97@gmail.com
+              </p>
+              {copied ? (
+                <p
+                  className=" ml-[40%] -mt-[3.5%] rounded-es-md rounded-ee-md rounded-se-md
+                 bg-slate-200 text-black w-min text-sm px-2 py-1">
+                  Copied!
+                </p>
+              ) : (
+                ""
+              )}
             </p>
           </div>
           <input
@@ -47,9 +73,15 @@ const Contact = () => {
 
           <button
             className={
-              !message || !email || !senderName
+              !message ||
+              !email ||
+              !senderName ||
+              message.trim() === "" ||
+              email.trim() === "" ||
+              senderName.trim() === ""
                 ? "hidden"
-                : "text-white hover:text-[#453C67] border-2 hover:bg-[#bca9ff] hover:border-[#bca9ff] px-4 py-3 my-8 mx-auto flex items-center"
+                : `text-white hover:text-[#453C67] border-2 hover:bg-[#bca9ff]
+                 hover:border-[#bca9ff] px-4 py-3 my-8 mx-auto flex items-center`
             }>
             Send
           </button>

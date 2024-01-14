@@ -9,6 +9,7 @@ interface Projects {
   description: string;
   link: { download: string; github: string };
   backgroundImage: File;
+  tags?: string[];
 }
 const projects: Projects[] = [
   {
@@ -20,6 +21,7 @@ const projects: Projects[] = [
       github: "https://github.com/abhikatta/JoBo",
     },
     backgroundImage: Project1,
+    tags: ["reactnative", "huggingface", "firebase", "android"],
   },
   {
     name: "Webber",
@@ -30,6 +32,7 @@ const projects: Projects[] = [
         "https://github.com/abhikatta/Webber/releases/download/proto1/Webber.zip",
     },
     backgroundImage: Project2,
+    tags: ["python", "windows", "infi.systray", "vscode", "speechrecognition"],
   },
   {
     name: "TimeTableTuner",
@@ -40,16 +43,26 @@ const projects: Projects[] = [
       download: "https://github.com/abhikatta/TimeTableTuner",
     },
     backgroundImage: Project3,
+    tags: [
+      "python",
+      "flask",
+      "tailwindCSS",
+      "HTML",
+      "javascript",
+      "jquery",
+      "data-cleaning",
+      "vscode",
+    ],
   },
   {
     name: "Portfolio Website",
-    description:
-      "Portfolio website written in react and tailwind css. Deployed to github pages.",
+    description: "Portfolio website written in React and TailwindCSS.",
     link: {
       github: "https://abhikatta.github.io/portfolio",
       download: "https://github.com/portfolio",
     },
     backgroundImage: Project4,
+    tags: ["react", "tailwindcss", "typescript", "github", "vscode"],
   },
   {
     name: "Spamde",
@@ -61,6 +74,7 @@ const projects: Projects[] = [
         "https://github.com/Abhinay-Katta/Spam-with-Python/releases/download/v1.0.0/spamde.exe",
     },
     backgroundImage: Project5,
+    tags: ["windows", "python", "pyautogui", "pyqt6", "vscode"],
   },
 ];
 
