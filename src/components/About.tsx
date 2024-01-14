@@ -3,7 +3,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="w-full min-h-screen h-auto py-[100px] bg-[#5F264A] text-gray-300">
+      className="w-full min-h-screen h-auto md:py-[0px] py-[40px]  bg-[#5F264A] text-gray-300">
       <div className="flex flex-col justify-center items-center w-full h-screen">
         {/* Container */}
         <div className=" w-full max-w-[53.125rem] grid grid-cols-2 gap-8">

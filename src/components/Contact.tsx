@@ -48,8 +48,8 @@ const Contact = () => {
           <button
             className={
               !message || !email || !senderName
-                ? "scale-0"
-                : "text-white scale-100 duration-200 hover:text-[#453C67] border-2 hover:bg-[#bca9ff] hover:border-[#bca9ff] px-4 py-3 my-8 mx-auto flex items-center"
+                ? "hidden"
+                : "text-white hover:text-[#453C67] border-2 hover:bg-[#bca9ff] hover:border-[#bca9ff] px-4 py-3 my-8 mx-auto flex items-center"
             }>
             Send
           </button>
