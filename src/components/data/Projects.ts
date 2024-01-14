@@ -58,8 +58,8 @@ const projects: Projects[] = [
     name: "Portfolio Website",
     description: "Portfolio website written in React and TailwindCSS.",
     link: {
-      github: "https://abhikatta.github.io/portfolio",
-      download: "https://github.com/portfolio",
+      github: "https://github.com/portfolio",
+      download: "https://abhikatta.github.io/portfolio",
     },
     backgroundImage: Project4,
     tags: ["react", "tailwindcss", "typescript", "github", "vscode"],

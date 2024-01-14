@@ -7,8 +7,7 @@ const Work = () => {
   return (
     <div
       id="work"
-      className="w-full min-h-screen h-auto md:py-[0px] py-[40px] bg-[#ac3c67] text-gray-300 ">
-      {/* className="w-full min-h-screen h-auto py-[100px]  text-gray-300 "> */}
+      className="w-auto min-h-screen h-auto md:py-[0px] py-[40px] bg-[#ac3c67] text-gray-300">
       <div className="max-w-[53.125rem] mx-auto  p-4 flex flex-col justify-center w-full h-full">
         <div>
           <p className="font-bold inline border-b-4 border-[#5f4dff] component-title">
@@ -16,31 +15,60 @@ const Work = () => {
           </p>
           <p className="py-4 component-caption">|| This is some of my work</p>
         </div>
-
         {/* container for icons */}
-
         {projects.map((v, i) => {
           return (
             <div
               key={i}
-              className={`min-h-[10rem] w-auto md:mx-0 mx-4 my-[20px] rounded-3xl hover:scale-110 
+              className={`min-h-[10rem] w-auto md:mx-0 mx-4 my-[20px] rounded-3xl hover:scale-110  md:border-none border  p-4
               transition-transform duration-300 flex flex-col ${
                 i % 2 === 0 ? "md:items-start" : "md:items-end"
-              }
-              `}>
-              <div className={`flex flex-row justify-evenly`}>
-                <p
-                  className="md:flex hidden font-bold text-5xl px-2 py-10 text-[#261a91] underline 
-                underline-offset-4">
-                  #{i + 1}
-                </p>
-                <img
-                  alt=""
-                  className={`rounded-3xl w-[24rem]`}
-                  src={`${v.backgroundImage}`}
-                />
+              }`}>
+              <div className={`flex md:flex-row flex-col justify-evenly`}>
+                <div
+                  className={`flex 
+                ${
+                  i % 2 !== 0
+                    ? "md:flex-row-reverse flex-col"
+                    : "md:flex-row flex-col"
+                }`}>
+                  <div
+                    className={`flex items-center
+                ${
+                  i % 2 !== 0
+                    ? "md:flex-row-reverse flex-col"
+                    : "md:flex-row flex-col"
+                }`}>
+                    <img
+                      alt=""
+                      className={`rounded-3xl w-[24rem]`}
+                      src={`${v.backgroundImage}`}
+                    />
+                    <div className="mx-[7rem] flex flex-col items-center   h-min">
+                      <h1
+                        className={`md:flex hidden font-bold px-2  text-5xl
+                        `}>
+                        #{i + 1}
+                      </h1>
+                      <div className="flex flex-row md:my-0 my-4">
+                        <a
+                          className="rounded-md hover:bg-[#dc81a4] bg-inherit
+                       hover:opacity-100 opacity-60 bg-slate-200 text-white font-bold h-min w-min mr-2 px-2 py-1"
+                          href={`${v.link.download}`}>
+                          Demo
+                        </a>
+                        <a
+                          className="rounded-md hover:bg-[#dc81a4] bg-inherit
+                       hover:opacity-100 opacity-60 bg-slate-200 text-white font-bold h-min w-min ml-2 px-2 py-1"
+                          href={`${v.link.github}`}>
+                          Github
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <p className="font-medium text-md">{v.description}</p>
+              <p className="font-medium text-md my-4">{v.description}</p>
               <div className="md:flex hidden">
                 {v.tags?.map((tag, i) => {
                   return (
