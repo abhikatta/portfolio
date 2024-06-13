@@ -14,9 +14,9 @@ const Navbar = () => {
     <div>
       <div
         style={{ zIndex: 2 }}
-        className="fixed h-[3rem] hover:h-[6rem] transition-all duration-300 w-full top-4 flex justify-center items-center px-10 py-4 text-gray-300">
-        <div className="h-[3rem] hover:h-[6rem] transition-all duration-300 border-r-4 border-[black] border-l-4 rounded-full w-[50%] backdrop-blur-lg flex flex-row justify-between items-center">
-          <div className="h-[3rem] hover:h-[6rem] transition-all duration-300">
+        className="fixed h-[3rem] hover:h-[5rem] transition-all duration-300 w-full top-4 flex justify-center items-center px-10 py-4 text-gray-300">
+        <div className="h-[3rem] hover:h-[5rem] transition-all duration-300 border-r-4 border-l-4 rounded-[1rem] w-[50%] backdrop-blur-lg flex flex-row justify-between items-center">
+          <div className="h-[3rem] hover:h-[5rem] transition-all duration-300">
             <a className="lg:flex hidden " href="/portfolio">
               <img
                 src={Logo}
@@ -35,16 +35,15 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
-
-            {/* <li>
-          <Link
-            className="hover:underline hover:underline-offset-4"
-            to="about"
-            smooth={true}
-            duration={500}>
-            About
-          </Link>
-        </li> */}
+            <li>
+              <Link
+                className="hover:underline hover:underline-offset-4"
+                to="about"
+                smooth={true}
+                duration={500}>
+                About
+              </Link>
+            </li>
             <li>
               <Link
                 className="hover:underline hover:underline-offset-4"
@@ -93,11 +92,11 @@ const Navbar = () => {
               Home
             </Link>
           </li>
-          {/* <li className="py-[4px] my-[25px] text-4xl hover:text-black hover:bg-slate-50 duration-300 transition-colors rounded-md ">
-          <Link onClick={handleclick} to="about" smooth={true} duration={500}>
-            About
-          </Link>
-        </li> */}
+          <li className="py-[4px] my-[25px] text-4xl hover:text-black hover:bg-slate-50 duration-300 transition-colors rounded-md ">
+            <Link onClick={handleclick} to="about" smooth={true} duration={500}>
+              About
+            </Link>
+          </li>
           <li className="py-[4px] my-[25px] text-4xl hover:text-black hover:bg-slate-50 duration-300 transition-colors rounded-md ">
             <Link
               onClick={handleclick}

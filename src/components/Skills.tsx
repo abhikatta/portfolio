@@ -7,17 +7,13 @@ const Skills = () => {
       className="w-full min-h-screen h-auto md:py-[0px] py-[40px] bg-[#1e1666] text-gray-300 ">
       <div className="max-w-[53.125rem] mx-auto  p-4 flex flex-col justify-center w-full h-screen">
         <div className="-left-[10rem] w-[100vh] absolute items-center -rotate-90 text-white opacity-60 flex flex-col">
-          <p className="font-bold  text-[15rem]">Skills</p>
+          <p className="font-bold  text-[10rem]">Skills</p>
         </div>
         <div>
-          {/* <p className="font-bold inline border-b-4 border-[#5f4dff] component-title">
-            Skills
-          </p> */}
           <p className="py-4 component-caption">
             || These are the technologies I've worked with
           </p>
         </div>
-
         {/* container for icons */}
         <div className="w-full  grid grid-cols-2 lg:grid-cols-4 gap-4 text-center py-8">
           {skillIcons.map((v, i) => {

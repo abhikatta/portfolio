@@ -6,12 +6,9 @@ const About = () => {
       <div className="flex flex-col justify-center items-center w-full h-screen">
         {/* Container */}
         <div className=" w-full max-w-[53.125rem] grid grid-cols-2 gap-8">
-          <div className="md:text-left pb-8 pl-4">
-            <p className=" font-bold inline border-b-4 border-[#be4d95] component-title">
-              About
-            </p>
+          <div className="-left-[10rem] w-[100vh] absolute  items-center -rotate-90 text-white opacity-60 flex flex-col">
+            <p className="font-bold text-[10rem]">About</p>
           </div>
-          <div></div>
         </div>
         <div className="max-w-[850px] w-full grid md:grid-cols-2 gap-8 pl-10 md:pr-10 sm:pr-10 pr-10">
           <p className="font-normal md:text-right component-text">

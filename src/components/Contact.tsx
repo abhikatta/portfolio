@@ -25,23 +25,16 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="w-full h-[65rem] bg-[#453C67] flex justify-center items-center">
-      <div className="-left-[18rem] w-[65rem] absolute bg-red-50 items-center -rotate-90 text-white opacity-60 flex flex-col">
-        <p className="font-bold text-[15rem]">Contact</p>
-      </div>
+      className="w-full h-screen bg-[#453C67] flex justify-center items-center">
       <form
         method="POST"
         action="https://getform.io/f/36ce7206-7251-4f1c-8850-6109a00ac661"
         className="flex flex-col max-w-[53.125rem] w-full h-auto">
-        <div className="max-w-[53.125rem] mx-auto p-4 pt-0 flex flex-col justify-center w-full h-auto">
-          {/* above or this with font size change */}
-          {/* <div className="-left-[10rem] w-[100vh] absolute items-center -rotate-90 text-white opacity-60 flex flex-col">
-            <p className="font-bold  text-[10rem]">Skills</p>
-          </div> */}
-          <div className="pb-8 -mt-[10rem]">
-            {/* <p className="font-bold inline border-b-4 border-[#bca9ff] text-gray-300 component-title">
-              Contact
-            </p> */}
+        <div className="max-w-[53.125rem] mx-auto p-4 flex flex-col justify-center w-full h-auto">
+          <div className="-left-[10rem] w-[100vh] absolute items-center -rotate-90 text-white opacity-60 flex flex-col">
+            <p className="font-bold  text-[10rem]">Contact</p>
+          </div>
+          <div className="pb-8">
             <p className="text-gray-300 py-4 component-caption">
               || Submit the form below or write me an email -
               <p
@@ -93,7 +86,7 @@ const Contact = () => {
                 ? "Please fill in all the fields marked with *."
                 : ""
             }
-            className={`text-white hover:text-[#453C67] border-2 hover:bg-[#bca9ff]
+            className={`text-white hover:text-[#453C67] border-2 hover:bg-[#bca9ff] rounded-md
                  hover:border-[#bca9ff] px-4 py-3 mt-8 mx-auto flex items-center cursor-pointer
                   ${
                     isSubmitDisabled
