@@ -10,7 +10,7 @@ const Skills = () => {
           <p className="font-bold  text-[10rem]">Skills</p>
         </div>
         <div>
-          <p className="py-4 component-caption">
+          <p className="py-4 pt-[10rem] component-caption">
             || These are the technologies I've worked with
           </p>
         </div>

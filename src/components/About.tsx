@@ -5,8 +5,8 @@ const About = () => {
       className="w-full min-h-screen h-auto bg-[#5F264A] text-gray-300">
       <div className="flex flex-col justify-center items-center w-full h-screen">
         {/* Container */}
-        <div className=" w-full max-w-[53.125rem] grid grid-cols-2 gap-8">
-          <div className="-left-[10rem] w-[100vh] absolute  items-center -rotate-90 text-white opacity-60 md:flex hidden flex-col">
+        <div className=" w-full max-w-[53.125rem]">
+          <div className="-left-[10rem] w-[100vh] mt-10 absolute items-center -rotate-90 text-white opacity-60 md:flex hidden flex-col">
             <p className="font-bold text-[10rem]">About</p>
           </div>
         </div>
