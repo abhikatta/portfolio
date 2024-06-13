@@ -8,11 +8,11 @@ const Work = () => {
       id="work"
       className="w-auto min-h-screen h-auto md:py-[0px] py-[40px] bg-[#ac3c67] text-gray-300">
       <div className="max-w-[53.125rem] mx-auto  p-4 flex flex-col justify-center w-full h-full">
-        <div className="-left-[10rem] w-[100vh] absolute items-center -rotate-90 text-white opacity-60 flex flex-col">
+        <div className="-left-[10rem] w-[100vh] absolute items-center -rotate-90 text-white opacity-60 md:flex hidden flex-col">
           <p className="font-bold text-[10rem]">Work</p>
         </div>
         <div>
-          <p className="pt-[8rem] component-caption">
+          <p className="md:pt-[8rem] component-caption">
             || This is some of my work
           </p>
         </div>

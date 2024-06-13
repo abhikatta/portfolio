@@ -77,8 +77,8 @@ const Navbar = () => {
         <div
           onClick={handleclick}
           style={{ zIndex: 3 }}
-          className="lg:hover:cursor-pointer w-screen lg:hidden pt-20 flex justify-end">
-          {!nav ? <FaBars size={80} /> : <FaTimes size={80} />}
+          className="lg:hover:cursor-pointer w-screen lg:hidden pt-10 flex justify-end">
+          {!nav ? <FaBars size={50} /> : <FaTimes size={50} />}
         </div>
         {/* on minimized/phone screen */}
         <ul

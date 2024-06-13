@@ -31,7 +31,7 @@ const Contact = () => {
         action="https://getform.io/f/36ce7206-7251-4f1c-8850-6109a00ac661"
         className="flex flex-col max-w-[53.125rem] w-full h-auto">
         <div className="max-w-[53.125rem] mx-auto p-4 flex flex-col justify-center w-full h-auto">
-          <div className="-left-[10rem] w-[100vh] absolute items-center -rotate-90 text-white opacity-60 flex flex-col">
+          <div className="-left-[10rem] w-[100vh] absolute items-center -rotate-90 text-white opacity-60 md:flex hidden flex-col">
             <p className="font-bold  text-[10rem]">Contact</p>
           </div>
           <div className="pb-8">

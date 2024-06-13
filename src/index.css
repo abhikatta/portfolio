@@ -72,44 +72,42 @@
 .component-subheading{} */
 /* ----------- */
 
-/* Default font sizes for components */
 .component-title {
-  font-size: 3rem; /* Adjust based on design preferences */
+  font-size: 3rem;
 }
 
 .component-subheading {
   font-weight: 400;
 
-  font-size: 2rem; /* Adjust based on design preferences */
+  font-size: 2rem;
 }
 
 .component-caption {
   font-weight: 400;
 
-  font-size: 1.35rem; /* Adjust based on design preferences */
+  font-size: 1.35rem;
 }
 
 .component-text {
   font-weight: 400;
 
-  font-size: 1.25rem; /* Adjust based on design preferences */
+  font-size: 1.25rem;
 }
 
-/* Responsive font sizes for mobile views */
-@media screen and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 768px) {
   .component-title {
-    font-size: 2.5rem; /* Adjust for mobile views */
+    font-size: 2.2rem;
   }
 
   .component-subheading {
-    font-size: 1.25rem; /* Adjust for mobile views */
+    font-size: 1.4rem;
   }
 
   .component-caption {
-    font-size: 1.2rem; /* Adjust for mobile views */
+    font-size: 1.3rem;
   }
 
   .component-text {
-    font-size: 1.35rem; /* Adjust for mobile views */
+    font-size: 1rem;
   }
 }
