@@ -57,10 +57,10 @@ const Navbar = () => {
             <li>
               <Link
                 className="hover:underline hover:underline-offset-4"
-                to="projects"
+                to="work"
                 smooth={true}
                 duration={500}>
-                Projects
+                Work
               </Link>
             </li>
             <li>
@@ -108,12 +108,8 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="py-[4px] my-[25px] text-4xl hover:text-black hover:bg-slate-50 duration-300 transition-colors rounded-md ">
-            <Link
-              onClick={handleclick}
-              to="projects"
-              smooth={true}
-              duration={500}>
-              Projects
+            <Link onClick={handleclick} to="work" smooth={true} duration={500}>
+              Work
             </Link>
           </li>
           <li className="py-[4px] my-[25px] text-4xl hover:text-black hover:bg-slate-50 duration-300 transition-colors rounded-md ">
