@@ -2,12 +2,12 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"); */
 
 @layer base {
-  body {
+  /* body {
     font-family: "Montserrat", sans-serif;
-  }
+  } */
 
   li {
     padding-left: 1rem;
@@ -22,7 +22,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 250px;
+  height: auto;
 }
 .content-div:hover {
   background-image: linear-gradient(
@@ -30,4 +30,84 @@
     rgba(24, 133, 105, 0.8),
     hsla(143, 62%, 67%, 0.8)
   ) !important;
+}
+
+/* when on maintainence: */
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+* {
+  font-family: "Poppins";
+  font-weight: 200;
+}
+.rotate {
+  animation: rotateAnimation 3s linear infinite; /* Adjust the duration as needed */
+}
+
+.text-width {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+@media screen and (max-width: 768px) {
+  .text-width {
+    margin-left: 60px;
+    margin-right: 60px;
+    font-size: 23px;
+  }
+}
+
+/* --------------- */
+
+/* font sizes: */
+/* ----------- */
+/* required font sizes for: */
+/* .component-title{}
+.component-caption{}
+.component-text{}
+.component-subheading{} */
+/* ----------- */
+
+.component-title {
+  font-size: 3rem;
+}
+
+.component-subheading {
+  font-weight: 400;
+
+  font-size: 2rem;
+}
+
+.component-caption {
+  font-weight: 400;
+
+  font-size: 1.35rem;
+}
+
+.component-text {
+  font-weight: 400;
+
+  font-size: 1.25rem;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .component-title {
+    font-size: 2.2rem;
+  }
+
+  .component-subheading {
+    font-size: 1.4rem;
+  }
+
+  .component-caption {
+    font-size: 1.3rem;
+  }
+
+  .component-text {
+    font-size: 1rem;
+  }
 }

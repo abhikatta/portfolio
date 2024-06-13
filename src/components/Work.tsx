@@ -1,169 +1,90 @@
-import React from "react";
-import Project0 from "../assets/JoBo.png";
-import Project1 from "../assets/project1.png";
-import Project2 from "../assets/project2.png";
-import Project3 from "../assets/project3.png";
-import Project4 from "../assets/project4.png";
-// Workimg from assets
+import "../index.css";
+import projects from "./data/Projects";
+// bg - [#ac3c67];
+
 const Work = () => {
   return (
-    // <div name="work" className="w-full lg:h-full text-gray-300 bg-[#166e29]">
-
     <div
       id="work"
-      className="w-full h-screen bg-[#ac3c67] flex justify-center items-center p-4">
-      {/* main container */}
-      <div className="max-w-[53.125rem] mx-auto p-4 flex flex-col justify-center w-full h-screen">
-        <div className="pb-8">
-          <p className="lg:text-4xl text-5xl font-bold inline border-b-4 text-gray-300 border-[#3ad889]">
-            Work
-          </p>
-          <p className="py-6 lg:text-xl text-4xl text-white  ">
-            ||This is some of my work
+      className="w-auto min-h-screen h-auto md:py-[0px] py-[40px] bg-[#ac3c67] text-gray-300">
+      <div className="max-w-[53.125rem] mx-auto  p-4 flex flex-col justify-center w-full h-full">
+        <div className="-left-[10rem] w-[100vh] absolute items-center -rotate-90 text-white opacity-60 md:flex hidden flex-col">
+          <p className="font-bold text-[10rem]">Work</p>
+        </div>
+        <div>
+          <p className="md:pt-[8rem] component-caption">
+            || This is some of my work
           </p>
         </div>
-        {/* items container */}
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
-          {/* grid container */}
-          {/* project 0 */}
-          <div
-            style={{ backgroundImage: `url(${Project0})` }}
-            className="shadow-lg shadow-[#040c16] group container hover:scale-105 duration-300 rounded-md flex justify-center items-center mx-auto content-div">
-            {/* hover effects */}
-            <div className="opacity-0 group-hover:opacity-100 px-2">
-              <span className="text-2xl font-bold text-white tracking-wider">
-                JoBo
-              </span>
-              <p className="text-sm font-bold text-white tracking-wider">
-                A mobile application written in react native that converts
-                handwritten text to digital text using hugging face's TrOCR
-                model.
-              </p>
-              <div className="pt-8 text-center">
-                <a href="https://github.com/abhikatta/JoBo">
-                  <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                    Demo
-                  </button>
-                </a>
-                <a href="https://github.com/abhikatta/JoBo">
-                  <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                    Code
-                  </button>
-                </a>
+        {/* container for icons */}
+        {projects.map((v, i) => {
+          return (
+            <div
+              key={i}
+              className={`min-h-[10rem] w-auto md:mx-0 mx-4 my-[20px] rounded-3xl hover:scale-110  md:border-none border  p-4
+              transition-transform duration-300 flex flex-col ${
+                i % 2 === 0 ? "md:items-start" : "md:items-end"
+              }`}>
+              <div className={`flex md:flex-row flex-col justify-evenly`}>
+                <div
+                  className={`flex 
+                ${
+                  i % 2 !== 0
+                    ? "md:flex-row-reverse flex-col"
+                    : "md:flex-row flex-col"
+                }`}>
+                  <div
+                    className={`flex items-center
+                ${
+                  i % 2 !== 0
+                    ? "md:flex-row-reverse flex-col"
+                    : "md:flex-row flex-col"
+                }`}>
+                    <img
+                      alt=""
+                      className={`rounded-3xl w-[24rem]`}
+                      src={`${v.backgroundImage}`}
+                    />
+                    <div className="mx-[7rem] flex flex-col items-center   h-min">
+                      <h1
+                        className={`md:flex hidden font-bold px-2  text-5xl
+                        `}>
+                        #{i + 1}
+                      </h1>
+                      <div className="flex flex-row md:my-0 my-4">
+                        <a
+                          className="rounded-md md:hover:bg-[#dc81a4] md:bg-inherit bg-[#dc81a4] md:text-base text-xl
+                       hover:opacity-100 md:opacity-60 opacity-100 text-white font-bold h-min w-min mr-2 px-2 py-1"
+                          href={`${v.link.download}`}>
+                          Demo
+                        </a>
+                        <a
+                          className="rounded-md md:hover:bg-[#dc81a4] md:bg-inherit bg-[#dc81a4] md:text-base text-xl
+                       hover:opacity-100 md:opacity-60 opacity-100 text-white font-bold h-min w-min ml-2 px-2 py-1"
+                          href={`${v.link.github}`}>
+                          Github
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p className="font-medium text-md my-4">{v.description}</p>
+              <div className="md:flex hidden">
+                {v.tags?.map((tag, i) => {
+                  return (
+                    <p
+                      key={i}
+                      className="mx-2 rounded-lg bg-[#deaaad] cursor-pointer select-text selection:bg-none opacity-60
+                       hover:opacity-100 px-2 py-1 text-black">
+                      {tag}
+                    </p>
+                  );
+                })}
               </div>
             </div>
-          </div>
-          {/* project2 */}
-          <div
-            style={{ backgroundImage: `url(${Project2})` }}
-            className="shadow-lg shadow-[#040c16] group container hover:scale-105 duration-300 rounded-md flex justify-center items-center mx-auto content-div">
-            {/* hover effects */}
-            <div className="opacity-0 group-hover:opacity-100 px-2">
-              <span className="text-2xl font-bold text-white tracking-wider">
-                Webber
-              </span>
-              <p className="text-sm font-bold text-white tracking-wider">
-                A simple voice assistant for windows written in python.
-              </p>
-              <div className="pt-8 text-center">
-                <a href="https://github.com/abhikatta/Webber/releases/download/proto1/Webber.zip">
-                  <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                    Demo
-                  </button>
-                </a>
-                <a href="https://github.com/abhikatta/Webber">
-                  <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                    Code
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-          {/* project1 */}
-          <div
-            style={{ backgroundImage: `url(${Project1})` }}
-            className="shadow-lg shadow-[#040c16] group  hover:scale-105 duration-300 container rounded-md flex justify-center items-center mx-auto content-div">
-            {/* hover effects */}
-            <div className="opacity-0 group-hover:opacity-100 px-2">
-              <span className="text-2xl font-bold text-white tracking-wider">
-                TimeTableTuner
-              </span>
-              <p className="text-sm font-bold text-white tracking-wider">
-                A flask app that shows current time and class from a
-                auto-cleaned excel sheet.
-              </p>
-
-              <div className="pt-8 text-center">
-                <a href="https://github.com/abhikatta/TimeTableTuner">
-                  <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                    Demo
-                  </button>
-                </a>
-                <a href="https://github.com/abhikatta/TimeTableTuner">
-                  <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                    Code
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-          {/* project3 */}
-          <div
-            style={{ backgroundImage: `url(${Project3})` }}
-            className="shadow-lg shadow-[#040c16] group container hover:scale-105 duration-300 rounded-md flex justify-center items-center mx-auto content-div">
-            {/* hover effects */}
-            <div className="opacity-0 group-hover:opacity-100 px-2">
-              <span className="text-2xl font-bold text-white tracking-wider">
-                Portfolio Website
-              </span>
-              <p className="text-sm font-bold text-white tracking-wider">
-                Portfolio website written in react and tailwind css. Deployed to
-                github pages.
-              </p>
-              <div className="pt-8 text-center">
-                <a href="https://abhikatta.github.io/portfolio">
-                  <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                    Demo
-                  </button>
-                </a>
-                <a href="https://github.com/abhikatta/portfolio">
-                  <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                    Code
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-          {/*project4  */}
-          <div
-            style={{
-              backgroundImage: `url(${Project4})`,
-            }}
-            className="shadow-lg shadow-[#040c16] group container rounded-md flex hover:scale-105 duration-300 justify-center items-center mx-auto content-div">
-            {/* hover effects */}
-            <div className="opacity-0 group-hover:opacity-100 px-2">
-              <span className="text-2xl font-bold text-white tracking-wider">
-                Spamde
-              </span>
-              <p className="text-sm font-bold text-white tracking-wider">
-                A windows widget app that can spam a given text in any chat app
-                or anywhere where a text can be typed.
-              </p>
-              <div className="pt-8 text-center">
-                <a href="https://github.com/Abhinay-Katta/Spam-with-Python/releases/download/v1.0.0/spamde.exe">
-                  <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                    Demo
-                  </button>
-                </a>
-                <a href="https://github.com/abhikatta/Spamde">
-                  <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                    Code
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+          );
+        })}
       </div>
     </div>
   );

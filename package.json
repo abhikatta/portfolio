@@ -1,5 +1,4 @@
 {
-  "homepage": "https://Abhinay-Katta.github.io/portfolio",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
@@ -12,6 +11,7 @@
     "firebase": "^10.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-ga4": "^2.1.0",
     "react-icons": "^4.12.0",
     "react-quill": "^2.0.0",
     "react-scripts": "5.0.1",
