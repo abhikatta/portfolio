@@ -5,12 +5,14 @@ const Skills = () => {
     <div
       id="skills"
       className="w-full min-h-screen h-auto md:py-[0px] py-[40px] bg-[#1e1666] text-gray-300 ">
-      {/* className="w-full min-h-screen h-auto py-[100px]  text-gray-300 "> */}
       <div className="max-w-[53.125rem] mx-auto  p-4 flex flex-col justify-center w-full h-screen">
+        <div className="-left-[10rem] w-[100vh] absolute items-center -rotate-90 text-white opacity-60 flex flex-col">
+          <p className="font-bold  text-[15rem]">Skills</p>
+        </div>
         <div>
-          <p className="font-bold inline border-b-4 border-[#5f4dff] component-title">
+          {/* <p className="font-bold inline border-b-4 border-[#5f4dff] component-title">
             Skills
-          </p>
+          </p> */}
           <p className="py-4 component-caption">
             || These are the technologies I've worked with
           </p>
