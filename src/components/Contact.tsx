@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 const Contact = () => {
   const [senderName, setSenderName] = useState("");
@@ -12,7 +12,16 @@ const Contact = () => {
       }, 2500);
     }
   }, [copied]);
-
+  const isSubmitDisabled = useMemo(() => {
+    return (
+      !message ||
+      !email ||
+      !senderName ||
+      message.trim() === "" ||
+      email.trim() === "" ||
+      senderName.trim() === ""
+    );
+  }, [message, email, senderName]);
   return (
     <div
       id="contact"
@@ -30,7 +39,6 @@ const Contact = () => {
               || Submit the form below or write me an email -
               <p
                 onClick={() => {
-                  // document.execCommand("copy"); // bad but works :)
                   navigator.clipboard.writeText("abhinaykatta97@gmail.com");
                   setCopied(true);
                 }}
@@ -50,39 +58,41 @@ const Contact = () => {
             </p>
           </div>
           <input
-            className=" bg-[#ccd6f6] p-2"
+            className=" bg-[#ccd6f6] p-2 rounded-md"
             type="text"
-            placeholder="Name"
+            placeholder="Name *"
             onChange={(e) => setSenderName(e.target.value)}
             name="name"
             value={senderName}></input>
           <input
-            className="my-4 p-2 bg-[#ccd6f6]"
+            className="my-4 p-2 bg-[#ccd6f6] rounded-md"
             type="text"
             name="email"
-            placeholder="Email"
+            placeholder="Email *"
             onChange={(e) => setEmail(e.target.value)}
             value={email}></input>
           <textarea
-            className=" bg-[#ccd6f6] p-2"
+            className=" bg-[#ccd6f6] p-2 rounded-md"
             value={message}
             name="message"
             rows={8}
             onChange={(e) => setMessage(e.target.value)}
-            placeholder="Message"></textarea>
+            placeholder="Message *"></textarea>
 
           <button
-            className={
-              !message ||
-              !email ||
-              !senderName ||
-              message.trim() === "" ||
-              email.trim() === "" ||
-              senderName.trim() === ""
-                ? "hidden"
-                : `text-white hover:text-[#453C67] border-2 hover:bg-[#bca9ff]
-                 hover:border-[#bca9ff] px-4 py-3 my-8 mx-auto flex items-center`
-            }>
+            disabled={isSubmitDisabled}
+            title={
+              isSubmitDisabled
+                ? "Please fill in all the fields marked with *."
+                : ""
+            }
+            className={`text-white hover:text-[#453C67] border-2 hover:bg-[#bca9ff]
+                 hover:border-[#bca9ff] px-4 py-3 mt-8 mx-auto flex items-center cursor-pointer
+                  ${
+                    isSubmitDisabled
+                      ? "opacity-30 cursor-not-allowed"
+                      : "opacity-100"
+                  }`}>
             Send
           </button>
         </div>
