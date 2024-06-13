@@ -6,11 +6,11 @@ const About = () => {
       <div className="flex flex-col justify-center items-center w-full h-screen">
         {/* Container */}
         <div className=" w-full max-w-[53.125rem]">
-          <div className="-left-[10rem] w-[100vh] mt-10 absolute items-center -rotate-90 text-white opacity-60 md:flex hidden flex-col">
+          <div className="-left-[10rem] w-[100vh] mt-10 absolute items-center -rotate-90 text-white opacity-60 xl:flex hidden flex-col">
             <p className="font-bold text-[10rem]">About</p>
           </div>
         </div>
-        <div className="max-w-[850px] w-full grid md:grid-cols-2 gap-8 pl-10 md:pr-10 sm:pr-10 pr-10">
+        <div className="max-w-[850px] w-full grid md:grid-cols-2 gap-8 pl-10 pr-10">
           <p className="font-normal md:text-right component-text">
             {/* Further description */}
             Hello, I'm Abhinay Katta, Passionate and dedicated computer science

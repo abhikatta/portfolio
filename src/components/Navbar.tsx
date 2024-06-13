@@ -14,7 +14,7 @@ const Navbar = () => {
     <div>
       <div
         style={{ zIndex: 2 }}
-        className="fixed h-[3rem] hover:h-[5rem] lg:transition-all duration-300 w-full top-4 flex justify-center items-center px-10 py-4 text-gray-300">
+        className="fixed h-[3rem] hover:h-[5rem] lg:transition-all duration-300 w-full md:top-4 flex justify-center items-center md:px-10 md:py-4 text-gray-300">
         <div className="h-[3rem] hover:h-[5rem] lg:transition-all duration-300 border-r-4 border-l-4 rounded-[1rem] w-[50%] backdrop-blur-lg lg:flex hidden flex-row justify-between items-center">
           <div className="h-[3rem] hover:h-[5rem] lg:transition-all duration-300">
             <a className="lg:flex hidden " href="/portfolio">
@@ -77,8 +77,8 @@ const Navbar = () => {
         <div
           onClick={handleclick}
           style={{ zIndex: 3 }}
-          className="lg:hover:cursor-pointer w-screen lg:hidden pt-10 flex justify-end">
-          {!nav ? <FaBars size={50} /> : <FaTimes size={50} />}
+          className="lg:hover:cursor-pointer w-auto absolute right-5 top-5 lg:hidden flex justify-end">
+          {!nav ? <FaBars size={40} /> : <FaTimes size={40} />}
         </div>
         {/* on minimized/phone screen */}
         <ul

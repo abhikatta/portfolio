@@ -6,11 +6,11 @@ const Skills = () => {
       id="skills"
       className="w-full min-h-screen h-full bg-[#1e1666] text-gray-300 ">
       <div className="max-w-[53.125rem] mx-auto  p-4 flex flex-col justify-center w-full h-auto">
-        <div className="-left-[10rem] w-[100vh] absolute items-center -rotate-90 text-white opacity-60 md:flex hidden flex-col">
+        <div className="-left-[10rem] w-[100vh] absolute items-center -rotate-90 text-white opacity-60 xl:flex hidden flex-col">
           <p className="font-bold  text-[10rem]">Skills</p>
         </div>
         <div>
-          <p className="py-4 pt-[10rem] component-caption">
+          <p className="py-4 xl:pt-[10rem] lg:pt-[6rem] component-caption">
             || These are the technologies I've worked with
           </p>
         </div>
