@@ -12,7 +12,7 @@ const Skills = () => {
         </div>
         <div>
           <p className="py-4 xl:pt-[10rem] lg:pt-[6rem] component-caption">
-            || These are the technologies I've worked with
+            || These are the technologies I&apos;ve worked with
           </p>
         </div>
         {/* container for icons */}

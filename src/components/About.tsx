@@ -13,9 +13,9 @@ const About = () => {
         <div className="max-w-[850px] w-full grid md:grid-cols-2 gap-8 pl-10 pr-10">
           <p className="font-normal md:text-right component-text">
             {/* Further description */}
-            Hello, I'm Abhinay Katta, Passionate and dedicated computer science
-            student having good amount of development knowledge in python. I
-            have minor to mid-level projects on my GitHub.
+            Hello, I&aposm Abhinay Katta, Passionate and dedicated computer
+            science student having good amount of development knowledge in
+            python. I have minor to mid-level projects on my GitHub.
           </p>
           <p className="font-normal component-text">
             I got into programming because of my interest in gaming which turned
