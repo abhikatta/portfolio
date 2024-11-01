@@ -35,9 +35,9 @@ const Contact = () => {
             <p className="font-bold  text-[10rem]">Contact</p>
           </div>
           <div className="pb-8 xl:pt-[10rem] lg:pt-[6rem]">
-            <p className="text-gray-300 py-4 component-caption">
+            <p className="text-gray-300 py-4 component-caption relative">
               || Submit the form below or write me an email -
-              <p
+              <span
                 onClick={() => {
                   navigator.clipboard.writeText("abhinaykatta97@gmail.com");
                   setCopied(true);
@@ -45,13 +45,13 @@ const Contact = () => {
                 className="cursor-pointer select-all hover:bg-[#112100]
                 transition-colors duration-100 w-min px-1 hover:selection:bg-black py-1 rounded-md selection:bg-none">
                 abhinaykatta97@gmail.com
-              </p>
+              </span>
               {copied ? (
-                <p
+                <span
                   className=" ml-[40%] -mt-[3.5%] rounded-es-md rounded-ee-md rounded-se-md
-                 bg-slate-200 text-black w-min text-sm px-2 py-1">
+                 bg-slate-200 text-black w-min text-sm px-2 py-1 absolute left-[50%] top-20">
                   Copied!
-                </p>
+                </span>
               ) : (
                 ""
               )}

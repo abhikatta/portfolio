@@ -1,5 +1,4 @@
 import "./index.css";
-import MaintainenceIcon from "./assets/maintainence-icon.jpg";
 function Maintainence() {
   return (
     <div className="bg-yellow-300 text-white w-screen h-screen flex flex-col items-center justify-center">
@@ -10,7 +9,7 @@ function Maintainence() {
       />
       <img
         className="mb-[40px] z-10"
-        src={MaintainenceIcon}
+        src={"/maintainence-icon.jpg"}
         alt="maintainence-icon"
       />
       <p className="mb-[40px] text-black text-[20px] text-width">
