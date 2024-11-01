@@ -1,4 +1,4 @@
-import "../index.css";
+import "@/app/index.css";
 import projects from "./data/Projects";
 import Image from "next/image";
 // bg - [#ac3c67];
