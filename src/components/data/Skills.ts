@@ -1,3 +1,15 @@
+import Python from "../../assets/python.png";
+import HTML from "../../assets/html.png";
+// import Tensorflow from "../../assets/tensorflow.png";
+import ReactIcon from "../../assets/react.png";
+import Tailwind from "../../assets/tailwind.png";
+// import Flask from "../../assets/flask.jpg";
+import GitIcon from "../../assets/git.png";
+import Unity from "../../assets/unity.png";
+import Firebase from "../../assets/firebase.png";
+import NextIcon from "../../assets/next.png";
+import C_Sharp from "../../assets/c_sharp.png";
+
 interface skill {
   name: string;
   icon: string;
@@ -5,36 +17,36 @@ interface skill {
 const skillIcons: skill[] = [
   {
     name: "React.js/ReactNative",
-    icon: "/react.png",
+    icon: ReactIcon,
   },
   {
     name: "C#",
-    icon: "/c_sharp.png",
+    icon: C_Sharp,
   },
   {
     name: "TailwindCSS",
-    icon: "/tailwind.png",
+    icon: Tailwind,
   },
   {
     name: "HTMl",
-    icon: "/html.png",
+    icon: HTML,
   },
-  { name: "Next.js", icon: "/next.png" },
+  { name: "Next.js", icon: NextIcon },
   {
     name: "Python",
-    icon: "/python.png",
+    icon: Python,
   },
   {
     name: "Firebase",
-    icon: "/firebase.png",
+    icon: Firebase,
   },
   {
     name: "Git",
-    icon: "/git.png",
+    icon: GitIcon,
   },
   {
     name: "Unity 3D",
-    icon: "/unity.png",
+    icon: Unity,
   },
 ];
 

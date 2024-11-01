@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Logo from "../assets/logo.png";
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
@@ -18,8 +19,13 @@ const Navbar = () => {
         <div className="h-[3rem] hover:h-[5rem] lg:transition-all duration-300 border-r-4 border-l-4 rounded-[1rem] w-[50%] backdrop-blur-lg lg:flex hidden flex-row justify-between items-center">
           <div className="h-[3rem] hover:h-[5rem] lg:transition-all duration-300">
             <a className="lg:flex hidden " href="/portfolio">
+<<<<<<< HEAD
               <Image
                 src={"/logo.png"}
+=======
+              <img
+                src={Logo}
+>>>>>>> 8444f7b0f4ca2d06c0d7c508915d0cc71cb9d61c
                 alt="logo"
                 width={48}
                 height={96}
