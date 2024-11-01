@@ -10,7 +10,7 @@ import Maintainence from "./Maintainence";
 const App = () => {
   // set this to true when updating the site and deploy,
   // add changes, set to false and deploy
-  const onMaintainence = false;
+  const onMaintainence = true;
 
   return onMaintainence ? (
     <Maintainence />
