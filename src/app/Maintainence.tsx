@@ -1,13 +1,16 @@
+import Image from "next/image";
 import "./index.css";
 function Maintainence() {
   return (
     <div className="bg-yellow-300 text-white w-screen h-screen flex flex-col items-center justify-center">
-      <img
+      <Image
+        fill
         className="rotate -ml-[120px] -mb-[30px]"
         src="https://img.icons8.com/?size=64&id=115336&format=png"
         alt="rotating-gear-icon"
       />
-      <img
+      <Image
+        fill
         className="mb-[40px] z-10"
         src={"/maintainence-icon.jpg"}
         alt="maintainence-icon"
@@ -20,7 +23,10 @@ function Maintainence() {
       <a
         className="hover:-translate-y-4 transition-transform duration-300"
         href="https://github.com/abhikatta?tab=repositories">
-        <img src="https://img.icons8.com/?size=50&id=12599&format=png" alt="" />
+        <Image
+          src="https://img.icons8.com/?size=50&id=12599&format=png"
+          alt=""
+        />
       </a>
     </div>
   );

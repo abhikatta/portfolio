@@ -1,3 +1,4 @@
+import Image from "next/image";
 import skillIcons from "./data/Skills";
 
 const Skills = () => {
@@ -21,8 +22,10 @@ const Skills = () => {
               <div
                 key={i}
                 className="shadow-md grayscale hover:grayscale-0 shadow-[#040c16] hover:scale-110 duration-500">
-                <img
+                <Image
                   src={v.icon}
+                  width={80}
+                  height={80}
                   alt="skill-icon"
                   className="w-20 mx-auto  select-none"
                 />

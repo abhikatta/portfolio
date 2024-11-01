@@ -3,6 +3,7 @@ import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { Link } from "react-scroll";
+import Image from "next/image";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleclick = () => {
@@ -17,10 +18,13 @@ const Navbar = () => {
         <div className="h-[3rem] hover:h-[5rem] lg:transition-all duration-300 border-r-4 border-l-4 rounded-[1rem] w-[50%] backdrop-blur-lg lg:flex hidden flex-row justify-between items-center">
           <div className="h-[3rem] hover:h-[5rem] lg:transition-all duration-300">
             <a className="lg:flex hidden " href="/portfolio">
-              <img
+              <Image
                 src={"/logo.png"}
                 alt="logo"
-                className="w-[3rem] hover:w-[5rem] transition-all duration-300"></img>
+                width={48}
+                height={96}
+                className="w-[3rem] hover:w-[5rem] transition-all duration-300"
+              />
             </a>
           </div>
           <ul className="hidden lg:flex">

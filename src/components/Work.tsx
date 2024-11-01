@@ -1,5 +1,6 @@
 import "@/app/index.css";
 import projects from "./data/Projects";
+import Image from "next/image";
 // bg - [#ac3c67];
 
 const Work = () => {
@@ -40,8 +41,10 @@ const Work = () => {
                     ? "md:flex-row-reverse flex-col"
                     : "md:flex-row flex-col"
                 }`}>
-                    <img
+                    <Image
                       alt=""
+                      width={384}
+                      height={200}
                       className={`rounded-3xl w-[24rem]`}
                       src={`${v.backgroundImage}`}
                     />
