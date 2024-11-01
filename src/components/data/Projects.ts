@@ -1,8 +1,14 @@
+import Project1 from "../../assets/JoBo.png";
+import Project2 from "../../assets/webber.png";
+import Project3 from "../../assets/timeTableTuner.png";
+import Project4 from "../../assets/portfolio.png";
+import Project5 from "../../assets/spamde.png";
+
 interface Projects {
   name: string;
   description: string;
   link: { download: string; github: string };
-  backgroundImage: unknown;
+  backgroundImage: File;
   tags?: string[];
 }
 const projects: Projects[] = [
@@ -14,7 +20,7 @@ const projects: Projects[] = [
       download: "https://github.com/abhikatta/JoBo",
       github: "https://github.com/abhikatta/JoBo",
     },
-    backgroundImage: "/JoBo.png",
+    backgroundImage: Project1,
     tags: ["reactnative", "huggingface", "firebase", "android"],
   },
   {
@@ -26,7 +32,7 @@ const projects: Projects[] = [
       download:
         "https://github.com/abhikatta/Webber/releases/download/proto1/Webber.zip",
     },
-    backgroundImage: "/webber.png",
+    backgroundImage: Project2,
     tags: ["python", "windows", "infi.systray", "vscode", "speechrecognition"],
   },
   {
@@ -38,7 +44,7 @@ const projects: Projects[] = [
       github: "https://github.com/abhikatta/TimeTableTuner",
       download: "https://github.com/abhikatta/TimeTableTuner",
     },
-    backgroundImage: "/timeTableTuner.png",
+    backgroundImage: Project3,
     tags: [
       "python",
       "flask",
@@ -57,7 +63,7 @@ const projects: Projects[] = [
       github: "https://github.com/portfolio",
       download: "https://abhikatta.github.io/portfolio",
     },
-    backgroundImage: "/portfolio.png",
+    backgroundImage: Project4,
     tags: ["react", "tailwindcss", "typescript", "github", "vscode"],
   },
   {
@@ -69,7 +75,7 @@ const projects: Projects[] = [
       download:
         "https://github.com/Abhinay-Katta/Spam-with-Python/releases/download/v1.0.0/spamde.exe",
     },
-    backgroundImage: "/spamde.png",
+    backgroundImage: Project5,
     tags: ["windows", "python", "pyautogui", "pyqt6", "vscode"],
   },
 ];

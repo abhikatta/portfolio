@@ -1,4 +1,4 @@
-import "@/app/index.css";
+import "../index.css";
 import projects from "./data/Projects";
 // bg - [#ac3c67];
 
