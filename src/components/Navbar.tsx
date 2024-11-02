@@ -11,8 +11,8 @@ const Navbar = () => {
       <div
         onMouseOver={() => setShowNav(true)}
         onMouseLeave={() => setShowNav(false)}
-        className="fixed top-16 right-16 cursor-pointer h-fit">
-        <p className="z-10  leading-[62px] text-[#5a87a5] text-[100px]">=</p>
+        className="fixed  z-30 top-16 right-16 cursor-pointer h-fit">
+        <p className=" leading-[62px] text-[#5a87a5] text-[100px]">=</p>
         <AnimatePresence>
           {showNav && (
             <motion.div
@@ -20,7 +20,7 @@ const Navbar = () => {
               transition={{ duration: 0.5, type: "spring" }}
               exit={{ opacity: 0, x: 300 }}
               animate={{ opacity: 1, x: -350 }}
-              className="absolute w-[30rem] pl-[50px] h-screen rounded-tl-[100px] rounded-bl-[100px] bg-black  flex flex-col justify-center items-start">
+              className="absolute w-[30rem] z-[99999] pl-[50px] h-screen rounded-tl-[100px] rounded-bl-[100px] bg-black  flex flex-col justify-center items-start">
               <motion.div
                 initial={{ opacity: 0, x: 200 }}
                 transition={{ duration: 0.5, type: "spring" }}

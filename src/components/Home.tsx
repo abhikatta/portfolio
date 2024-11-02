@@ -1,4 +1,5 @@
-import { Link } from "react-scroll";
+import Link from "next/link";
+
 const Home = () => {
   return (
     <div id="home" className="w-full h-full bg-[#0a192f]">
@@ -19,7 +20,7 @@ const Home = () => {
         </p>
 
         <div>
-          <Link className="group" to="work" smooth={true} duration={500}>
+          <Link className="group" href={"/work"}>
             <button className="text-white  border-[#5a87a5] rounded-xl px-6 py-3 my-2 flex items-center transition-colors duration-500 hover:bg-[#5a87a5] hover:border-[#5a87a5]">
               View Work
             </button>
