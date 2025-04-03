@@ -5,7 +5,7 @@ const Skills = () => {
   return (
     <div
       id="skills"
-      className="w-full min-h-screen h-full bg-[#1e1666] text-gray-300 ">
+      className="w-full min-h-screen items-center justify-center flex h-full bg-[#1e1666] text-gray-300 ">
       <div className="max-w-[53.125rem] mx-auto  p-4 flex flex-col justify-center w-full h-auto">
         <div className="-left-[10rem] w-[100vh] absolute items-center -rotate-90 text-white opacity-60 xl:flex hidden flex-col">
           <p className="font-bold  text-[10rem]">Skills</p>
