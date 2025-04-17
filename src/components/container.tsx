@@ -8,9 +8,7 @@ const Container = ({
 }: HTMLAttributes<HTMLDivElement>) => {
   return (
     <div className="px-4 md:px-6">
-      <div
-        {...props}
-        className={cn("max-w-[1728px] pt-20  mx-auto", className)}>
+      <div {...props} className={cn("max-w-[1728px] mx-auto", className)}>
         {children}
       </div>
     </div>

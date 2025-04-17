@@ -24,19 +24,16 @@ const Navbar = () => {
       y: 0,
       opacity: 1,
       transition: {
-        delay: delayValue * 0.1,
-        duration: 0.4,
+        duration: 0.25,
+        delay: delayValue * 0.075,
         type: "spring",
       },
     }),
     exit: (delayValue: number) => ({
-      x: -100,
       opacity: 0,
-      y: -100,
-      skew: 45,
       transition: {
-        duration: 0.4,
-        delay: delayValue * 0.1,
+        duration: 0.25,
+        delay: delayValue * 0.075,
         type: "spring",
       },
     }),
@@ -45,13 +42,14 @@ const Navbar = () => {
     <Container>
       <nav className="flex flex-col items-center justify-center relative">
         <button
-          className="absolute top-10 left-10 size-[40px] cursor-pointer z-999"
-          onClick={toggleMenu}>
+          onClick={toggleMenu}
+          onMouseEnter={toggleMenu}
+          className="absolute top-0 left-0 size-[40px] cursor-pointer z-999 mt-20">
           <HamburgerMenuIcon isOpen={isOpen} />
         </button>
         <AnimatePresence mode="sync">
           {isOpen && (
-            <div className="absolute left-0 top-0 flex flex-col h-screen w-full items-start justify-center bg-primaryBlue z-100">
+            <div className="absolute left-0 top-0 flex flex-col gap-y-8 max-h-[90vh] lg:max-h-screen h-screen w-full items-start justify-center bg-primaryBlue z-100">
               {navItems.map((nav, index) => (
                 <motion.a
                   variants={navVariants}
@@ -62,7 +60,7 @@ const Navbar = () => {
                   custom={index}
                   id="menu-item"
                   className={cn(
-                    "px-4 py-2 text-8xl flex flex-row font-lemonMilk",
+                    "py-2 text-3xl s:text-4xl whitespace-nowrap lg:text-8xl flex flex-row font-lemonMilk hover:scale-105 duration-100",
                     pathname.replace("/", "") === nav.path
                       ? "bg-primaryYellow "
                       : ""

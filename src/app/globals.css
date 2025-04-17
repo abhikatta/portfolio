@@ -67,6 +67,8 @@
   --color-darkBlue: #0a192f;
   --color-primaryYellow: #fff602;
   --color-primaryBlue: #1da1fe;
+  --breakpoint-xs: 375px;
+  --breakpoint-s: 425px;
 
   --font-bigShouldersStencil: var(--font-bigShouldersStencil);
   --font-syne: var(--font-syne);
