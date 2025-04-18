@@ -33,11 +33,6 @@ const HomeHero = () => {
   const SPACE_DIFFERENTIAL = 128;
 
   // TODO: un-hardcode this
-  const positions = [
-    `${SPACE_DIFFERENTIAL}px`,
-    "0px",
-    `-${SPACE_DIFFERENTIAL}px`,
-  ];
 
   const iAm = ["Frontend dev", "UI enjoyer", "Animation abuser"];
 
@@ -63,14 +58,22 @@ const HomeHero = () => {
   const controls = useAnimationControls();
 
   useEffect(() => {
-    console.log(isMobile);
+    let positions: string[];
+    if (isMobile) {
+      positions = ["96px", "0px", "-96px"];
+    } else {
+      positions = [
+        `${SPACE_DIFFERENTIAL}px`,
+        "0px",
+        `-${SPACE_DIFFERENTIAL}px`,
+      ];
+    }
     let thisIndex = 0;
     const animateLoop = async () => {
       while (true) {
         setCurrentIndex(thisIndex);
         await controls.start({
-          y: isMobile ? 0 : positions[thisIndex],
-          x: isMobile ? positions[thisIndex] : 0,
+          y: positions[thisIndex],
           transition: {
             duration: 0.5,
             ease: "easeInOut",
@@ -110,19 +113,19 @@ const HomeHero = () => {
           ))}
         </motion.div>
       </div>
-      <div className="mt-5 lg:mt-20 w-full h-auto relative overflow-hidden flex lg:flex-row flex-col items-center justify-center">
-        <h2 className="font-boldonse text-xl lg:text-2xl whitespace-nowrap min-w-[7rem] 2xl:text-4xl">
+      <div className="lg:mt-20 w-full h-auto relative overflow-hidden flex flex-row items-center justify-center">
+        <h2 className="font-boldonse left-auto right-auto text-xl lg:text-2xl whitespace-nowrap min-w-fit mr-5 lg:mr-0 lg:min-w-[7rem] 2xl:text-4xl">
           I am a
         </h2>
         <motion.div
           animate={controls}
-          className="h-full ml-0 lg:ml-[5rem] mr-auto w-full flex lg:flex-col flex-row items-start justify-between"
+          className="h-full ml-0 lg:ml-[5rem] mr-auto w-full flex flex-col items-start justify-between"
         >
           {iAm.map((i, ind) => (
             <motion.h1
               key={ind}
               className={cn(
-                "text-2xl lg:text-6xl font-lemonMilk h-fit my-6 px-4 py-2",
+                "text-2xl lg:text-6xl font-lemonMilk h-fit w-fit whitespace-nowrap my-6 px-4 py-2",
                 ind === currentIndex
                   ? "text-primaryYellow border-1 border-primaryYellow"
                   : "text-blue-900 blur-[8px]"
