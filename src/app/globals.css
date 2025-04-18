@@ -53,7 +53,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --font-poppins: "Poppins", sans-serif;
+  --font-poppins: "Poppins", system-ui;
   --font-bigShouldersStencil: "Big Shoulders Stencil", var(--font-poppins);
   --font-boldonse: "Boldonse", var(--font-poppins);
   --font-syne: "Syne", var(--font-poppins);

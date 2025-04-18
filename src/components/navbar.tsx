@@ -32,7 +32,7 @@ const Navbar = () => {
     exit: (delayValue: number) => ({
       opacity: 0,
       transition: {
-        duration: 0.25,
+        duration: 0.35,
         delay: delayValue * 0.075,
         type: "spring",
       },
@@ -60,7 +60,7 @@ const Navbar = () => {
                   custom={index}
                   id="menu-item"
                   className={cn(
-                    "py-2 text-3xl s:text-4xl whitespace-nowrap lg:text-8xl flex flex-row font-lemonMilk hover:scale-105 duration-100",
+                    "py-2 text-3xl s:text-4xl whitespace-nowrap lg:text-8xl flex flex-row font-lemonMilk lg:hover:scale-105 lg:duration-100",
                     pathname.replace("/", "") === nav.path
                       ? "bg-primaryYellow "
                       : ""
