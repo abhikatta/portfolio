@@ -44,12 +44,13 @@ const Navbar = () => {
         <button
           onClick={toggleMenu}
           onMouseEnter={toggleMenu}
-          className="absolute top-0 left-0 size-[40px] cursor-pointer z-999 mt-20">
+          className="absolute top-0 left-0 size-[40px] cursor-pointer z-999 mt-10 2xl:mt-20"
+        >
           <HamburgerMenuIcon isOpen={isOpen} />
         </button>
         <AnimatePresence mode="sync">
           {isOpen && (
-            <div className="absolute left-0 top-0 flex flex-col gap-y-8 max-h-[90vh] lg:max-h-screen h-screen w-full items-start justify-center bg-primaryBlue z-100">
+            <div className="absolute lg:pt-5 2xl:pt-0 left-0 top-0 flex flex-col lg:gap-y-6 2xl:gap-y-8 max-h-[90vh] lg:max-h-screen h-screen w-full items-start justify-center bg-primaryBlue z-100">
               {navItems.map((nav, index) => (
                 <motion.a
                   variants={navVariants}
@@ -60,12 +61,13 @@ const Navbar = () => {
                   custom={index}
                   id="menu-item"
                   className={cn(
-                    "py-2 text-3xl s:text-4xl whitespace-nowrap lg:text-8xl flex flex-row font-lemonMilk lg:hover:scale-105 lg:duration-100",
+                    "py-2 text-3xl s:text-4xl whitespace-nowrap lg:text-7xl 2xl:text-8xl flex flex-row font-lemonMilk lg:hover:scale-105 lg:duration-100",
                     pathname.replace("/", "") === nav.path
                       ? "bg-primaryYellow "
                       : ""
                   )}
-                  href={`/${nav.path}`}>
+                  href={`/${nav.path}`}
+                >
                   {nav.name}
                 </motion.a>
               ))}

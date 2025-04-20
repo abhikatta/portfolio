@@ -92,7 +92,7 @@ const HomeHero = () => {
 
   return (
     <Container className="flex flex-col items-start justify-between pt-20">
-      <div className="mt-30 h-auto flex flex-col">
+      <div className=" mt-14 2xl:mt-30 h-auto flex flex-col">
         <p className="text-2xl lg:text-5xl font-syne mb-10 lg:mb-20">
           hi, my name is
         </p>
