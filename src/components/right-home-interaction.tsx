@@ -40,7 +40,7 @@ const RightHomeInteraction = () => {
   };
   const getColor = () =>
     ALL_COLORS[Math.floor(Math.random() * ALL_COLORS.length)];
-
+  // TODO: make this stagger like a ripple effect
   return (
     <MotionDiv className="grid rotate-45 grid-cols-10 gap-4">
       {Array.from({ length: GRID_SIZE }).map((_, indexi) =>
