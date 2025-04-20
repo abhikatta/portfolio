@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import PageLoad from "@/components/page-load";
+import WaitForLoad from "@/components/wait-for-load";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -10,14 +11,14 @@ const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 export const metadata: Metadata = {
-  title: "Abhinay Katta | Frontend & Game Developer",
+  title: "Abhinay Katta | Portfolio",
   description:
     "Frontend developer with a sharp eye for design, speed, and performance. Specializing in React, Next.js, Tailwind, and some experience in  Python and Unity game development.",
   keywords:
     "Frontend Developer, Web Developer, Game Developer, React, TailwindCSS, Unity, Python, JavaScript, Next.js, UI/UX, Performance Optimization, Abhinay Katta Portfolio",
   robots: "index, follow",
   openGraph: {
-    title: "Abhinay Katta | Frontend & Game Dev",
+    title: "Abhinay Katta | Portfolio",
     description:
       "Frontend developer with a sharp eye for design, speed, and performance. Specializing in React, Next.js, Tailwind, and some experience in  Python and Unity game development.",
     url: "https://abhikatta.vercel.app",
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@abhikkatta",
     creator: "@abhikkatta",
-    title: "Abhinay Katta | Frontend & Game Developer",
+    title: "Abhinay Katta | Portfolio",
     description:
       "Frontend developer with a sharp eye for design, speed, and performance. Specializing in React, Next.js, Tailwind, and some experience in  Python and Unity game development.",
     images: ["/favicon-32x32.png"],
@@ -50,9 +51,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} antialiased`}>
-        <Navbar />
         <PageLoad />
-        {children}
+        <WaitForLoad>
+          <Navbar />
+          {children}
+        </WaitForLoad>
       </body>
     </html>
   );

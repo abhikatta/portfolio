@@ -1,0 +1,2 @@
+export const BAR_LOADING_DELAY = 1;
+export const BAR_LOADING_TOTAL_TIME = BAR_LOADING_DELAY + 1.5;
