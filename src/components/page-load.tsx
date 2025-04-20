@@ -8,7 +8,7 @@ import { motion, Variants } from "motion/react";
 const PageLoad = () => {
   const COLOR_OPTIONS = ["bg-white", "bg-[#FF0000]", "bg-[#FFD700]"];
 
-  const BARS_COUNT = Math.ceil(Math.random() * 6) + 2;
+  const BARS_COUNT = Math.ceil(Math.random() * 10);
 
   const loadVariants: Variants = {
     initial: {
