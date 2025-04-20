@@ -6,11 +6,11 @@ const RevealBox = () => {
   const opacity = useTransform(x, [-100, 0, 100], [1, 0.2, 1]);
 
   return (
-    <div className="relative w-full h-[150px] overflow-hidden">
+    <div className="relative h-[150px] w-full overflow-hidden">
       {/* Punchline (underneath) */}
       <motion.div
         style={{ opacity }}
-        className="absolute inset-0 z-0 p-4 text-lg font-mono text-white"
+        className="absolute inset-0 z-0 p-4 font-mono text-lg text-white"
       >
         Currently breaking pixels and writing tests at a startup.
         <br />
@@ -21,7 +21,7 @@ const RevealBox = () => {
       <motion.div
         drag
         dragConstraints={{ left: -100, right: 100, top: 100, bottom: -100 }}
-        className="z-10 relative w-full h-full flex items-center justify-center bg-yellow-400 font-bold cursor-grab text-black"
+        className="relative z-10 flex h-full w-full cursor-grab items-center justify-center bg-yellow-400 font-bold text-black"
       >
         🕹 Drag to reveal
       </motion.div>
