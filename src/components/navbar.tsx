@@ -61,7 +61,7 @@ const Navbar = () => {
                   custom={index}
                   id="menu-item"
                   className={cn(
-                    "s:text-4xl font-lemonMilk flex flex-row py-2 text-3xl whitespace-nowrap hover:cursor-none hover:underline lg:text-7xl lg:duration-100 lg:hover:scale-105 2xl:text-8xl",
+                    "s:text-4xl font-lemonMilk flex flex-row py-2 text-3xl whitespace-nowrap lg:text-7xl lg:duration-100 lg:hover:scale-105 2xl:text-8xl",
                     pathname.replace("/", "") === nav.path
                       ? "bg-primaryYellow"
                       : "",
