@@ -61,6 +61,7 @@
 }
 
 @theme inline {
+  --animate-slow-spin: 5s spin linear infinite;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 

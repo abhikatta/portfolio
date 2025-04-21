@@ -11,7 +11,6 @@ const RightHomeInteraction = () => {
     "var(--color-primaryBlue)",
     "var(--color-lightBlue)",
     "var(--color-accentYellow)",
-    "var(--color-bloodRed)",
     "var(--color-black)",
     "var(--color-deepRed)",
     "var(--color-accentBlue)",
@@ -23,6 +22,7 @@ const RightHomeInteraction = () => {
   ];
 
   const GRID_SIZE = 10;
+
   const indexVariant: Variants = {
     initial: {
       scale: "90%",
@@ -30,11 +30,16 @@ const RightHomeInteraction = () => {
     },
     animate: (delay: number) => ({
       backgroundColor: ALL_COLORS,
-      scale: "110%",
+      scale: [1, 2, 2, 1, 1],
+      rotate: [0, 0, 180, 180, 0],
+      borderRadius: ["0%", "0%", "50%", "50%", "0%"],
       transition: {
-        repeat: Infinity,
-        duration: ALL_COLORS.length * 2,
+        duration: 2,
         delay: delay * 0.4,
+        ease: "easeInOut",
+        times: [0, 0.2, 0.5, 0.8, 1],
+        repeat: Infinity,
+        repeatDelay: 1,
       },
     }),
   };
@@ -42,12 +47,12 @@ const RightHomeInteraction = () => {
     ALL_COLORS[Math.floor(Math.random() * ALL_COLORS.length)];
   // TODO: make this stagger like a ripple effect
   return (
-    <MotionDiv className="grid rotate-45 grid-cols-10 gap-4">
+    <MotionDiv className="animate-slow-spin grid grid-cols-10 gap-4">
       {Array.from({ length: GRID_SIZE }).map((_, indexi) =>
         Array.from({ length: GRID_SIZE }).map((_, indexj) => (
           <MotionDiv
             variants={indexVariant}
-            custom={Math.abs(indexi - indexj)}
+            custom={Math.abs((indexi - indexj) / 2)}
             style={{ backgroundColor: getColor() }}
             className={cn("size-5 rounded-full")}
             key={`${indexi}-${indexj}`}
