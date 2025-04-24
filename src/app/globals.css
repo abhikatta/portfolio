@@ -65,20 +65,13 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  --color-darkBlue: #0a192f;
   --color-primaryYellow: #fff602;
   --color-primaryBlue: #1da1fe;
+
   --color-lightBlue: #add8e6;
   --color-accentYellow: #ffd700;
-  --color-bloodRed: #8b0000;
-
-  --color-black: #000000;
-  --color-deepRed: #8b0000;
   --color-accentBlue: #1e90ff;
-
   --color-viltrumRed: #ff0000;
-  --color-gray: #808080;
-  --color-darkGray: #a9a9a9;
   --color-white: #ffffff;
   --color-sinisterYellow: #ffd700;
 
