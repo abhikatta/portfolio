@@ -39,3 +39,17 @@ Animations Ideas:
 
 for projects or some card type elements:
 3 level of base each stagger and slide down below the card/element like a stacked base
+
+TODOs:
+[ ] - page load animation
+[ ] - home page leftt section animation
+[ ] - home page right section interactive animation
+[ ] - experience page : about section
+[ ] - experience page : experience flow diagram
+[ ] - work page: short video of projects worked or some better way of representation with cards
+[ ] - personal projects page: videos or some better card representation way
+[ ] - contact page: some interactive animation in form
+
+References:
+
+About : https://www.braydoncoyer.dev/about
