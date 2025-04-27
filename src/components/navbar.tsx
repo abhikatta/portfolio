@@ -35,7 +35,7 @@ const NavItem = ({ navVariants, index, nav, setPosition }: NavElement) => {
   const hidePill = () => setPosition((prev) => ({ ...prev, opacity: 0 }));
 
   return (
-    <div className="flex h-auto w-full flex-row items-center justify-between">
+    <div className="flex h-auto w-full flex-row items-start justify-between lg:items-center">
       <motion.a
         ref={ref}
         variants={navVariants}
@@ -47,7 +47,7 @@ const NavItem = ({ navVariants, index, nav, setPosition }: NavElement) => {
         custom={index}
         id="menu-item"
         className={cn(
-          "s:text-4xl font-lemonMilk text-primaryBlue z-10 flex flex-row p-2 text-3xl whitespace-nowrap mix-blend-difference lg:text-7xl 2xl:text-8xl",
+          "s:text-[34px] font-lemonMilk text-primaryBlue z-10 flex flex-row px-1.5 py-2 text-3xl whitespace-nowrap mix-blend-difference md:text-5xl lg:p-2 lg:text-7xl 2xl:text-8xl",
           pathname.replace("/", "") === nav.path ? "border" : "",
         )}
         href={`/${nav.path}`}
@@ -55,7 +55,7 @@ const NavItem = ({ navVariants, index, nav, setPosition }: NavElement) => {
         {nav.name}
       </motion.a>
       {nav.isWorkInProgress && (
-        <p className="font-syne text-xl text-black/75">
+        <p className="font-syne hidden text-xl text-black/75 xl:flex">
           {"["}Page is still work in progress{"]"}
         </p>
       )}
