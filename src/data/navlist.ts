@@ -1,4 +1,6 @@
-export const navItems: { name: string; path: string }[] = [
+import { NavItem } from "@/utils/types";
+
+export const navItems: NavItem[] = [
   {
     name: "Home",
   },
