@@ -10,6 +10,7 @@ export interface Bar {
 export interface NavItem {
   name: string;
   path: string;
+  isWorkInProgress: boolean;
 }
 export interface Position {
   top: number;
@@ -21,7 +22,6 @@ export interface Position {
 export interface NavElement {
   navVariants: Variants;
   index: number;
-  pathname: string;
   setPosition: Dispatch<SetStateAction<Position>>;
 
   nav: NavItem;

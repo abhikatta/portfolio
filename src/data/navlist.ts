@@ -13,4 +13,5 @@ export const navItems: NavItem[] = [
 ].map((item) => ({
   ...item,
   path: item.name === "Home" ? "" : item.name.replace(" ", "-").toLowerCase(),
+  isWorkInProgress: item.name === "Home" ? false : true,
 }));
