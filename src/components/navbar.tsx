@@ -110,7 +110,7 @@ const Navbar = () => {
   };
   return (
     <Container>
-      <nav className="relative flex flex-col items-center justify-center">
+      <nav className="relative">
         <button
           onClick={toggleMenu}
           onMouseEnter={toggleMenu}
@@ -123,7 +123,7 @@ const Navbar = () => {
         </button>
         <AnimatePresence mode="sync">
           {isOpen && (
-            <div className="bg-primaryBlue absolute top-0 left-0 z-100 flex h-screen max-h-[100vh] w-full flex-col items-start justify-center lg:max-h-screen lg:gap-y-6 lg:pt-5 2xl:gap-y-8 2xl:pt-0">
+            <div className="bg-primaryBlue absolute top-0 left-0 z-100 flex h-screen w-full flex-col items-start justify-center lg:gap-y-6 lg:pt-5 2xl:gap-y-8 2xl:pt-20">
               {navItems.map((nav, index) => (
                 <NavItem
                   key={index}
