@@ -78,7 +78,7 @@ const HomeHero = () => {
           <p className="font-syne mb-10 text-2xl lg:mb-20 lg:text-5xl">
             hi, my name is
           </p>
-          <motion.div id="header-title" className="flex flex-row">
+          <div id="header-title" className="flex flex-row">
             {"Abhinay Katta".split("").map((letter, index) => (
               <motion.span
                 variants={NameVariants}
@@ -93,7 +93,7 @@ const HomeHero = () => {
                 {letter}
               </motion.span>
             ))}
-          </motion.div>
+          </div>
         </div>
         <div className="relative flex h-auto w-full flex-row items-center justify-center overflow-hidden 2xl:mt-20">
           <h2 className="font-boldonse right-auto left-auto mr-5 min-w-fit text-xl whitespace-nowrap lg:mr-0 lg:min-w-[5.5rem] 2xl:min-w-[7rem] 2xl:text-4xl">
@@ -104,7 +104,7 @@ const HomeHero = () => {
             className="mr-auto ml-0 flex h-full w-full flex-col items-start justify-between 2xl:ml-[5rem]"
           >
             {iAm.map((i, ind) => (
-              <motion.h1
+              <h1
                 key={ind}
                 className={cn(
                   "font-lemonMilk my-6 h-fit w-fit px-4 py-2 text-2xl whitespace-nowrap lg:text-6xl",
@@ -114,7 +114,7 @@ const HomeHero = () => {
                 )}
               >
                 {i}
-              </motion.h1>
+              </h1>
             ))}
           </motion.div>
         </div>

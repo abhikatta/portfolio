@@ -1,8 +1,7 @@
 "use client";
 
 import { cn } from "@/utils/cn";
-import { MotionDiv } from "@/utils/variant-props-spread";
-import { animate, motion } from "motion/react";
+import { animate } from "motion/react";
 import { memo } from "react";
 
 const idConstructor = (i: number, j: number) => `#${i}-${j}`;
@@ -54,10 +53,10 @@ const RightHomeInteraction = memo(() => {
 
   // TODO: make this stagger like a ripple effect or something like the particles js thing that pushes away neighboring elements
   return (
-    <MotionDiv className="relative z-10 grid grid-cols-10">
+    <div className="relative z-10 grid grid-cols-10">
       {Array.from({ length: GRID_SIZE }).map((_, indexj) =>
         Array.from({ length: GRID_SIZE }).map((_, indexi) => (
-          <motion.div
+          <div
             id={idConstructor(indexi, indexj)}
             onMouseOver={() => animateGrid(indexi, indexj, "enter")}
             onMouseLeave={() => animateGrid(indexi, indexj, "leave")}
@@ -68,7 +67,7 @@ const RightHomeInteraction = memo(() => {
           />
         )),
       )}
-    </MotionDiv>
+    </div>
   );
 });
 
