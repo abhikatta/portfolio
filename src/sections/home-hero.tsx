@@ -34,6 +34,9 @@ const HomeHero = () => {
         type: "spring",
       },
     }),
+    hoverAnimate: {
+      fontWeight: 900,
+    },
   };
 
   const controls = useAnimationControls();
@@ -84,11 +87,12 @@ const HomeHero = () => {
                 variants={NameVariants}
                 initial="initial"
                 animate="animate"
+                whileHover="hoverAnimate"
                 custom={index}
                 key={index}
                 viewport={{ once: true }}
                 id="header-alphabet"
-                className="!font-boldonse !text-primaryYellow text-4xl leading-20 font-black uppercase lg:text-7xl 2xl:text-8xl"
+                className="!font-boldonse !text-primaryYellow text-4xl leading-20 font-normal tracking-tight uppercase lg:text-7xl 2xl:text-8xl"
               >
                 {letter}
               </motion.span>
