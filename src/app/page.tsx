@@ -1,10 +1,8 @@
-import HomeHero from "@/sections/home-hero";
-import TrippyScroll from "@/components/something-spin-animation";
+import HomeHero from "@/sections/home-hero"; 
 export default function Home() {
   return (
     <>
-      <HomeHero />
-      <TrippyScroll />
+      <HomeHero /> 
     </>
   );
 }
