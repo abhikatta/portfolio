@@ -6,9 +6,29 @@ import { Bar } from "@/utils/types";
 import { motion, Variants } from "motion/react";
 import { useMemo, useState } from "react";
 
+const COLOR_OPTIONS = ["bg-white", "bg-[#FF0000]", "bg-[#FFD700]"];
+
+const getBars = (BARS_COUNT: number): Array<Bar> => {
+  const bars: Bar[] = [
+    {
+      delay: Math.random() * 0.5,
+      bgColor: "bg-[#FF0000]",
+    },
+  ];
+  //   const barColor =
+  //     COLOR_OPTIONS[Math.floor(Math.random() * COLOR_OPTIONS.length)];
+  //   for (let index = 0; index < BARS_COUNT; index++) {
+  //     bars.push({
+  //       delay: Math.random() * 0.5,
+  //       bgColor: barColor,
+  //     });
+  //   }
+
+  return bars;
+};
+
 const PageLoad = () => {
   const [isAnimationCompleted, setIsAnimationCompleted] = useState(false);
-  const COLOR_OPTIONS = ["bg-white", "bg-[#FF0000]", "bg-[#FFD700]"];
 
   const MAX_BARS = 10,
     MIN_BARS = 3;
@@ -28,19 +48,6 @@ const PageLoad = () => {
         ease: [0.25, 1, 0.5, 1],
       },
     }),
-  };
-
-  const getBars = (BARS_COUNT: number): Array<Bar> => {
-    const bars: Bar[] = [];
-    const barColor =
-      COLOR_OPTIONS[Math.floor(Math.random() * COLOR_OPTIONS.length)];
-    for (let index = 0; index < BARS_COUNT; index++) {
-      bars.push({
-        delay: Math.random() * 0.5,
-        bgColor: barColor,
-      });
-    }
-    return bars;
   };
 
   const bars = useMemo(() => getBars(BARS_COUNT), [BARS_COUNT]);
