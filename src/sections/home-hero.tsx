@@ -75,58 +75,61 @@ const HomeHero = () => {
   }, [isMobile]);
 
   return (
-    <Container className="flex flex-row items-start justify-between pt-20">
-      <div>
-        <div className="mt-14 flex h-auto flex-col 2xl:mt-30">
-          <p className="font-syne mb-10 text-2xl lg:mb-20 lg:text-5xl">
-            hi, my name is
-          </p>
-          <div id="header-title" className="flex flex-row">
-            {"Abhinay Katta".split("").map((letter, index) => (
-              <motion.span
-                variants={NameVariants}
-                initial="initial"
-                animate="animate"
-                whileHover="hoverAnimate"
-                custom={index}
-                key={index}
-                viewport={{ once: true }}
-                id="header-alphabet"
-                className="!font-boldonse !text-primaryYellow text-4xl leading-20 font-normal tracking-tight uppercase lg:text-7xl 2xl:text-8xl"
-              >
-                {letter}
-              </motion.span>
-            ))}
+    <div className="backdrop-blur-sm">
+      <Container className="flex min-h-screen w-full flex-row items-start justify-between pt-20">
+        <div className="absolute top-0 left-0 -z-10" />
+        <div>
+          <div className="mt-14 flex h-auto flex-col 2xl:mt-30">
+            <p className="font-syne mb-10 text-2xl lg:mb-20 lg:text-5xl">
+              hi, my name is
+            </p>
+            <div id="header-title" className="flex flex-row">
+              {"Abhinay Katta".split("").map((letter, index) => (
+                <motion.span
+                  variants={NameVariants}
+                  initial="initial"
+                  animate="animate"
+                  whileHover="hoverAnimate"
+                  custom={index}
+                  key={index}
+                  viewport={{ once: true }}
+                  id="header-alphabet"
+                  className="!font-boldonse !text-primaryYellow text-4xl leading-20 font-normal tracking-tight uppercase lg:text-7xl 2xl:text-8xl"
+                >
+                  {letter}
+                </motion.span>
+              ))}
+            </div>
+          </div>
+          <div className="relative flex h-auto w-full flex-row items-center justify-center overflow-hidden 2xl:mt-20">
+            <h2 className="font-boldonse right-auto left-auto mr-5 min-w-fit text-xl whitespace-nowrap lg:mr-0 lg:min-w-[5.5rem] 2xl:min-w-[7rem] 2xl:text-4xl">
+              I am a
+            </h2>
+            <motion.div
+              animate={controls}
+              className="mr-auto ml-0 flex h-full w-full flex-col items-start justify-between 2xl:ml-[5rem]"
+            >
+              {iAm.map((i, ind) => (
+                <h1
+                  key={ind}
+                  className={cn(
+                    "font-lemonMilk my-6 h-fit w-fit px-4 py-2 text-2xl whitespace-nowrap lg:text-6xl",
+                    ind === currentIndex
+                      ? "text-primaryYellow border-primaryYellow border-1"
+                      : "text-blue-200 blur-[8px]",
+                  )}
+                >
+                  {i}
+                </h1>
+              ))}
+            </motion.div>
           </div>
         </div>
-        <div className="relative flex h-auto w-full flex-row items-center justify-center overflow-hidden 2xl:mt-20">
-          <h2 className="font-boldonse right-auto left-auto mr-5 min-w-fit text-xl whitespace-nowrap lg:mr-0 lg:min-w-[5.5rem] 2xl:min-w-[7rem] 2xl:text-4xl">
-            I am a
-          </h2>
-          <motion.div
-            animate={controls}
-            className="mr-auto ml-0 flex h-full w-full flex-col items-start justify-between 2xl:ml-[5rem]"
-          >
-            {iAm.map((i, ind) => (
-              <h1
-                key={ind}
-                className={cn(
-                  "font-lemonMilk my-6 h-fit w-fit px-4 py-2 text-2xl whitespace-nowrap lg:text-6xl",
-                  ind === currentIndex
-                    ? "text-primaryYellow border-primaryYellow border-1"
-                    : "text-blue-900 blur-[8px]",
-                )}
-              >
-                {i}
-              </h1>
-            ))}
-          </motion.div>
+        <div className="mx-auto my-auto hidden xl:block">
+          <RightHomeInteraction />
         </div>
-      </div>
-      <div className="mx-auto my-auto hidden xl:block">
-        <RightHomeInteraction />
-      </div>
-    </Container>
+      </Container>
+    </div>
   );
 };
 

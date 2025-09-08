@@ -1,8 +1,10 @@
-import HomeHero from "@/sections/home-hero"; 
+import { BallBg } from "@/components/balls/ball-bg";
+import HomeHero from "@/sections/home-hero";
 export default function Home() {
   return (
     <>
-      <HomeHero /> 
+      <BallBg />
+      <HomeHero />
     </>
   );
 }

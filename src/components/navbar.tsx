@@ -110,35 +110,38 @@ const Navbar = () => {
   };
   return (
     <Container>
-      <nav className="relative">
-        <button
-          onClick={toggleMenu}
-          onMouseEnter={toggleMenu}
-          className={cn(
-            "absolute top-0 left-0 z-999 mt-10 size-[40px] cursor-pointer 2xl:mt-20",
-            is404 && "mt-8 2xl:mt-12",
-          )}
-        >
-          <HamburgerMenuIcon isOpen={isOpen} />
-        </button>
-        <AnimatePresence mode="sync">
-          {isOpen && (
-            <div className="bg-primaryBlue absolute top-0 left-0 z-100 flex h-screen w-full flex-col items-start justify-center lg:gap-y-6 lg:pt-5 2xl:gap-y-8 2xl:pt-20">
-              {navItems.map((nav, index) => (
-                <NavItem
-                  key={index}
-                  index={index}
-                  nav={nav}
-                  setPosition={setPosition}
-                  navVariants={navVariants}
-                />
-              ))}
-              {is404 && <WildernessNavItem />}
-              <Pill {...position} />
-            </div>
-          )}
-        </AnimatePresence>
-      </nav>
+      <button
+        onClick={toggleMenu}
+        onMouseEnter={toggleMenu}
+        className={cn(
+          "absolute z-999 mt-10 size-[40px] cursor-pointer 2xl:mt-20",
+          is404 && "mt-8 2xl:mt-12",
+        )}
+      >
+        <HamburgerMenuIcon isOpen={isOpen} />
+      </button>
+      <AnimatePresence mode="sync">
+        {isOpen && (
+          <div
+            className={cn(
+              "bg-accentBlue absolute top-0 left-0 z-100 flex h-screen w-full flex-col items-start justify-center px-6 lg:gap-y-6 lg:pt-5 2xl:gap-y-8 2xl:px-24 2xl:pt-20",
+              "backdrop-blur-2xl",
+            )}
+          >
+            {navItems.map((nav, index) => (
+              <NavItem
+                key={index}
+                index={index}
+                nav={nav}
+                setPosition={setPosition}
+                navVariants={navVariants}
+              />
+            ))}
+            {is404 && <WildernessNavItem />}
+            <Pill {...position} />
+          </div>
+        )}
+      </AnimatePresence>
     </Container>
   );
 };

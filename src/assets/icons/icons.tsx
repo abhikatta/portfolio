@@ -42,16 +42,17 @@ export const HamburgerMenuIcon = ({
     <div
       {...props}
       className={cn(
-        "relative w-full h-full flex justify-center flex-col gap-y-2",
+        "relative flex h-full w-full flex-col justify-center gap-y-2",
         isOpen ? "items-center" : "",
-        className
-      )}>
+        className,
+      )}
+    >
       <AnimatePresence mode="wait">
         {!isOpen ? (
           <>
-            <motion.div className="w-3/5 mr-auto border-1 rounded-full border-gray-600" />
-            <motion.div className="w-full border-1 rounded-full border-gray-600" />
-            <motion.div className="w-3/5 ml-auto border-1 rounded-full border-gray-600" />
+            <motion.div className="mr-auto w-3/5 rounded-full border-1 border-gray-600" />
+            <motion.div className="w-full rounded-full border-1 border-gray-600" />
+            <motion.div className="ml-auto w-3/5 rounded-full border-1 border-gray-600" />
           </>
         ) : (
           <>
@@ -61,14 +62,14 @@ export const HamburgerMenuIcon = ({
               animate="animate"
               exit="exit"
               custom={1}
-              className="w-3/5  border-1 rounded-full border-gray-600"
+              className="w-3/5 rounded-full border-1 border-gray-600"
             />
             <motion.div
               variants={MiddleVariant}
               initial="initial"
               animate="animate"
               exit="exit"
-              className="w-full border-1 rounded-full border-gray-600"
+              className="w-full rounded-full border-1 border-gray-600"
             />
             <motion.div
               variants={otherVariant}
@@ -76,7 +77,7 @@ export const HamburgerMenuIcon = ({
               animate="animate"
               exit="exit"
               custom={2}
-              className="w-3/5  border-1 rounded-full border-gray-600"
+              className="w-3/5 rounded-full border-1 border-gray-600"
             />
           </>
         )}
