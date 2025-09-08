@@ -2,7 +2,6 @@
 import Container from "@/components/container";
 import UseIs404 from "@/hooks/use-is-404";
 import Link from "next/link";
-import React from "react";
 
 const Page = () => {
   const { is404 } = UseIs404();

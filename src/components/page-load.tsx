@@ -1,40 +1,24 @@
 "use client";
 
-import { BAR_LOADING_DELAY, BAR_LOADING_TOTAL_TIME } from "@/data/constants";
+import {
+  BAR_LOADING_DELAY,
+  BAR_LOADING_TOTAL_TIME,
+  MAX_BARS,
+  MIN_BARS,
+} from "@/data/constants";
 import { cn } from "@/utils/cn";
+import { getBars } from "@/utils/get-bars";
 import { Bar } from "@/utils/types";
 import { motion, Variants } from "motion/react";
-import { useMemo, useState } from "react";
-
-const COLOR_OPTIONS = ["bg-white", "bg-[#FF0000]", "bg-[#FFD700]"];
-
-const getBars = (BARS_COUNT: number): Array<Bar> => {
-  const bars: Bar[] = [
-    {
-      delay: Math.random() * 0.5,
-      bgColor: "bg-[#FF0000]",
-    },
-  ];
-  //   const barColor =
-  //     COLOR_OPTIONS[Math.floor(Math.random() * COLOR_OPTIONS.length)];
-  //   for (let index = 0; index < BARS_COUNT; index++) {
-  //     bars.push({
-  //       delay: Math.random() * 0.5,
-  //       bgColor: barColor,
-  //     });
-  //   }
-
-  return bars;
-};
+import { useEffect, useState } from "react";
 
 const PageLoad = () => {
   const [isAnimationCompleted, setIsAnimationCompleted] = useState(false);
+  const [bars, setBars] = useState<Bar[] | null>(null);
 
-  const MAX_BARS = 10,
-    MIN_BARS = 3;
-
-  const BARS_COUNT =
-    Math.ceil(Math.random() * (MAX_BARS - MIN_BARS + 1)) + MIN_BARS;
+  useEffect(() => {
+    setBars(getBars(MAX_BARS, MIN_BARS));
+  }, []);
 
   const loadVariants: Variants = {
     initial: {
@@ -50,8 +34,7 @@ const PageLoad = () => {
     }),
   };
 
-  const bars = useMemo(() => getBars(BARS_COUNT), [BARS_COUNT]);
-  const maxDelay = Math.max(...bars.map((bar) => bar.delay));
+  const maxDelay = bars ? Math.max(...bars.map((bar) => bar.delay)) : 0;
 
   return (
     !isAnimationCompleted && (
@@ -59,23 +42,24 @@ const PageLoad = () => {
         variants={loadVariants}
         className="absolute flex h-screen w-full flex-row items-center justify-center overflow-hidden"
       >
-        {bars.map((bar, index) => (
-          <motion.div
-            key={index}
-            variants={loadVariants}
-            initial="initial"
-            onAnimationComplete={() => {
-              if (maxDelay === bar.delay) {
-                setTimeout(() => {
-                  setIsAnimationCompleted(true);
-                }, 500);
-              }
-            }}
-            animate="animate"
-            custom={bar.delay}
-            className={cn("h-[100vh] w-full rounded-t-full", bar.bgColor)}
-          />
-        ))}
+        {bars &&
+          bars.map((bar, index) => (
+            <motion.div
+              key={index}
+              variants={loadVariants}
+              initial="initial"
+              onAnimationComplete={() => {
+                if (maxDelay === bar.delay) {
+                  setTimeout(() => {
+                    setIsAnimationCompleted(true);
+                  }, 500);
+                }
+              }}
+              animate="animate"
+              custom={bar.delay}
+              className={cn("h-[100vh] w-full rounded-t-full", bar.bgColor)}
+            />
+          ))}
       </motion.div>
     )
   );
