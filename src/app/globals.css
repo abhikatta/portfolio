@@ -103,3 +103,7 @@ body {
   background: var(--color-primaryBlue);
   color: var(--color-darkBlue);
 }
+
+* {
+  cursor: url("/custom-cursor.svg"), auto;
+}

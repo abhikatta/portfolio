@@ -22,10 +22,10 @@ const HomeHero = () => {
       x: -100,
       opacity: 0,
       y: -100,
-      skew: 45,
+      skewX: 45,
     },
     animate: (delayValue: number) => ({
-      skew: 0,
+      skewX: 0,
       x: 0,
       y: 0,
       opacity: 1,

@@ -10,13 +10,17 @@ const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
+
 export const metadata: Metadata = {
   title: "Abhinay Katta | Portfolio",
   description:
     "Frontend developer with a sharp eye for design, speed, and performance. Specializing in React, Next.js, Tailwind, and some experience in  Python and Unity game development.",
   keywords:
     "Frontend Developer, Web Developer, Game Developer, React, TailwindCSS, Unity, Python, JavaScript, Next.js, UI/UX, Performance Optimization, Abhinay Katta Portfolio",
-  robots: "index, follow",
+  robots: {
+    index: false,
+    follow: false,
+  },
   openGraph: {
     title: "Abhinay Katta | Portfolio",
     description:
