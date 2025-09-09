@@ -1,6 +1,7 @@
 "use client";
 import Container from "@/components/container";
 import RightHomeInteraction from "@/components/right-home-interaction";
+import { variantProps } from "@/components/variant-props-spread";
 import { useIsMobile } from "@/hooks/use-is-mobile";
 import { cn } from "@/utils/cn";
 import { motion, useAnimationControls, Variants } from "motion/react";
@@ -88,8 +89,7 @@ const HomeHero = () => {
               {"Abhinay Katta".split("").map((letter, index) => (
                 <motion.span
                   variants={NameVariants}
-                  initial="initial"
-                  animate="animate"
+                  {...variantProps}
                   whileHover="hoverAnimate"
                   custom={index}
                   key={index}

@@ -1,6 +1,6 @@
 // "use client";
 
-import { MotionDiv } from "@/utils/variant-props-spread";
+import { MotionDiv, variantProps } from "@/components/variant-props-spread";
 import { Variants } from "motion/react";
 
 // import { cn } from "@/utils/cn";
@@ -148,8 +148,7 @@ const Cpm = () => {
         <MotionDiv
           key={item}
           variants={variants}
-          initial="initial"
-          animate="animate"
+          {...variantProps}
           custom={item}
           className="bg-accentBlue absolute flex size-10 items-center justify-center"
         ></MotionDiv>

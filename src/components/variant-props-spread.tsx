@@ -1,7 +1,7 @@
-import { HTMLMotionProps, motion } from "motion/react";
+import { HTMLMotionProps, MotionProps, motion } from "motion/react";
 
 // too lazy to write different names for different variants, so spread this everywhere
-export const variantProps: Partial<HTMLMotionProps<"div">> = {
+export const variantProps: MotionProps = {
   initial: "initial",
   animate: "animate",
 };

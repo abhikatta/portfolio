@@ -1,4 +1,5 @@
 "use client";
+import { variantProps } from "@/components/variant-props-spread";
 import { cn } from "@/utils/cn";
 import { HTMLDivProps } from "@/utils/types";
 import { AnimatePresence, motion, Variants } from "motion/react";
@@ -58,23 +59,20 @@ export const HamburgerMenuIcon = ({
           <>
             <motion.div
               variants={otherVariant}
-              initial="initial"
-              animate="animate"
+              {...variantProps}
               exit="exit"
               custom={1}
               className="w-3/5 rounded-full border-1 border-gray-600"
             />
             <motion.div
               variants={MiddleVariant}
-              initial="initial"
-              animate="animate"
+              {...variantProps}
               exit="exit"
               className="w-full rounded-full border-1 border-gray-600"
             />
             <motion.div
               variants={otherVariant}
-              initial="initial"
-              animate="animate"
+              {...variantProps}
               exit="exit"
               custom={2}
               className="w-3/5 rounded-full border-1 border-gray-600"

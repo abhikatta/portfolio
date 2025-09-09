@@ -11,6 +11,7 @@ import { getBars } from "@/utils/get-bars";
 import { Bar } from "@/utils/types";
 import { motion, Variants } from "motion/react";
 import { useEffect, useState } from "react";
+import { variantProps } from "./variant-props-spread";
 
 const PageLoad = () => {
   const [isAnimationCompleted, setIsAnimationCompleted] = useState(false);
@@ -47,7 +48,7 @@ const PageLoad = () => {
             <motion.div
               key={index}
               variants={loadVariants}
-              initial="initial"
+              {...variantProps}
               onAnimationComplete={() => {
                 if (maxDelay === bar.delay) {
                   setTimeout(() => {
@@ -55,7 +56,6 @@ const PageLoad = () => {
                   }, 500);
                 }
               }}
-              animate="animate"
               custom={bar.delay}
               className={cn("h-[100vh] w-full rounded-t-full", bar.bgColor)}
             />

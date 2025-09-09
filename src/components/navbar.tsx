@@ -8,6 +8,7 @@ import { AnimatePresence, motion, Variants } from "motion/react";
 import { HamburgerMenuIcon } from "@/assets/icons/icons";
 import { NavElement, Position } from "@/utils/types";
 import useIs404 from "@/hooks/use-is-404";
+import { variantProps } from "./variant-props-spread";
 
 const initialPosition: Position = {
   top: 0,
@@ -38,11 +39,10 @@ const NavItem = ({ navVariants, index, nav, setPosition }: NavElement) => {
     <div className="flex h-auto w-full flex-row items-start justify-between lg:items-center">
       <motion.a
         ref={ref}
+        {...variantProps}
         variants={navVariants}
         onMouseEnter={getPropertiesForPill}
         onMouseLeave={hidePill}
-        initial="initial"
-        animate="animate"
         exit="exit"
         custom={index}
         id="menu-item"
