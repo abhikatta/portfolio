@@ -1,6 +1,6 @@
 // "use client";
 
-import { MotionDiv, variantProps } from "@/components/variant-props-spread";
+import { MotionDiv, variantProps } from "@/components/common-motion-elements";
 import { Variants } from "motion/react";
 
 // import { cn } from "@/utils/cn";

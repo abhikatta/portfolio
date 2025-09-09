@@ -1,7 +1,7 @@
 "use client";
 import Container from "@/components/container";
 import RightHomeInteraction from "@/components/right-home-interaction";
-import { variantProps } from "@/components/variant-props-spread";
+import { variantProps } from "@/components/common-motion-elements";
 import { useIsMobile } from "@/hooks/use-is-mobile";
 import { cn } from "@/utils/cn";
 import { motion, useAnimationControls, Variants } from "motion/react";

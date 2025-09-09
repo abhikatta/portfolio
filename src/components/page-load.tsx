@@ -11,7 +11,7 @@ import { getBars } from "@/utils/get-bars";
 import { Bar } from "@/utils/types";
 import { motion, Variants } from "motion/react";
 import { useEffect, useState } from "react";
-import { variantProps } from "./variant-props-spread";
+import { variantProps } from "./common-motion-elements";
 
 const PageLoad = () => {
   const [isAnimationCompleted, setIsAnimationCompleted] = useState(false);

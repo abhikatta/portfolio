@@ -7,7 +7,7 @@ import Container from "./container";
 import { AnimatePresence, motion, Variants } from "motion/react";
 import { HamburgerMenuIcon } from "@/assets/icons/icons";
 import { NavElement, Position } from "@/utils/types";
-import { variantProps } from "./variant-props-spread";
+import { variantProps } from "./common-motion-elements";
 
 const initialPosition: Position = {
   top: 0,

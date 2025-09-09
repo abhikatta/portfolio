@@ -1,9 +1,9 @@
-import { ExperienceFirstFold } from "@/sections/experience/experience";
+import { AboutFirstFold } from "@/sections/about/first-fold";
 
 const Page = () => {
   return (
     <>
-      <ExperienceFirstFold />
+      <AboutFirstFold />
     </>
   );
 };
