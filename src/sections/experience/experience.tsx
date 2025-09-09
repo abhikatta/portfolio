@@ -1,36 +1,7 @@
 "use client";
 import Container from "@/components/container";
-import {
-  useScroll,
-  motion,
-  HTMLMotionProps,
-  useTransform,
-  MotionValue,
-} from "motion/react";
+import { useScroll, motion, useTransform, MotionValue } from "motion/react";
 import { useRef } from "react";
-
-const Span = ({
-  children,
-  value,
-  range,
-  ...props
-}: HTMLMotionProps<"span"> & {
-  value: MotionValue<number>;
-  range: number[];
-}) => {
-  const opacity = useTransform(value, range, [0, 1]);
-
-  return (
-    <motion.span
-      {...props}
-      style={{
-        opacity,
-      }}
-    >
-      {children}
-    </motion.span>
-  );
-};
 
 const Paragraph = ({
   words,
@@ -43,6 +14,8 @@ const Paragraph = ({
     const start = index / words.length;
     const end = start + 1 / words.length;
     const range = [start, end];
+    const opacity = useTransform(scrollYProgress, range, [0, 1]);
+
     return (
       <span className={"relative"} key={index}>
         &nbsp;
@@ -50,11 +23,12 @@ const Paragraph = ({
           className="absolute opacity-20"
           dangerouslySetInnerHTML={{ __html: t }}
         />
-        <Span
-          value={scrollYProgress}
+        <motion.span
+          style={{
+            opacity,
+          }}
           dangerouslySetInnerHTML={{ __html: t }}
-          range={range}
-        ></Span>
+        ></motion.span>
       </span>
     );
   });
@@ -74,7 +48,7 @@ export const ExperienceFirstFold = () => {
   const words1 = paragraph1.split(" ");
 
   return (
-    <Container className="relative">
+    <Container className="relative py-[100vh]">
       <p
         className="font-poppins sticky top-0 flex flex-wrap text-4xl leading-16"
         ref={ref}
