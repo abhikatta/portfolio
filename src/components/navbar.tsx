@@ -2,7 +2,7 @@
 import { navItems } from "@/data/navlist";
 import { cn } from "@/utils/cn";
 import { usePathname } from "next/navigation";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Container from "./container";
 import { AnimatePresence, motion, Variants } from "motion/react";
 import { HamburgerMenuIcon } from "@/assets/icons/icons";
@@ -70,6 +70,15 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
   const [position, setPosition] = useState<Position>(initialPosition);
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
+
   const navVariants: Variants = {
     initial: {
       x: -100,
@@ -97,12 +106,18 @@ const Navbar = () => {
       },
     }),
   };
+
   return (
-    <Container className="flex min-h-24 items-center justify-start 2xl:min-h-40">
+    <Container
+      className={cn(
+        "flex min-h-24 items-center justify-start 2xl:min-h-40",
+        !isOpen && "relative",
+      )}
+    >
       <button
         onClick={toggleMenu}
         onMouseEnter={toggleMenu}
-        className={cn("absolute z-999 size-[40px] cursor-pointer")}
+        className={"fixed z-999 size-[40px] cursor-pointer"}
       >
         <HamburgerMenuIcon isOpen={isOpen} />
       </button>
@@ -110,7 +125,7 @@ const Navbar = () => {
         {isOpen && (
           <div
             className={cn(
-              "bg-accentBlue absolute top-0 left-0 z-100 flex h-screen w-full flex-col items-start justify-center px-6 lg:gap-y-6 2xl:gap-y-8 2xl:px-24",
+              "bg-accentBlue fixed top-0 left-0 z-100 flex h-screen w-full flex-col items-start justify-center px-6 lg:gap-y-6 2xl:gap-y-8 2xl:px-24",
               "pt-10 backdrop-blur-2xl",
             )}
           >
