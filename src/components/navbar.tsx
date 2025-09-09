@@ -109,12 +109,12 @@ const Navbar = () => {
     }),
   };
   return (
-    <Container>
+    <Container className="flex min-h-24 items-center justify-start 2xl:min-h-40">
       <button
         onClick={toggleMenu}
         onMouseEnter={toggleMenu}
         className={cn(
-          "absolute z-999 mt-10 size-[40px] cursor-pointer 2xl:mt-20",
+          "absolute z-999 size-[40px] cursor-pointer",
           is404 && "mt-8 2xl:mt-12",
         )}
       >
@@ -124,7 +124,7 @@ const Navbar = () => {
         {isOpen && (
           <div
             className={cn(
-              "bg-accentBlue absolute top-0 left-0 z-100 flex h-screen w-full flex-col items-start justify-center px-6 lg:gap-y-6 lg:pt-5 2xl:gap-y-8 2xl:px-24 2xl:pt-20",
+              "bg-accentBlue absolute top-0 left-0 z-100 flex h-screen w-full flex-col items-start justify-center px-6 lg:gap-y-6 2xl:gap-y-8 2xl:px-24",
               "backdrop-blur-2xl",
             )}
           >

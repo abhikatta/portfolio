@@ -49,5 +49,7 @@ export const BallBg = () => {
     };
   }, []);
 
-  return <canvas className="absolute -z-10 h-screen w-full" ref={canvasRef} />;
+  return (
+    <canvas className="absolute top-0 -z-10 h-full w-full" ref={canvasRef} />
+  );
 };

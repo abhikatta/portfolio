@@ -75,11 +75,12 @@ const HomeHero = () => {
   }, [isMobile]);
 
   return (
-    <div className="backdrop-blur-sm">
-      <Container className="flex min-h-screen w-full flex-row items-start justify-between pt-20">
-        <div className="absolute top-0 left-0 -z-10" />
+    <>
+      <div className="absolute top-0 left-0 -z-10 h-screen w-full backdrop-blur-sm"></div>
+
+      <Container className="z-10 flex w-full flex-row items-start justify-between">
         <div>
-          <div className="mt-14 flex h-auto flex-col 2xl:mt-30">
+          <div className="flex h-auto flex-col">
             <p className="font-syne mb-10 text-2xl lg:mb-20 lg:text-5xl">
               hi, my name is
             </p>
@@ -129,7 +130,7 @@ const HomeHero = () => {
           <RightHomeInteraction />
         </div>
       </Container>
-    </div>
+    </>
   );
 };
 

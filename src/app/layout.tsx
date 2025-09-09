@@ -58,7 +58,9 @@ export default function RootLayout({
         <PageLoad />
         <WaitForLoad>
           <Navbar />
-          {children}
+          <main className="max-h-[calc(100vh-6rem)] 2xl:max-h-[calc(100vh-10rem)]">
+            {children}
+          </main>
         </WaitForLoad>
       </body>
     </html>
