@@ -7,7 +7,6 @@ import Container from "./container";
 import { AnimatePresence, motion, Variants } from "motion/react";
 import { HamburgerMenuIcon } from "@/assets/icons/icons";
 import { NavElement, Position } from "@/utils/types";
-import useIs404 from "@/hooks/use-is-404";
 import { variantProps } from "./variant-props-spread";
 
 const initialPosition: Position = {
@@ -47,7 +46,7 @@ const NavItem = ({ navVariants, index, nav, setPosition }: NavElement) => {
         custom={index}
         id="menu-item"
         className={cn(
-          "s:text-[34px] font-lemonMilk text-primaryBlue z-10 flex flex-row px-1.5 py-2 text-3xl whitespace-nowrap mix-blend-difference md:text-5xl lg:p-2 lg:text-7xl 2xl:text-8xl",
+          "s:text-[34px] font-lemonMilk text-primaryBlue z-10 flex flex-row px-1.5 py-2 text-3xl whitespace-nowrap mix-blend-difference md:text-5xl lg:p-2 lg:text-7xl",
           pathname.replace("/", "") === nav.path ? "border" : "",
         )}
         href={`/${nav.path}`}
@@ -67,20 +66,10 @@ const Pill = ({ ...props }: Position) => (
   <motion.div className="absolute z-3 bg-black" animate={{ ...props }} />
 );
 
-// TODO: probably temporary, maybe change later
-const WildernessNavItem = () => {
-  return (
-    <div className="font-lemonMilk text-primaryBlue z-10 flex flex-row border p-2 text-3xl whitespace-nowrap mix-blend-difference">
-      Somewhere out in the wildneress of the internet
-    </div>
-  );
-};
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
   const [position, setPosition] = useState<Position>(initialPosition);
-  const { is404 } = useIs404();
   const navVariants: Variants = {
     initial: {
       x: -100,
@@ -113,10 +102,7 @@ const Navbar = () => {
       <button
         onClick={toggleMenu}
         onMouseEnter={toggleMenu}
-        className={cn(
-          "absolute z-999 size-[40px] cursor-pointer",
-          is404 && "mt-8 2xl:mt-12",
-        )}
+        className={cn("absolute z-999 size-[40px] cursor-pointer")}
       >
         <HamburgerMenuIcon isOpen={isOpen} />
       </button>
@@ -125,7 +111,7 @@ const Navbar = () => {
           <div
             className={cn(
               "bg-accentBlue absolute top-0 left-0 z-100 flex h-screen w-full flex-col items-start justify-center px-6 lg:gap-y-6 2xl:gap-y-8 2xl:px-24",
-              "backdrop-blur-2xl",
+              "pt-10 backdrop-blur-2xl",
             )}
           >
             {navItems.map((nav, index) => (
@@ -137,7 +123,6 @@ const Navbar = () => {
                 navVariants={navVariants}
               />
             ))}
-            {is404 && <WildernessNavItem />}
             <Pill {...position} />
           </div>
         )}

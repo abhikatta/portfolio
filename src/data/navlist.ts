@@ -5,6 +5,9 @@ export const navItems: NavItem[] = [
     name: "Home",
   },
   {
+    name: "About",
+  },
+  {
     name: "Experience",
   },
   { name: "Work" },
