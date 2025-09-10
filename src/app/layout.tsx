@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import PageLoad from "@/components/page-load";
 import WaitForLoad from "@/components/wait-for-load";
+import { LenisSmoothScroll } from "@/components/smooth-scroll";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -56,6 +57,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.variable} antialiased`}>
         <PageLoad />
+        <LenisSmoothScroll />
         <WaitForLoad>
           <Navbar />
           <main className="max-h-[calc(100vh-6rem)] 2xl:max-h-[calc(100vh-10rem)]">
