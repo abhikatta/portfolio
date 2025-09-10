@@ -35,7 +35,7 @@ export const RevealWord = ({
     const opacity = useTransform(scrollYProgress, range, [0, 1]);
 
     return (
-      <span className={"relative"} key={index}>
+      <span className="relative" key={index}>
         &nbsp;
         <span
           className={cn("absolute opacity-20", className)}

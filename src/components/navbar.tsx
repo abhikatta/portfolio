@@ -110,7 +110,7 @@ const Navbar = () => {
   return (
     <Container
       className={cn(
-        "flex min-h-24 items-center justify-start 2xl:min-h-40",
+        "bg flex min-h-24 items-center justify-start 2xl:min-h-40",
         !isOpen && "relative",
       )}
     >

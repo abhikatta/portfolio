@@ -87,8 +87,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: var(--color-darkBlue);
-    --foreground: #ededed;
+    --foreground: #ffffff;
+    --background: #171717;
   }
 }
 
