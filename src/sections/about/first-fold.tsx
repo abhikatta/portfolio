@@ -7,14 +7,14 @@ import { useRef } from "react";
 export const AboutFirstFold = () => {
   const ref = useRef<HTMLParagraphElement | null>(null);
 
-  const { scrollYProgress: yTextReveal } = useScroll({
+  const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end end"],
   });
 
   return (
     <section ref={ref} className="relative h-[200vh] w-full">
-      <DescriptionSection scrollYProgress={yTextReveal} />
+      <DescriptionSection scrollYProgress={scrollYProgress} />
     </section>
   );
 };
@@ -28,7 +28,7 @@ export const DescriptionSection = ({
 
   const { scrollYProgress: yTextReveal } = useScroll({
     target: scrollRef,
-    offset: ["start 0.6", "start 0.4"],
+    offset: ["start 0.8", "start 0.3"],
   });
 
   const text =
@@ -41,13 +41,13 @@ export const DescriptionSection = ({
 
   return (
     <MotionDiv
-      className="bg-accentYellow sticky top-0 mt-[100vh] flex h-screen w-full flex-col items-center justify-center"
+      className="sticky top-0 mt-[100vh] flex h-screen w-full flex-col items-center justify-center bg-black"
       style={{ scale, rotate }}
     >
       <Container>
         <p
           ref={scrollRef}
-          className="font-poppins flex w-full flex-wrap text-lg 2xl:text-3xl 2xl:leading-12"
+          className="font-poppins text-lightBlue flex w-full flex-wrap text-lg 2xl:text-3xl 2xl:leading-12"
         >
           <RevealWord words={words} scrollYProgress={yTextReveal} />
         </p>
