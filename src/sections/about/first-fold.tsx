@@ -1,21 +1,46 @@
+"use client";
+
+import Container from "@/components/container";
 import { SectionSmoothScroll } from "../reusable/section-smooth-scroll";
+import { useRef } from "react";
+import { useScroll } from "motion/react";
+import { RevealWord } from "@/components/animated/reveal-words";
+import { CurveText } from "@/components/animated/curved-text-parallax";
 
 const AboutFirstFold = () => {
   const topLine = "Why do I work as a frontend developer?";
   const text =
     "I've always been a huge gamer, which is what got me into coding. I started out learning game development with Unity, then got pulled into the world of AI and machine learning for a while. I eventually found that what I really enjoy is building things people can see and use, which is how I landed in frontend development with React and Next.js.";
+  const scrollRef = useRef<HTMLParagraphElement | null>(null);
+
+  const words = text.split(" ");
+
+  const { scrollYProgress: yTextReveal } = useScroll({
+    target: scrollRef,
+    offset: ["end end", "start center"],
+  });
 
   return (
-    <SectionSmoothScroll
-      curveTextProps={{
-        svgTextClassName: "text-boldonse text-4xl",
-        svgTextDisplacement: 25,
-        className: "absolute top-0 max-w-full",
-        topLine: topLine,
-        hasCurveText: true,
-      }}
-      textProps={{ text }}
-    />
+    <SectionSmoothScroll className="relative">
+      <CurveText
+        svgTextDisplacement={25}
+        topLine={topLine}
+        svgPathHref="first-fold"
+        svgPath={
+          <path
+            stroke="none"
+            id="first-fold"
+            d="M1 528C25.5 393 157 231 325 172C493 113 519 121.5 641 131.5C884.153 176.119 1028.36 248.976 1239 213.5C1429 181.5 1405 176 1490.5 154C1490.5 154 1711 67 1919 1"
+          />
+        }
+      />
+      <Container ref={scrollRef}>
+        <p className="font-poppins text-lightBlue flex h-full w-full flex-wrap text-lg 2xl:text-3xl 2xl:leading-12">
+          <RevealWord words={words} scrollYProgress={yTextReveal} />
+        </p>
+      </Container>
+      ;
+    </SectionSmoothScroll>
   );
 };
 

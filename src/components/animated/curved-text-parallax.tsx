@@ -1,3 +1,5 @@
+"use client";
+
 import { cn } from "@/utils/cn";
 import { useScroll } from "motion/react";
 import { RefObject, useEffect, useRef } from "react";
@@ -8,6 +10,8 @@ export const CurveText = ({
   svgTextClassName,
   svgTextColor,
   svgTextDisplacement,
+  svgPath,
+  svgPathHref,
   ...props
 }: CurveSvgProps) => {
   const ref = useRef<SVGTextElement | null>(null);
@@ -39,23 +43,20 @@ export const CurveText = ({
       viewBox="0 0 1920 529"
       fill="none"
       {...props}
+      className={cn("absolute top-0", props.className)}
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path
-        id="curve"
-        fill="none"
-        d="M1 528C25.5 393 139.5 212.5 325 172C510.5 131.5 510.5 131.5 641 131.5C884.153 176.119 1028.36 248.976 1239 213.5C1429 181.5 1405 176 1490.5 154C1490.5 154 1711 67 1919 1"
-      />
+      {svgPath}
       <text
         ref={ref}
         className={cn(
-          "font-bigShouldersStencil text-2xl uppercase",
+          "font-bigShouldersStencil text-4xl uppercase",
           svgTextClassName,
         )}
         fill={svgTextColor || "white"}
       >
         {[...Array(20)].map((_, index) => (
-          <textPath key={index} href="#curve">
+          <textPath key={index} href={`#${svgPathHref}`}>
             {topLine}
           </textPath>
         ))}
