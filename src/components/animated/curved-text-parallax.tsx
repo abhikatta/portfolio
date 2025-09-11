@@ -46,7 +46,7 @@ export const CurveText = ({
       <text
         ref={ref}
         className={cn(
-          "font-bigShouldersStencil text-7xl uppercase 2xl:text-4xl",
+          "font-bigShouldersStencil text-4xl uppercase",
           svgTextClassName,
         )}
         fill={svgTextColor || "white"}

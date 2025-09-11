@@ -6,12 +6,15 @@ import { useRef } from "react";
 import { useScroll } from "motion/react";
 import { RevealWord } from "@/components/animated/reveal-words";
 import { CurveText } from "@/components/animated/curved-text-parallax";
+import { useIsMobile } from "@/hooks/use-is-mobile";
 
 const AboutFirstFold = () => {
   const topLine = "Why do I work as a frontend developer?";
   const text =
     "I've always been a huge gamer, which is what got me into coding. I started out learning game development with Unity, then got pulled into the world of AI and machine learning for a while. I eventually found that what I really enjoy is building things people can see and use, which is how I landed in frontend development with React and Next.js.";
   const words = text.split(" ");
+
+  const { isMobile } = useIsMobile();
 
   const scrollRef = useRef<HTMLParagraphElement | null>(null);
   const { scrollYProgress: yTextReveal } = useScroll({
@@ -27,12 +30,13 @@ const AboutFirstFold = () => {
 
   return (
     <div ref={ref}>
-      <SectionSmoothScroll className="relative">
+      <SectionSmoothScroll className="relative overflow-hidden">
         <CurveText
           scrollYProgress={scrollYProgress}
           svgTextItemsCount={20}
-          svgTextDisplacement={25}
+          svgTextDisplacement={isMobile ? 22 : 25}
           topLine={topLine}
+          {...(isMobile ? { height: "400" } : {})}
           svgPathHref="first-fold"
           svgPath={
             <path

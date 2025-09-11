@@ -7,16 +7,21 @@ import Container from "@/components/container";
 import { techImages } from "@/data/tech-images";
 import Image from "next/image";
 import { MotionDiv } from "@/components/common-motion-elements";
+import { useIsMobile } from "@/hooks/use-is-mobile";
 
 const AboutSecondFold = () => {
   const ref = useRef(null);
-
+  const { isMobile } = useIsMobile();
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start 0.8", "end end"],
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["90%", "-30%"]);
+  const x = useTransform(
+    scrollYProgress,
+    [0, 1],
+    isMobile ? ["150%", "-50%"] : ["90%", "-30%"],
+  );
 
   return (
     <section ref={ref} className="relative min-h-[200vh]">
@@ -25,8 +30,9 @@ const AboutSecondFold = () => {
           <CurveText
             svgTextItemsCount={20}
             scrollYProgress={scrollYProgress}
-            className="top-10 2xl:top-0"
+            className="top-[10%] text-7xl 2xl:top-0"
             svgTextDisplacement={13}
+            {...(isMobile ? { height: "400" } : {})}
             topLine="Skills & Tech I use"
             svgPathHref="second-fold"
             svgPath={
