@@ -1,8 +1,7 @@
 "use client";
 
 import { cn } from "@/utils/cn";
-import { useScroll } from "motion/react";
-import { RefObject, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { CurveSvgProps } from "./types";
 
 export const CurveText = ({
@@ -13,14 +12,10 @@ export const CurveText = ({
   svgPath,
   svgPathHref,
   svgTextItemsCount,
+  scrollYProgress,
   ...props
 }: CurveSvgProps) => {
   const ref = useRef<SVGTextElement | null>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref as RefObject<HTMLElement | null>,
-    offset: ["start 0.8", "end start"],
-  });
 
   useEffect(() => {
     const scrollProgress = scrollYProgress.on("change", (e) => {

@@ -1,3 +1,4 @@
+import { MotionValue } from "motion";
 import { ReactNode, SVGProps } from "react";
 
 export interface CurveSvgProps extends SVGProps<SVGSVGElement> {
@@ -8,4 +9,5 @@ export interface CurveSvgProps extends SVGProps<SVGSVGElement> {
   svgTextDisplacement?: number;
   svgPath: ReactNode;
   svgTextItemsCount: number;
+  scrollYProgress: MotionValue<number>;
 }

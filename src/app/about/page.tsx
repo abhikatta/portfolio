@@ -4,10 +4,8 @@ import AboutSecondFold from "@/sections/about/second-fold";
 
 const Page = () => {
   return (
-    <section className="relative h-auto w-full">
-      <AboutHero
-       
-      />
+    <section className="relative w-full">
+      <AboutHero />
       <AboutFirstFold />
       <AboutSecondFold />
     </section>
