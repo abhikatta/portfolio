@@ -23,6 +23,7 @@ const AboutFirstFold = () => {
   return (
     <SectionSmoothScroll className="relative">
       <CurveText
+        svgTextItemsCount={20}
         svgTextDisplacement={25}
         topLine={topLine}
         svgPathHref="first-fold"

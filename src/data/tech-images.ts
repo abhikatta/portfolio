@@ -1,0 +1,16 @@
+export const techImages = [
+  { src: "/images/tech/c_sharp.png", alt: "C Sharp" },
+  { src: "/images/tech/firebase.png", alt: "Firebase" },
+  { src: "/images/tech/flask.jpg", alt: "Flask" },
+  { src: "/images/tech/git.png", alt: "Git" },
+  { src: "/images/tech/html.png", alt: "HTML" },
+  { src: "/images/tech/next.png", alt: "Next.js" },
+  { src: "/images/tech/python.png", alt: "Python" },
+  { src: "/images/tech/react.png", alt: "React" },
+  { src: "/images/tech/motion-one.png", alt: "Motion" },
+  { src: "/images/tech/mdx.png", alt: "MDX" },
+  { src: "/images/tech/tanstack.png", alt: "TanStack" },
+  { src: "/images/tech/tailwind.png", alt: "Tailwind CSS" },
+  { src: "/images/tech/tensorflow.png", alt: "TensorFlow" },
+  { src: "/images/tech/unity.png", alt: "Unity" },
+];

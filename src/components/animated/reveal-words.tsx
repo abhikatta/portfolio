@@ -12,7 +12,7 @@ export const RevealWord = ({
     const start = index / words.length;
     const end = start + 1 / words.length;
     const range = [start, end];
-    const opacity = useTransform(scrollYProgress, range, [0, 1]);
+    const opacity = useTransform(scrollYProgress, range, [0.3, 1]);
 
     return (
       <span className="relative" key={index}>

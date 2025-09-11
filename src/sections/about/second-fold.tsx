@@ -1,13 +1,28 @@
+"use client";
 import { CurveText } from "@/components/animated/curved-text-parallax";
 import { SectionSmoothScroll } from "../reusable/section-smooth-scroll";
+import { useScroll, useTransform } from "motion/react";
+import { useRef } from "react";
+import Container from "@/components/container";
+import { techImages } from "@/data/tech-images";
+import Image from "next/image";
+import { MotionDiv } from "@/components/common-motion-elements";
 
 const AboutSecondFold = () => {
-  const topLine = "Education Stats";
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end 0.8"],
+  });
 
+  const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
   return (
-    <SectionSmoothScroll>
+    <SectionSmoothScroll className="bg-black/70">
       <CurveText
-        topLine={topLine}
+        svgTextItemsCount={20}
+        className="top-10 2xl:top-0"
+        svgTextDisplacement={13}
+        topLine="Skills & Tech I use"
         svgPathHref="second-fold"
         svgPath={
           <path
@@ -17,6 +32,36 @@ const AboutSecondFold = () => {
           />
         }
       />
+      <Container
+        ref={ref}
+        className="mt-30 flex flex-col items-start justify-center gap-10 2xl:mt-0"
+      >
+        <h2 className="font-poppins text-lg text-white 2xl:text-2xl">
+          Things that I use or have used in the past
+        </h2>
+        <div className="flex w-full flex-row flex-wrap items-center justify-center gap-15">
+          {techImages.map((item) => (
+            <MotionDiv
+              style={{ opacity }}
+              key={item.alt}
+              className="flex flex-col items-center justify-center gap-y-5"
+            >
+              <Image
+                src={item.src}
+                alt={item.alt}
+                width={120}
+                height={120}
+                className="aspect-square rounded-4xl object-contain grayscale transition-all duration-500 hover:scale-125 hover:grayscale-0"
+              />
+              <p className="font-boldonse text-md text-white">
+                {"{ "}
+                {item.alt}
+                {" }"}
+              </p>
+            </MotionDiv>
+          ))}
+        </div>
+      </Container>
     </SectionSmoothScroll>
   );
 };

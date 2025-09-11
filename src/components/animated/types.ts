@@ -7,4 +7,5 @@ export interface CurveSvgProps extends SVGProps<SVGSVGElement> {
   svgPathHref: string;
   svgTextDisplacement?: number;
   svgPath: ReactNode;
+  svgTextItemsCount: number;
 }

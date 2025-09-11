@@ -12,6 +12,7 @@ export const CurveText = ({
   svgTextDisplacement,
   svgPath,
   svgPathHref,
+  svgTextItemsCount,
   ...props
 }: CurveSvgProps) => {
   const ref = useRef<SVGTextElement | null>(null);
@@ -50,12 +51,12 @@ export const CurveText = ({
       <text
         ref={ref}
         className={cn(
-          "font-bigShouldersStencil text-4xl uppercase",
+          "font-bigShouldersStencil text-7xl uppercase 2xl:text-4xl",
           svgTextClassName,
         )}
         fill={svgTextColor || "white"}
       >
-        {[...Array(20)].map((_, index) => (
+        {[...Array(svgTextItemsCount)].map((_, index) => (
           <textPath key={index} href={`#${svgPathHref}`}>
             {topLine}
           </textPath>
