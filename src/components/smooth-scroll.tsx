@@ -5,20 +5,26 @@ import Lenis from "lenis";
 
 export const LenisSmoothScroll = () => {
   useEffect(() => {
-    const lenis = new Lenis();
+    // Check if the user is on a touch device
+    const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
 
-    let animationFrameId: number;
+    // Only initialize Lenis on non-touch devices
+    if (!isTouchDevice) {
+      const lenis = new Lenis();
 
-    function raf(time: number) {
-      lenis.raf(time);
+      let animationFrameId: number;
+
+      function raf(time: number) {
+        lenis.raf(time);
+        animationFrameId = requestAnimationFrame(raf);
+      }
+
       animationFrameId = requestAnimationFrame(raf);
+      return () => {
+        cancelAnimationFrame(animationFrameId);
+        lenis.destroy();
+      };
     }
-
-    animationFrameId = requestAnimationFrame(raf);
-    return () => {
-      cancelAnimationFrame(animationFrameId);
-      lenis.destroy();
-    };
   }, []);
 
   return <></>;
