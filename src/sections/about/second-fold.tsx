@@ -20,15 +20,16 @@ const AboutSecondFold = () => {
   const x = useTransform(
     scrollYProgress,
     [0, 1],
-    isMobile ? ["150%", "-50%"] : ["90%", "-30%"],
+    isMobile ? ["120%", "-40%"] : ["150%", "-70%"],
   );
 
   return (
     <section ref={ref} className="relative min-h-[200vh]">
       <div className="sticky top-0">
-        <SectionSmoothScroll className="overflow-hidden bg-black/70">
+        <SectionSmoothScroll className="shadow-4xl relative mx-auto max-w-screen overflow-hidden rounded-4xl bg-gray-300">
           <CurveText
             svgTextItemsCount={20}
+            svgTextColor="black"
             scrollYProgress={scrollYProgress}
             className="top-[10%] text-7xl 2xl:top-0"
             svgTextDisplacement={13}
@@ -44,12 +45,12 @@ const AboutSecondFold = () => {
             }
           />
           <Container className="mt-30 flex flex-col items-start justify-center gap-10 2xl:mt-0">
-            <h2 className="font-poppins text-lg text-white 2xl:text-2xl">
+            <h2 className="font-poppins w-full text-lg text-black 2xl:text-2xl">
               Things that I use or have used in the past
             </h2>
             <MotionDiv
               style={{ x }}
-              className="flex h-full w-full flex-row items-center justify-center gap-15"
+              className="grid h-full w-full max-w-[calc(100vw-48px)] grid-flow-col grid-rows-2 items-center justify-center gap-15 lg:flex lg:flex-row"
             >
               {techImages.map((item) => (
                 <div
@@ -63,7 +64,7 @@ const AboutSecondFold = () => {
                     height={120}
                     className="aspect-square rounded-4xl object-contain grayscale transition-all duration-500 hover:scale-125 hover:grayscale-0"
                   />
-                  <p className="font-boldonse text-md text-white">
+                  <p className="font-boldonse lg:text-md text-sm text-black">
                     {"{ "}
                     {item.alt}
                     {" }"}

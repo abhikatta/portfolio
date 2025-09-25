@@ -1,12 +1,15 @@
 "use client";
+import { cn } from "@/utils/cn";
 import { MotionValue, motion, useTransform } from "motion/react";
 
 export const RevealWord = ({
   words,
   scrollYProgress,
+  behindTextClassName,
 }: {
   words: string[];
   scrollYProgress: MotionValue<number>;
+  behindTextClassName?: string;
 }) => {
   return words.map((t, index) => {
     const start = index / words.length;
@@ -17,10 +20,14 @@ export const RevealWord = ({
     return (
       <span className="relative" key={index}>
         &nbsp;
-        <span aria-hidden="true" className="absolute opacity-20">
+        <span
+          aria-hidden="true"
+          className={cn("absolute opacity-[1%]", behindTextClassName)}
+        >
           {t}
         </span>
         <motion.span
+          className="!text-black"
           style={{
             opacity,
           }}

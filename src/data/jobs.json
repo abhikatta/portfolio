@@ -1,0 +1,98 @@
+[
+  {
+    "id": "python-engineers",
+    "title": "Python Engineer",
+    "status": "Open",
+    "location": "Remote, India",
+    "type": "Full time",
+    "experience": "5 - 6 years of Experience",
+    "whatYouWillBeDoing": [
+      "Writing Clean, Readable, Testable and Reusable Code.",
+      "Design simple systems that are built for scale.",
+      "Break down complex problems in to small and simple problems.",
+      "Consider Software Development as a craft and keep improving everyday.",
+      "Working closely with other Developers, UX designers, Business and System Analysts.",
+      "Take part in all daily activities like Stand-ups, Iteration planning, Retrospectives."
+    ],
+    "whatWeAreLookingFor": [
+      "Expert in Python.",
+      "Good Knowledge of any of the available web frameworks like Django, Flask, Tornado...etc.",
+      "Understanding of the Concurrency and Parallelism limitations of Python and workarounds for them.",
+      "Good understanding of server-side templating languages.",
+      "Basic understanding of front-end technologies, such as React, TypeScript/JavaScript, HTML5, and CSS3",
+      "Knowledge of user authentication and authorization implementation.(Oauth, SAML, OpenId,..)",
+      "Familiarity with event-driven programming in Python.",
+      "Great understanding of any of the concepts like REST, gRPC, GraphQL.",
+      "Able to create database schemas that represent and support business processes.",
+      "Strong TDD, unit test and debugging skills.",
+      "Proficient understanding of Git and GitHub workflows.",
+      "Proficient in docker usage.",
+      "Basic Understanding of CI/CD workflows.",
+      "Cloud deployment basics (AWS/Azure/GCP)"
+    ],
+    "additionalSkills": [
+      "Golang, ROR, Kotlin, React, VueJS",
+      "AWS, Ansible, Kubernetes, Docker"
+    ],
+    "jobPerks": [
+      "Freedom to implement and follow industry best practices.",
+      "Get to work with the most down to earth and talented people.",
+      "Get to work on very interesting problems with impact in real world.",
+      "We are always working on bleeding edge tech stack. MicroServices?? Serverless?? we got you covered.",
+      "Open and Inclusive Environment.",
+      "Remote first teams.",
+      "Flexible timings as long as work gets done.",
+      "Opportunity to contribute to open-source projects."
+    ],
+    "applyLink": "/apply?profile=Python Engineer&ref=website"
+  },
+  {
+    "id": "ios-mobile-developer",
+    "title": "iOS Mobile Developer",
+    "status": "Closed",
+    "location": "Remote, India",
+    "type": "Full time",
+    "experience": "6 - 8 years of Experience",
+    "whatYouWillBeDoing": [
+      "Writing clean, maintainable, and reusable code for iOS applications.",
+      "Designing scalable systems with performance and efficiency in mind.",
+      "Breaking down complex problems into manageable components and delivering simple solutions.",
+      "Continuously improving your iOS development skills and adopting the latest industry trends.",
+      "Collaborating with developers, UX designers, and business/system analysts to deliver the best user experience.",
+      "Participating in Agile practices like Stand-ups, Iteration Planning, and Retrospectives.",
+      "Writing unit and integration tests to ensure app stability and performance.",
+      "Ensuring apps are highly performant, including managing memory, battery usage, and smooth UI rendering.",
+      "Researching and integrating new technologies and tools to optimise the development pipeline."
+    ],
+    "whatWeAreLookingFor": [
+      "Proven experience in developing native iOS apps using Swift/Objective-C.",
+      "At least two apps published on the Apple App Store.",
+      "Expertise in iOS frameworks like UIKit, Core Data, Core Animation, and more.",
+      "Strong knowledge of networking and RESTful APIs.",
+      "Experience with data structures, algorithms, and problem-solving.",
+      "Expertise in debugging, identifying memory leaks, and solving performance bottlenecks.",
+      "Proficiency in multi-threading, offline storage solutions, and performance tuning.",
+      "Familiarity with cloud messaging, push notifications, and in-app purchases.",
+      "Knowledge of benchmarking and optimizing app performance.",
+      "Proficient with version control systems like Git/Bitbucket.",
+      "Experience with Apple’s Human Interface Guidelines and best UI/UX practices.",
+      "Knowledge of CI/CD pipelines and experience with build automation tools."
+    ],
+    "additionalSkills": [
+      "Experience with ARKit or Core ML is a plus.",
+      "Knowledge of low-level programming with C-based libraries is an advantage.",
+      "Knowledge on Flutter & React Native"
+    ],
+    "jobPerks": [
+      "Freedom to implement and follow industry best practices..",
+      "Get to work with the most down to earth and talented people.",
+      "Get to work on very interesting problems with impact in the real world.",
+      "We are always working on a bleeding-edge tech stack. MicroServices?? Serverless?? we got you covered.",
+      "Open and Inclusive Environment.",
+      "Remote first teams.",
+      "Flexible timings as long as work gets done.",
+      "Opportunity to contribute to open-source projects."
+    ],
+    "applyLink": "/apply?profile=iOS Mobile Developer&ref=website"
+  }
+]

@@ -12,6 +12,8 @@ export const AboutHero = () => {
   });
 
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.7]);
+  const scrollMoreScale = useTransform(scrollYProgress, [0, 1], [1, 0]);
+  const scrollMoreY = useTransform(scrollYProgress, [0, 1], ["10%", "-100%"]);
   return (
     <Container
       ref={ref}
@@ -26,9 +28,14 @@ export const AboutHero = () => {
           <span className="absolute top-[13vw] left-[18vw]">tta</span>
         </h2>
       </MotionDiv>
-      <div className="h-100">
-        <p className="font-boldonse text-2xl">Scroll to read more below</p>
-      </div>
+      <MotionDiv
+        style={{ scale: scrollMoreScale, y: scrollMoreY }}
+        className="h-100"
+      >
+        <p className="font-boldonse rounded-3xl border-2 border-dotted px-3 py-2 text-xs">
+          Scroll to read more{" "}
+        </p>
+      </MotionDiv>
     </Container>
   );
 };
