@@ -1,3 +1,4 @@
+import nextPlugin from "eslint-config-next";
 import js from "@eslint/js";
 import globals from "globals";
 import tseslint from "typescript-eslint";
@@ -5,24 +6,33 @@ import pluginReact from "eslint-plugin-react";
 import json from "@eslint/json";
 import markdown from "@eslint/markdown";
 import css from "@eslint/css";
-import { defineConfig } from "eslint/config";
 
-export default defineConfig([
+export default [
   {
-    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
-    plugins: { js },
-    extends: ["js/recommended"],
+    ignores: ["node_modules/", ".next/"],
   },
   {
     files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
-    languageOptions: { globals: { ...globals.browser, ...globals.node } },
-  },
-  tseslint.configs.recommended,
-  pluginReact.configs.flat.recommended,
-  {
-    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
+    ...pluginReact.configs.flat.recommended,
+    plugins: {
+      ...pluginReact.plugins,
+      "@typescript-eslint": tseslint.plugin,
+      "react-hooks": pluginReact.hooks,
+    },
+    languageOptions: {
+      ...pluginReact.configs.flat.recommended.languageOptions,
+      globals: { ...globals.browser, ...globals.node },
+      parser: tseslint.parser,
+    },
     rules: {
+      ...tseslint.configs.recommended.rules,
+      ...nextPlugin.rules,
       "react/react-in-jsx-scope": "off",
+    },
+    settings: {
+      react: {
+        version: "detect",
+      },
     },
   },
   {
@@ -55,4 +65,4 @@ export default defineConfig([
     language: "css/css",
     extends: ["css/recommended"],
   },
-]);
+];
