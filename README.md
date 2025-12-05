@@ -40,6 +40,11 @@ Animations Ideas:
 for projects or some card type elements:
 3 level of base each stagger and slide down below the card/element like a stacked base
 
+for all button texts, make the innerText a function call
+like and the loading state is shown inside the params:
+ <button>submit()</button>
+ <button>submit(✅)</button>
+
 TODOs:
 [ ] - page load animation
 [ ] - home page leftt section animation
