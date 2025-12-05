@@ -35,9 +35,6 @@ const HomeHero = () => {
         type: "spring",
       },
     }),
-    hoverAnimate: {
-      fontWeight: 900,
-    },
   };
 
   const controls = useAnimationControls();
