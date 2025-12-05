@@ -125,3 +125,13 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--color-lightBlue);
 }
+
+::selection {
+  color: var(--color-primaryYellow);
+  background-color: var(--color-viltrumRed);
+}
+
+::-moz-selection {
+  color: var(--color-primaryYellow);
+  background-color: var(--color-viltrumRed);
+}

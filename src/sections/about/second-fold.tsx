@@ -1,15 +1,17 @@
 "use client";
 import { CurveText } from "@/components/animated/curved-text-parallax";
-import { SectionSmoothScroll } from "../reusable/section-smooth-scroll";
-import { useScroll, useTransform } from "motion/react";
-import { useRef } from "react";
+import { MotionDiv } from "@/components/common-motion-elements";
 import Container from "@/components/container";
 import { techImages } from "@/data/tech-images";
-import Image from "next/image";
-import { MotionDiv } from "@/components/common-motion-elements";
 import { useIsMobile } from "@/hooks/use-is-mobile";
+import { useScroll, useTransform } from "motion/react";
+import Image from "next/image";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { SectionSmoothScroll } from "../reusable/section-smooth-scroll";
+import { cn } from "@/utils/cn";
 
 const AboutSecondFold = () => {
+  const [removeRounded, setRemoveRounded] = useState(false);
   const ref = useRef(null);
   const { isMobile } = useIsMobile();
   const { scrollYProgress } = useScroll({
@@ -23,10 +25,24 @@ const AboutSecondFold = () => {
     isMobile ? ["120%", "-40%"] : ["150%", "-70%"],
   );
 
+  const handleScroll = useCallback((e: number) => {
+    setRemoveRounded(e >= 0.28);
+  }, []);
+
+  useEffect(() => {
+    const unsubscribe = scrollYProgress.on("change", handleScroll);
+    return unsubscribe;
+  }, [scrollYProgress, handleScroll]);
+
   return (
     <section ref={ref} className="relative min-h-[200vh]">
       <div className="sticky top-0">
-        <SectionSmoothScroll className="shadow-4xl relative mx-auto max-w-screen overflow-hidden rounded-4xl bg-gray-300">
+        <SectionSmoothScroll
+          className={cn(
+            "shadow-4xl relative mx-auto max-w-screen overflow-hidden bg-gray-300 transition-transform",
+            removeRounded ? "rounded-none" : "rounded-4xl",
+          )}
+        >
           <CurveText
             svgTextItemsCount={20}
             svgTextColor="black"

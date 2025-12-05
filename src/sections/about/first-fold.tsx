@@ -1,12 +1,13 @@
 "use client";
 
-import Container from "@/components/container";
-import { SectionSmoothScroll } from "../reusable/section-smooth-scroll";
-import { useRef } from "react";
-import { useScroll } from "motion/react";
-import { RevealWord } from "@/components/animated/reveal-words";
 import { CurveText } from "@/components/animated/curved-text-parallax";
+import { RevealWord } from "@/components/animated/reveal-words";
+import Container from "@/components/container";
 import { useIsMobile } from "@/hooks/use-is-mobile";
+import { cn } from "@/utils/cn";
+import { useScroll } from "motion/react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { SectionSmoothScroll } from "../reusable/section-smooth-scroll";
 
 const AboutFirstFold = () => {
   const topLine = "Why do I work as a frontend developer?";
@@ -15,7 +16,7 @@ const AboutFirstFold = () => {
   const words = text.split(" ");
 
   const { isMobile } = useIsMobile();
-
+  const [removeRounded, setRemoveRounded] = useState(false);
   const scrollRef = useRef<HTMLParagraphElement | null>(null);
   const { scrollYProgress: yTextReveal } = useScroll({
     target: scrollRef,
@@ -28,10 +29,24 @@ const AboutFirstFold = () => {
     offset: ["start 0.8", "end start"],
   });
 
+  const handleScroll = useCallback((e: number) => {
+    setRemoveRounded(e >= 0.28 && e <= 0.65);
+  }, []);
+
+  useEffect(() => {
+    const unsubscribe = scrollYProgress.on("change", handleScroll);
+    return unsubscribe;
+  }, [scrollYProgress, handleScroll]);
+
   return (
     <section ref={ref} className="relative min-h-[200vh]">
       <div ref={scrollRef} className="sticky top-0">
-        <SectionSmoothScroll className="shadow-4xl relative mx-auto overflow-hidden rounded-4xl bg-gray-200">
+        <SectionSmoothScroll
+          className={cn(
+            "shadow-4xl relative mx-auto overflow-hidden bg-gray-200 transition-transform",
+            removeRounded ? "rounded-none" : "rounded-4xl",
+          )}
+        >
           <CurveText
             scrollYProgress={scrollYProgress}
             svgTextItemsCount={20}
