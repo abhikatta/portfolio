@@ -109,24 +109,24 @@ const Navbar = () => {
       <div className="fixed lg:flex hidden flex-col items-center justify-center h-full">
         <ul>
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300">
-            <a
+            <Link
               className="flex justify-between items-center w-full text-gray-300"
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.linkedin.com/in/abhinaykatta/">
               LinkedIn
               <FaLinkedin size={30} />
-            </a>
+            </Link>
           </li>
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300">
-            <a
+            <Link
               target="_blank"
               rel="noopener noreferrer"
               className="flex justify-between items-center w-full text-gray-300"
               href="https://github.com/abhikatta">
               Github
               <FaGithub size={30} />
-            </a>
+            </Link>
           </li>
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300">
             <Link
@@ -141,14 +141,14 @@ const Navbar = () => {
           </li>
 
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300">
-            <a
+            <Link
               className="flex justify-between items-center w-full text-gray-300"
               target="_blank"
               rel="noopener noreferrer"
-              href="https://drive.google.com/file/d/1jrztL1KeejF93rVV4ezYNYoJMubPUMk6/view?usp=drive_link">
+              href="/Abhinay_Katta_Resume.pdf">
               Résumé
               <BsFillPersonLinesFill size={30} />
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

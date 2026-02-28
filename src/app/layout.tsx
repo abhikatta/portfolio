@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import LenisWrapper from "@/components/LenisWrapper";
+import MouseEffect from "@/components/MouseEffect";
 
 const poppins = Poppins({
   variable: "--font-geist-sans",
@@ -44,7 +45,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} ${poppins.variable} antialiased`}>
-        <LenisWrapper>{children}</LenisWrapper>
+        <LenisWrapper>
+          <MouseEffect>{children}</MouseEffect>
+        </LenisWrapper>
       </body>
     </html>
   );

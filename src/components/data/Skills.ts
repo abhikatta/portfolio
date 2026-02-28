@@ -13,7 +13,7 @@ const skillIcons: skill[] = [
   },
   {
     name: "TypeScript",
-    icon: "/react.png", // Using react icon as placeholder if TS isn't available
+    icon: "/Typescript.png",
   },
   {
     name: "TailwindCSS",
@@ -21,18 +21,18 @@ const skillIcons: skill[] = [
   },
   {
     name: "Redux",
-    icon: "/react.png", // Placeholder
+    icon: "/ReduxNew.png",
   },
   {
     name: "Zustand",
-    icon: "/react.png", // Placeholder
+    icon: "/Zustand.png",
   },
   {
     name: "TanStack Query",
-    icon: "/react.png", // Placeholder
+    icon: "/Tanstack.png",
   },
   {
-    name: "HTML/CSS",
+    name: "HTML",
     icon: "/html.png",
   },
   {

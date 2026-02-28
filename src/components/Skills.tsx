@@ -12,7 +12,7 @@ const Skills = () => {
         </div>
         <div>
           <p className="py-4 xl:pt-[10rem] lg:pt-[6rem] component-caption">
-            || These are the technologies I&apos;ve worked with
+            || These are my top most used technologies I work with day to day
           </p>
         </div>
         {/* container for icons */}
@@ -26,10 +26,10 @@ const Skills = () => {
                   src={v.icon}
                   width={80}
                   height={80}
-                  alt="skill-icon"
-                  className="w-20 mx-auto  select-none"
+                  alt={v.name}
+                  className="w-20 mx-auto select-none"
                 />
-                <p className="my-4 ">{`{${v.name}}`}</p>
+                <p className="my-4">{`{${v.name}}`}</p>
               </div>
             );
           })}

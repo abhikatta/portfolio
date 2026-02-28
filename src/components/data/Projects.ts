@@ -52,13 +52,21 @@ const projects: Projects[] = [
   },
   {
     name: "Portfolio Website",
-    description: "Portfolio website made using React and TailwindCSS.",
+    description:
+      "Portfolio website made using Next.js and TailwindCSS and Forminit.",
     link: {
       github: "https://github.com/portfolio",
       download: "https://abhikatta.github.io/portfolio",
     },
     backgroundImage: "/portfolio.png",
-    tags: ["react", "tailwindcss", "typescript", "github", "vscode"],
+    tags: [
+      "nextjs",
+      "tailwindcss",
+      "typescript",
+      "github",
+      "vscode",
+      "forminit",
+    ],
   },
   {
     name: "Spamde",
