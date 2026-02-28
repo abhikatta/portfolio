@@ -1,5 +1,5 @@
 import Image from "next/image";
-import skillIcons from "./data/Skills";
+import skillIcons from "./data/skills";
 
 const Skills = () => {
   return (
