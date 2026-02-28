@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useMemo, useState } from "react";
 
 const Contact = () => {
@@ -23,7 +24,7 @@ const Contact = () => {
     );
   }, [message, email, senderName]);
   return (
-    <div
+    <section
       id="contact"
       className="w-full h-full min-h-screen bg-[#453C67] flex justify-center items-center">
       <form
@@ -37,7 +38,7 @@ const Contact = () => {
           <div className="pb-8 xl:pt-[10rem] lg:pt-[6rem]">
             <p className="text-gray-300 py-4 component-caption relative">
               || Submit the form below or write me an email -
-              <span
+              <button
                 onClick={() => {
                   navigator.clipboard.writeText("abhinaykatta97@gmail.com");
                   setCopied(true);
@@ -45,7 +46,7 @@ const Contact = () => {
                 className="cursor-pointer select-all hover:bg-[#112100]
                 transition-colors duration-100 w-min px-1 hover:selection:bg-black py-1 rounded-md selection:bg-none">
                 abhinaykatta97@gmail.com
-              </span>
+              </button>
               {copied ? (
                 <span
                   className=" ml-[40%] -mt-[3.5%] rounded-es-md rounded-ee-md rounded-se-md
@@ -97,7 +98,7 @@ const Contact = () => {
           </button>
         </div>
       </form>
-    </div>
+    </section>
   );
 };
 

@@ -4,37 +4,40 @@ interface skill {
 }
 const skillIcons: skill[] = [
   {
-    name: "React.js/ReactNative",
+    name: "React.js",
     icon: "/react.png",
   },
   {
-    name: "C#",
-    icon: "/c_sharp.png",
+    name: "Next.js",
+    icon: "/next.png",
+  },
+  {
+    name: "TypeScript",
+    icon: "/react.png", // Using react icon as placeholder if TS isn't available
   },
   {
     name: "TailwindCSS",
     icon: "/tailwind.png",
   },
   {
-    name: "HTMl",
+    name: "Redux",
+    icon: "/react.png", // Placeholder
+  },
+  {
+    name: "Zustand",
+    icon: "/react.png", // Placeholder
+  },
+  {
+    name: "TanStack Query",
+    icon: "/react.png", // Placeholder
+  },
+  {
+    name: "HTML/CSS",
     icon: "/html.png",
-  },
-  { name: "Next.js", icon: "/next.png" },
-  {
-    name: "Python",
-    icon: "/python.png",
-  },
-  {
-    name: "Firebase",
-    icon: "/firebase.png",
   },
   {
     name: "Git",
     icon: "/git.png",
-  },
-  {
-    name: "Unity 3D",
-    icon: "/unity.png",
   },
 ];
 

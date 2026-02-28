@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import Seo from "@/components/Seo";
 
 const poppins = Poppins({
   variable: "--font-geist-sans",
@@ -11,7 +10,29 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Abhinay Katta",
-  description: " ",
+  description:
+    "Welcome to Abhinay Katta's personal portfolio. Discover projects, skills, and experiences in the software industry.",
+  keywords: "Abhinay Katta, Portfolio, Web Developer, Designer, Projects",
+  authors: [{ name: "Abhinay Katta" }],
+  openGraph: {
+    type: "website",
+    url: "https://abhikatta.vercel.app/",
+    title: "Abhinay Katta",
+    description:
+      "Welcome to Abhinay Katta's personal portfolio. Discover projects, skills, and experiences in the software industry.",
+    images: ["/android-chrome-192x192.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Abhinay Katta",
+    description:
+      "Welcome to Abhinay Katta's personal portfolio. Discover projects, skills, and experiences in the software industry.",
+    images: ["/android-chrome-192x192.png"],
+  },
+  manifest: "/manifest.json",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -21,7 +42,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Seo />
       <body className={`${poppins.variable} ${poppins.variable} antialiased`}>
         {children}
       </body>

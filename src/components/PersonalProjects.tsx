@@ -3,10 +3,10 @@ import projects from "./data/Projects";
 import Image from "next/image";
 // bg - [#ac3c67];
 
-const Work = () => {
+const PersonalProjects = () => {
   return (
-    <div
-      id="work"
+    <section
+      id="personalProjects"
       className="w-auto min-h-screen h-auto bg-[#ac3c67] text-gray-300">
       <div className="max-w-[53.125rem] mx-auto  p-4 flex flex-col justify-center w-full h-full">
         <div className="-left-[10rem] w-[100vh] absolute items-center -rotate-90 text-white opacity-60 xl:flex hidden flex-col">
@@ -89,8 +89,8 @@ const Work = () => {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };
 
-export default Work;
+export default PersonalProjects;

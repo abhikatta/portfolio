@@ -1,11 +1,10 @@
-"use client";
 import "./index.css";
 import Contact from "../components/Contact";
 import Home from "../components/Home";
 import Navbar from "../components/Navbar";
 import About from "../components/About";
 import Skills from "../components/Skills";
-import Work from "../components/Work";
+import Work from "../components/PersonalProjects";
 import Maintainence from "./Maintainence";
 const App = () => {
   // set this to true when updating the site and deploy,
