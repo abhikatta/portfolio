@@ -145,7 +145,7 @@ const Navbar = () => {
               className="flex justify-between items-center w-full text-gray-300"
               target="_blank"
               rel="noopener noreferrer"
-              href="/Abhinay_Katta_Resume.pdf">
+              href="/Abhinay_Katta.pdf">
               Résumé
               <BsFillPersonLinesFill size={30} />
             </Link>

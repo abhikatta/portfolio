@@ -41,16 +41,16 @@ const PersonalProjects = () => {
                     : "md:flex-row flex-col"
                 }`}>
                   <Image
-                    alt=""
+                    alt={v.name}
                     width={384}
                     height={200}
                     className={`rounded-3xl w-[24rem]`}
                     src={`${v.backgroundImage}`}
                   />
                   <div className="mx-[7rem] flex flex-col items-center   h-min">
-                    <h1 className="md:flex hidden font-bold px-2  text-5xl">
+                    <h2 className="md:flex hidden font-bold px-2  text-5xl">
                       #{i + 1}
-                    </h1>
+                    </h2>
                     <div className="flex flex-row md:my-0 my-4">
                       <a
                         className="rounded-md md:hover:bg-[#dc81a4] md:bg-inherit bg-[#dc81a4] md:text-base text-xl

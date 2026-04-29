@@ -7,6 +7,17 @@ interface Projects {
 }
 const projects: Projects[] = [
   {
+    name: "Re-tro",
+    description:
+      "A minimalisitc collaborative retrospective conduting app for agile development teams.",
+    link: {
+      github: "https://github.com/abhikatta/Re-tro",
+      download: "https://re-tro.vercel.app/",
+    },
+    backgroundImage: "/Re-tro.png",
+    tags: ["react", "vite", "fastapi", "typescript", "postgresql", "websocket"],
+  },
+  {
     name: "JoBo",
     description:
       "A mobile application written in react native that converts handwritten text to digital text using hugging face's TrOCR model.",
