@@ -1,13 +1,20 @@
-import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
-import "./globals.css";
+import Footer from "@/components/footer";
 import LenisWrapper from "@/components/LenisWrapper";
-import MouseEffect from "@/components/MouseEffect";
+import { cn } from "@/lib/utils";
+import type { Metadata } from "next";
+import { JetBrains_Mono, Syne } from "next/font/google";
+import "./globals.css";
 
-const poppins = Poppins({
-  variable: "--font-geist-sans",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+});
+
+const syne = Syne({
+  variable: "--font-syne",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -43,10 +50,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${poppins.variable} ${poppins.variable} antialiased`}>
+    <html
+      lang="en"
+      className={cn(
+        "h-full antialiased",
+        syne.variable,
+        jetbrainsMono.variable,
+      )}>
+      <body className="min-h-full flex flex-col">
         <LenisWrapper>
-          <MouseEffect>{children}</MouseEffect>
+          {children}
+          <Footer />
         </LenisWrapper>
       </body>
     </html>
