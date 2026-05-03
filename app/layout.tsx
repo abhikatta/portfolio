@@ -1,10 +1,10 @@
 import Footer from "@/components/footer";
 import LenisWrapper from "@/components/LenisWrapper";
+import Navbar from "@/components/navbar";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { JetBrains_Mono, Syne } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "./components/navbar";
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",

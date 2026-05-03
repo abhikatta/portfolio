@@ -22,7 +22,7 @@ const Footer = () => {
       ref={ref}
       id={navLinks.find((i) => i.label.toLowerCase() === "contact")?.href}
       className="bg-ink h-screen max-h-[1080px] text-paper border-b-2 border-ink relative overflow-hidden">
-      <Container>
+      <Container wantSpacing>
         <CommentTag>end of file</CommentTag>
 
         <motion.div style={{ scale, rotate: rot }} className="origin-left">
@@ -48,7 +48,7 @@ const Footer = () => {
 
           <div className="col-span-12 lg:col-span-5 flex flex-wrap gap-3">
             {socials.map(({ label, href }) => (
-              <CustomLink key={label} href={href}>
+              <CustomLink openInNewTab key={label} href={href}>
                 {label} ↗
               </CustomLink>
             ))}
