@@ -214,3 +214,7 @@
 ::-webkit-scrollbar-track {
   background: var(--secondary);
 }
+
+* {
+  cursor: url("/custom-cursor.svg"), auto;
+}
