@@ -21,7 +21,7 @@ const Footer = () => {
     <section
       ref={ref}
       id={navLinks.find((i) => i.label.toLowerCase() === "contact")?.href}
-      className="bg-ink h-screen max-h-[1080px] text-paper border-b-2 border-ink relative overflow-hidden">
+      className="bg-ink h-full max-h-screen text-paper border-b-2 border-ink relative">
       <Container wantSpacing>
         <CommentTag>end of file</CommentTag>
 
@@ -37,7 +37,7 @@ const Footer = () => {
           <div className="col-span-12 lg:col-span-7">
             <Link
               href={`mailto:${mailTo}`}
-              className="font-primary text-2xl sm:text-4xl underline underline-offset-8 decoration-2 hover:text-accent hover:decoration-accent transition-colors break-all">
+              className="font-primary text-2xl underline underline-offset-8 decoration-2 hover:text-accent hover:decoration-accent transition-colors break-all">
               {mailTo}
             </Link>
             <p className="mt-6 font-mono text-xs uppercase opacity-60 max-w-md">

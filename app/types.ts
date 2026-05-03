@@ -1,6 +1,5 @@
-import { Variants } from "motion/react";
-import { Dispatch, HTMLAttributes, SetStateAction } from "react";
-export type HTMLDivProps<T = unknown> = HTMLAttributes<HTMLDivElement> & T;
+import { HTMLMotionProps } from "motion/react";
+import { Dispatch, SetStateAction } from "react";
 
 export interface Bar {
   bgColor: string;
@@ -18,11 +17,11 @@ export interface Position {
   opacity: number;
   left: number;
 }
+export interface CustomLinkProps extends HTMLMotionProps<"a"> {
+  openInNewTab?: boolean;
+}
 
-export interface NavElement {
-  navVariants: Variants;
-  index: number;
+export interface NavItemProps extends CustomLinkProps {
   setPosition: Dispatch<SetStateAction<Position>>;
-
   nav: NavItem;
 }

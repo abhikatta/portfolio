@@ -1,8 +1,11 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion, MotionProps, Variants } from "motion/react";
-import { HTMLDivProps } from "../../types";
-const variantProps: MotionProps = {
+import { HTMLAttributes } from "react";
+
+export type HTMLDivProps<T = unknown> = HTMLAttributes<HTMLDivElement> & T;
+
+const variantProps: HTMLAttributes<HTMLDivElement> & MotionProps = {
   initial: "initial",
   animate: "animate",
 };

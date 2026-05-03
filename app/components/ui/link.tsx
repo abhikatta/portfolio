@@ -1,12 +1,9 @@
 import { cn } from "@/lib/utils";
-import { HTMLMotionProps, motion } from "motion/react";
+import { CustomLinkProps } from "@/types";
+import { motion } from "motion/react";
 import { forwardRef } from "react";
 
-interface ElementProps extends HTMLMotionProps<"a"> {
-  openInNewTab?: boolean;
-}
-
-const CustomLink = forwardRef<HTMLAnchorElement, ElementProps>(
+const CustomLink = forwardRef<HTMLAnchorElement, CustomLinkProps>(
   ({ href, className, children, openInNewTab, ...props }, ref) => {
     const newTabProps = openInNewTab
       ? {
@@ -31,7 +28,7 @@ const CustomLink = forwardRef<HTMLAnchorElement, ElementProps>(
           boxShadow: 0,
         }}
         className={cn(
-          "font-mono text-xs uppercase font-bold border border-paper px-5 py-3 bg-ink text-paper transition-colors",
+          "text-xs uppercase font-bold border border-paper px-5 py-3 bg-ink text-paper transition-colors",
           className,
         )}
         {...props}>

@@ -16,7 +16,7 @@ const Hero = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   return (
-    <section ref={ref} className="h-screen relative">
+    <section ref={ref} className="h-screen max-h-[1080px] relative">
       <Container className="border-b-2 h-full border-ink my-0 lg:my-0 flex flex-col items-center justify-center">
         <div
           className="absolute inset-0 pointer-events-none opacity-[0.07]"
@@ -29,7 +29,7 @@ const Hero = () => {
 
         <motion.div
           style={{ opacity }}
-          className="flex h-[70%] items-end w-full justify-center mx-auto relative z-10">
+          className="flex h-full my-40 items-end w-full justify-center mx-auto relative z-10">
           <motion.div style={{ y: titleY }} className="absolute top-0 left-0">
             <SectionTitle>hi, my name is </SectionTitle>
             <motion.h1
