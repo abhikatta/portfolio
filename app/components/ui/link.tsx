@@ -20,6 +20,11 @@ const CustomLink = ({
         x: -4,
         boxShadow: "8px 8px 0 0 var(--accent)",
       }}
+      whileTap={{
+        y: -0,
+        x: -0,
+        boxShadow: 0,
+      }}
       className={cn(
         "font-mono text-xs uppercase font-bold border border-paper px-5 py-3 bg-ink text-paper transition-colors",
         className,

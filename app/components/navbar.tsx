@@ -22,9 +22,7 @@ export function Navbar() {
             href="#"
             className=" selection:bg-transparent selection:text-ink font-syne md:text-4xl lg:text-5xl text-base uppercase tracking-tighter">
             AK
-            <span className="text-accent font-primary text-7xl tracking-tighter leading-0">
-              .
-            </span>
+            <span className="text-accent text-8xl leading-0">.</span>
           </Link>
           <div className="hidden md:flex gap-6 text-xs font-bold uppercase">
             {navLinks.map((l) => (

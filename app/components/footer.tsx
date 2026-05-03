@@ -6,6 +6,7 @@ import Container from "./ui/container";
 import Link from "next/link";
 import CustomLink from "./ui/link";
 import { navLinks } from "@/constants/nav";
+import CommentTag from "@/components/ui/comment-tag";
 
 const Footer = () => {
   const ref = useRef<HTMLElement>(null);
@@ -22,9 +23,7 @@ const Footer = () => {
       id={navLinks.find((i) => i.label.toLowerCase() === "contact")?.href}
       className="bg-ink h-screen max-h-[1080px] text-paper border-b-2 border-ink relative overflow-hidden">
       <Container>
-        <p className="text-xs uppercase tracking-widest mb-10">
-          {"// "}end of file
-        </p>
+        <CommentTag>end of file</CommentTag>
 
         <motion.div style={{ scale, rotate: rot }} className="origin-left">
           <h2 className="font-syne text-2xl min-[390px]:text-5xl md:text-6xl xl:text-9xl leading-[0.85] font-black uppercase tracking-tighter">

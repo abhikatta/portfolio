@@ -2,6 +2,7 @@
 import Container from "@/components/ui/container";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
+import SectionTitle from "./ui/section-title";
 
 const Hero = () => {
   const ref = useRef<HTMLElement>(null);
@@ -11,7 +12,7 @@ const Hero = () => {
   });
 
   const titleY = useTransform(scrollYProgress, [0, 1], [0, -200]);
-  const subY = useTransform(scrollYProgress, [0, 1], [0, -100]);
+  const subY = useTransform(scrollYProgress, [0, 1], [0, -50]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   return (
@@ -30,6 +31,7 @@ const Hero = () => {
           style={{ opacity }}
           className="flex h-[70%] items-end w-full justify-center mx-auto relative z-10">
           <motion.div style={{ y: titleY }} className="absolute top-0 left-0">
+            <SectionTitle>hi, my name is </SectionTitle>
             <motion.h1
               initial={{ opacity: 0, y: 60 }}
               animate={{ opacity: 1, y: 0 }}
@@ -40,7 +42,15 @@ const Hero = () => {
               <span className="text-accent">Katta</span>
             </motion.h1>
           </motion.div>
-
+          <div className="absolute inset-0 -z-10">
+            <div className="absolute left-1/2 top-1/2 w-[600px] h-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/20 blur-3xl" />
+          </div>
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 1.5 }}
+            className="absolute bottom-6 text-xs font-mono opacity-60">
+            scroll ↓
+          </motion.div>
           <motion.div
             style={{ y: subY }}
             className=" absolute bottom-0 right-0">
@@ -56,7 +66,7 @@ const Hero = () => {
                   </div>
                   <div>
                     <dt className="text-muted-foreground">focus</dt>
-                    <dd>perf · state · UI architecture</dd>
+                    <dd>performance · state · frontend architecture</dd>
                   </div>
                   <div>
                     <dt className="text-muted-foreground">based</dt>
