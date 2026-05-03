@@ -5,6 +5,7 @@ import { useRef } from "react";
 import Container from "./ui/container";
 import Link from "next/link";
 import CustomLink from "./ui/link";
+import { navLinks } from "@/constants/nav";
 
 const Footer = () => {
   const ref = useRef<HTMLElement>(null);
@@ -18,7 +19,7 @@ const Footer = () => {
   return (
     <section
       ref={ref}
-      id="footer"
+      id={navLinks.find((i) => i.label.toLowerCase() === "contact")?.href}
       className="bg-ink h-screen max-h-[1080px] text-paper border-b-2 border-ink relative overflow-hidden">
       <Container>
         <p className="text-xs uppercase tracking-widest mb-10">
@@ -48,7 +49,9 @@ const Footer = () => {
 
           <div className="col-span-12 lg:col-span-5 flex flex-wrap gap-3">
             {socials.map(({ label, href }) => (
-              <CustomLink key={label} href={href} label={label} />
+              <CustomLink key={label} href={href}>
+                {label} ↗
+              </CustomLink>
             ))}
           </div>
         </div>

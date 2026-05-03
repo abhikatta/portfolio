@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { JetBrains_Mono, Syne } from "next/font/google";
 import "./globals.css";
+import { Navbar } from "./components/navbar";
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
@@ -59,6 +60,7 @@ export default function RootLayout({
       )}>
       <body className="min-h-full flex flex-col">
         <LenisWrapper>
+          <Navbar />
           {children}
           <Footer />
         </LenisWrapper>

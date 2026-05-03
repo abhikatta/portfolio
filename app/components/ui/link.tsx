@@ -1,9 +1,17 @@
+import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 
-const CustomLink = ({ label, href }: { label: string; href: string }) => {
+const CustomLink = ({
+  href,
+  className,
+  children,
+}: {
+  href: string;
+  className?: string;
+  children: React.ReactNode;
+}) => {
   return (
     <motion.a
-      key={label}
       href={href}
       target="_blank"
       rel="noreferrer"
@@ -12,8 +20,11 @@ const CustomLink = ({ label, href }: { label: string; href: string }) => {
         x: -4,
         boxShadow: "8px 8px 0 0 var(--accent)",
       }}
-      className="font-mono text-xs uppercase font-bold border-2 border-paper px-5 py-3 bg-ink transition-colors">
-      {label} ↗
+      className={cn(
+        "font-mono text-xs uppercase font-bold border border-paper px-5 py-3 bg-ink text-paper transition-colors",
+        className,
+      )}>
+      {children}
     </motion.a>
   );
 };
