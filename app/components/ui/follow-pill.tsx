@@ -53,7 +53,7 @@ export const NavItem = memo(
           whileHover={{
             x: -4,
             y: -4,
-            boxShadow: 0,
+            boxShadow: "unset",
           }}
           onMouseLeave={hidePill}
           className={cn(

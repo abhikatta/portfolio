@@ -25,7 +25,7 @@ const CustomLink = forwardRef<HTMLAnchorElement, CustomLinkProps>(
         whileTap={{
           y: -0,
           x: -0,
-          boxShadow: 0,
+          boxShadow: "unset",
         }}
         className={cn(
           "text-xs md:text-sm uppercase font-bold border border-paper px-5 py-0 bg-ink text-paper transition-colors",
