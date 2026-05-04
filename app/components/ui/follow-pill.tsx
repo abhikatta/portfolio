@@ -19,7 +19,14 @@ export const Pill = memo((position: Position) => (
 ));
 
 export const NavItem = memo(
-  ({ nav, setPosition, className, openInNewTab, ...props }: NavItemProps) => {
+  ({
+    nav,
+    setPosition,
+    className,
+    openInNewTab,
+    customOffset = 4,
+    ...props
+  }: NavItemProps) => {
     const ref = useRef<HTMLAnchorElement | null>(null);
     const pathname = usePathname();
     const getPropertiesForPill = () => {
@@ -27,8 +34,8 @@ export const NavItem = memo(
         const { width, height } = ref.current.getBoundingClientRect();
         const { offsetTop, offsetLeft } = ref.current;
         setPosition({
-          top: offsetTop + 4,
-          left: offsetLeft + 4,
+          top: offsetTop + customOffset,
+          left: offsetLeft + customOffset,
           width,
           height,
           opacity: 1,

@@ -24,4 +24,5 @@ export interface CustomLinkProps extends HTMLMotionProps<"a"> {
 export interface NavItemProps extends CustomLinkProps {
   setPosition: Dispatch<SetStateAction<Position>>;
   nav: NavItem;
+  customOffset?: number;
 }
