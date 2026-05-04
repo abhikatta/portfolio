@@ -3,14 +3,13 @@ import { cn } from "@/lib/utils";
 const SectionTitle = ({
   children,
   className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => {
+  ...props
+}: React.HTMLAttributes<HTMLHeadingElement>) => {
   return (
     <h2
+      {...props}
       className={cn(
-        "text-2xl min-[390px]:text-3xl md:text-4xl font-syne tracking-tighter",
+        "mt-4 font-syne font-black text-4xl md:text-6xl",
         className,
       )}>
       {children}

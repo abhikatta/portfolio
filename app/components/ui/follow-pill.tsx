@@ -50,7 +50,7 @@ export const NavItem = memo(
           }}
           onMouseLeave={hidePill}
           className={cn(
-            "flex flex-row px-1.5 py-2 text-ink text-3xl whitespace-nowrap mix-blend-difference lg:p-2 border-none",
+            "flex flex-row px-1.5 py-2 whitespace-nowrap mix-blend-difference border-none",
             pathname.replace("/", "") === nav.href ? "border" : "",
             className,
           )}

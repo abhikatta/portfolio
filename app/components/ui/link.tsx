@@ -28,7 +28,7 @@ const CustomLink = forwardRef<HTMLAnchorElement, CustomLinkProps>(
           boxShadow: 0,
         }}
         className={cn(
-          "text-xs uppercase font-bold border border-paper px-5 py-3 bg-ink text-paper transition-colors",
+          "text-xs md:text-sm uppercase font-bold border border-paper px-5 py-0 bg-ink text-paper transition-colors",
           className,
         )}
         {...props}>

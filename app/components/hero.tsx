@@ -16,8 +16,8 @@ const Hero = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   return (
-    <section ref={ref} className="h-screen max-h-[1080px] relative">
-      <Container className="border-b-2 h-full border-ink my-0 lg:my-0 flex flex-col items-center justify-center">
+    <section ref={ref} className="h-screen min-h-full relative">
+      <Container className="h-full my-0 lg:my-0 flex flex-col items-center justify-center">
         <div
           className="absolute inset-0 pointer-events-none opacity-[0.07]"
           style={{
@@ -31,7 +31,9 @@ const Hero = () => {
           style={{ opacity }}
           className="flex h-full my-40 items-end w-full justify-center mx-auto relative z-10">
           <motion.div style={{ y: titleY }} className="absolute top-0 left-0">
-            <SectionTitle>hi, my name is </SectionTitle>
+            <span className="text-2xl min-[390px]:text-3xl md:text-4xl font-syne tracking-tighter">
+              hi, my name is
+            </span>
             <motion.h1
               initial={{ opacity: 0, y: 60 }}
               animate={{ opacity: 1, y: 0 }}
@@ -42,15 +44,7 @@ const Hero = () => {
               <span className="text-accent">Katta</span>
             </motion.h1>
           </motion.div>
-          <div className="absolute inset-0 -z-10">
-            <div className="absolute left-1/2 top-1/2 w-[600px] h-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/20 blur-3xl" />
-          </div>
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 1.5 }}
-            className="absolute bottom-6 text-xs font-mono opacity-60">
-            scroll ↓
-          </motion.div>
+
           <motion.div
             style={{ y: subY }}
             className=" absolute bottom-0 right-0">
@@ -59,7 +53,7 @@ const Hero = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}>
               <aside className="md:pl-8 md:border-l hairline">
-                <dl className="space-y-5 font-mono text-sm">
+                <dl className="space-y-5  text-sm">
                   <div>
                     <dt className="text-muted-foreground">role</dt>
                     <dd>SDE-1 @ ScaleReal</dd>
