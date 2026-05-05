@@ -6,6 +6,7 @@ import Container from "./ui/container";
 import { initialPosition, NavItem, Pill } from "./ui/follow-pill";
 import CommentTag from "./ui/comment-tag";
 import SectionTitle from "./ui/section-title";
+import { useIsMobile } from "@/hooks/use-is-mobile";
 
 interface Project {
   title: string;
@@ -80,6 +81,7 @@ interface ProjectCardProps {
 
 const ProjectCard = memo(({ p, i }: ProjectCardProps) => {
   const [position, setPosition] = useState(initialPosition);
+  const { isMobile } = useIsMobile();
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -97,7 +99,7 @@ const ProjectCard = memo(({ p, i }: ProjectCardProps) => {
   const yRange1Indexes = [0, 3, 4, 7];
 
   const yRange = () => {
-    if (yRange1Indexes.includes(i)) {
+    if (yRange1Indexes.includes(i) && !isMobile) {
       return [-80, 80];
     } else {
       return [80, -80];

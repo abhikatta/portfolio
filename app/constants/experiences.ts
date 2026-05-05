@@ -36,7 +36,7 @@ export const experiences = [
     company: "(self employed ig)",
     period: "Mar 2020 — Oct 2023",
     points: [
-      "Worked on a bunch of side projects with python, unity, react etc",
+      "Worked on a bunch of side projects with python, unity, react, react native etc",
       "Built couple of games using unity",
       "Almost built a full working 3d shooter game but my laptop crashed due to certain experiments trying to setup linux",
     ],

@@ -35,6 +35,28 @@ const skills2 = [
   "Strapi",
 ];
 
+const groups = [
+  {
+    label: "core",
+    items: ["React.js", "Next.js", "TypeScript"],
+  },
+  {
+    label: "styling",
+    items: ["TailwindCSS"],
+  },
+  {
+    label: "state",
+    items: ["Redux", "Zustand", "TanStack Query"],
+  },
+  {
+    label: "tooling",
+    items: ["Git", "Vite", "Webpack"],
+  },
+  {
+    label: "exploring",
+    items: ["React Native", "FastAPI", "Python", "PostgreSQL"],
+  },
+];
 const SkillMarqueeStrip = memo(
   ({ skills, x }: { skills: string[]; x: MotionValue<string> }) => {
     return (
@@ -66,7 +88,7 @@ const SkillLabels = memo(({ skills }: { skills: string[] }) =>
     <motion.span
       key={s}
       whileHover={{
-        y: -3,
+        scale: 1.15,
       }}
       transition={{ type: "spring", stiffness: 400, damping: 20 }}
       className="text-xs uppercase border-2 border-ink px-3 py-1.5 text-ink bg-paper">
@@ -131,9 +153,34 @@ const Skills = () => {
           <SkillMarqueeStrip x={row1X} skills={skills} />
           <SkillMarqueeStrip x={row2X} skills={skills2} />
 
-          <div className="w-full mx-auto mt-12 flex flex-wrap items-center md:justify-between gap-2">
+          <div className="w-full mx-auto mt-12 flex flex-wrap items-center 2xl:justify-between gap-2">
             <SkillLabels skills={skills} />
             <SkillLabels skills={skills2} />
+          </div>
+
+          <div className="mt-24 w-full max-w-2xl mx-auto">
+            <CommentTag>in detail</CommentTag>
+            <p className="text-xs">
+              my default settings for building something new:
+            </p>
+            <div className="mt-6  border-t hairline">
+              {groups.map((g) => (
+                <div
+                  key={g.label}
+                  className="flex flex-row justify-start gap-4 border-b hairline py-6">
+                  <span className="min-w-30 text-base text-accent">
+                    ./{g.label}
+                  </span>
+                  <div className="flex flex-wrap gap-2">
+                    {g.items.map((i) => (
+                      <span key={i} className="tag text-base">
+                        {i}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </Container>
       </Container>
