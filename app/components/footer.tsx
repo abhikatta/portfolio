@@ -19,9 +19,8 @@ const Footer = () => {
   return (
     <section
       ref={ref}
-      id={navLinks.find((i) => i.label.toLowerCase() === "contact")?.href}
-      className="bg-ink h-screen max-h-[1080px] text-paper border-b-2 border-ink relative flex flex-col items-center justify-end md:justify-center">
-      <Container wantSpacing>
+      className="bg-ink min-h-screen max-h-[1080px] text-paper border-b-2 border-ink relative flex flex-col items-center justify-end md:justify-center">
+      <Container id="contact" wantSpacing>
         <CommentTag>end of file</CommentTag>
 
         <motion.div

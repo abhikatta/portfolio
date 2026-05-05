@@ -27,7 +27,7 @@ const Menu = () => {
         "flex flex-col items-start justify-start w-full lg:hidden",
         isOpen && "fixed z-999 bg-paper",
       )}>
-      <button onClick={toggleMenu} className="size-[40px] mt-8 z-5">
+      <button onClick={toggleMenu} className="fixed size-[40px] mt-8 z-99">
         <HamburgerMenuIcon isOpen={isOpen} />
       </button>
       <AnimatePresence mode="sync">
