@@ -216,5 +216,5 @@
 }
 
 * {
-  cursor: url("/custom-cursor.svg"), auto;
+  cursor: url("/custom-cursor.svg");
 }
