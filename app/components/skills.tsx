@@ -8,55 +8,8 @@ import { CurveText } from "./ui/curved-text-parallax";
 import CommentTag from "./ui/comment-tag";
 import SectionTitle from "./ui/section-title";
 import { cn } from "@/lib/utils";
+import { groups, skills, skills2 } from "@/constants/skills";
 
-type Skills = Array<{ label: string; weight: "BLACK" | "ITALIC" }>;
-
-const skills = [
-  "React",
-  "Next.js",
-  "TypeScript",
-  "Django",
-  "TailwindCSS",
-  "Redux",
-  "Zustand",
-  "TanStack Query",
-  "Zod",
-];
-
-const skills2 = [
-  "shadcn/ui",
-  "Mantine",
-  "SCSS",
-  "Jest",
-  "Docker",
-  "Vitest",
-  "FastAPI",
-  "Motion",
-  "Strapi",
-];
-
-const groups = [
-  {
-    label: "core",
-    items: ["React.js", "Next.js", "TypeScript"],
-  },
-  {
-    label: "styling",
-    items: ["TailwindCSS"],
-  },
-  {
-    label: "state",
-    items: ["Redux", "Zustand", "TanStack Query"],
-  },
-  {
-    label: "tooling",
-    items: ["Git", "Vite", "Webpack"],
-  },
-  {
-    label: "exploring",
-    items: ["React Native", "FastAPI", "Python", "PostgreSQL"],
-  },
-];
 const SkillMarqueeStrip = memo(
   ({ skills, x }: { skills: string[]; x: MotionValue<string> }) => {
     return (
@@ -73,7 +26,9 @@ const SkillMarqueeStrip = memo(
                 : "text-accent font-thin italic",
             )}>
             {s}
-            <span className="text-stamp mx-4">·</span>
+            {i !== skills.length - 1 && (
+              <span className="text-stamp mx-4">·</span>
+            )}
           </span>
         ))}
       </motion.div>
@@ -110,26 +65,26 @@ const Skills = () => {
   const row1X = useTransform(
     scrollYProgress,
     [0, 1],
-    isMobile ? ["120vw", "-40vw"] : ["100vw", "-290vw"],
+    isMobile ? ["80vw", "-720vw"] : ["100vw", "-400vw"],
   );
 
   const row2X = useTransform(
     scrollYProgress,
     [0, 1],
-    isMobile ? ["-120vw", "40vw"] : ["-320vw", "0vw"],
+    isMobile ? ["-508vw", "180vw"] : ["-320vw", "100vw"],
   );
   return (
-    <section ref={ref} className=" min-h-[400vh] ">
+    <section ref={ref} className="min-h-[400vh]">
       <Container
         wantSpacing
         id="skills"
-        className="sticky top-[76px] min-h-screen h-full overflow-hidden">
+        className="sticky top-[76px] max-w-screen min-h-screen h-full overflow-hidden">
         <CurveText
           svgTextItemsCount={20}
           svgTextColor="black"
           scrollYProgress={scrollYProgress}
           className="top-0 text-2xl "
-          svgTextDisplacement={13}
+          svgTextDisplacement={14}
           svgTextClassName="text-5xl"
           {...(isMobile ? { height: "400" } : {})}
           topLine=" stack I use "

@@ -6,14 +6,23 @@ import Link from "next/link";
 import { useRef, useState } from "react";
 import Container from "./ui/container";
 import { initialPosition, NavItem, Pill } from "./ui/follow-pill";
+import { useIsMobile } from "@/hooks/use-is-mobile";
 
 const Footer = () => {
   const [position, setPosition] = useState(initialPosition);
-
+  const { isMobile } = useIsMobile();
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll();
-  const scale = useTransform(scrollYProgress, [0.8, 1], [0.7, 1]);
-  const rot = useTransform(scrollYProgress, [0.8, 1], [-3, 0]);
+  const scale = useTransform(
+    scrollYProgress,
+    [0.8, 1],
+    isMobile ? [0.5, 1] : [0.7, 1],
+  );
+  const rot = useTransform(
+    scrollYProgress,
+    [0.8, 1],
+    isMobile ? [-10, 0] : [-3, 0],
+  );
 
   return (
     <section
@@ -32,15 +41,20 @@ const Footer = () => {
         </motion.div>
 
         <div className="mt-15 flex w-full flex-col lg:flex-row gap-6 items-end justify-between">
-          <div className="col-span-12 lg:col-span-7">
+          <div className="flex flex-col gap-4 items-start justify-center">
             <Link
               href={`mailto:${mailTo}`}
-              className="font-primary text-paper text-base md:text-lg underline underline-offset-8 decoration-2 hover:text-accent hover:decoration-accent transition-colors break-all">
+              className="text-paper text-base md:text-lg underline underline-offset-8 decoration-2 hover:text-accent hover:decoration-accent transition-colors">
               {mailTo}
             </Link>
-            <p className="mt-6 text-paper text-xs uppercase opacity-70 max-w-md">
+            <Link
+              className="text-paper text-sm lg:text-base hover:text-accent hover:decoration-accent transition-colors"
+              href="tel:+919182848361">
+              +91 9182848361
+            </Link>
+            <p className="mt-6 text-paper text-xs lg:uppercase opacity-70 max-w-md">
               Currently looking for new opportunities. Full-time role offers,
-              project collaborations, or even a coffee chat are always welcome!
+              project collaborations, or even a coffee chat are welcome!
             </p>
           </div>
 

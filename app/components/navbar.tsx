@@ -65,7 +65,7 @@ const Navbar = () => {
                 openInNewTab
                 nav={{
                   href: "mailto:abhinaykatta97@gmail.com",
-                  label: "Hire ↗",
+                  label: "Send a Message ↗",
                 }}
                 className={navItemClassName}
                 setPosition={setPosition}
