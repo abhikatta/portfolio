@@ -19,6 +19,7 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://abhikatta.vercel.app"),
   title: "Abhinay Katta",
   description:
     "Welcome to Abhinay Katta's personal portfolio. Discover projects, skills, and experiences in the software industry.",
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
       "Welcome to Abhinay Katta's personal portfolio. Discover projects, skills, and experiences in the software industry.",
     images: ["/android-chrome-192x192.png"],
   },
-  manifest: "/manifest.json",
+  manifest: "/site.webmanifest",
   icons: {
     icon: "/favicon.ico",
   },

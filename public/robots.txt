@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://abhikatta.vercel.app
+
+# Sitemaps
+Sitemap: https://abhikatta.vercel.app/sitemap.xml
