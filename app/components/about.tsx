@@ -1,10 +1,35 @@
+"use client";
+import { useScroll } from "motion/react";
+import { useEffect, useRef } from "react";
 import CommentTag from "./ui/comment-tag";
 import Container from "./ui/container";
+import RevealWord from "./ui/reveal-word";
 import SectionTitle from "./ui/section-title";
+// import { WORDS } from "@/constants/about";
+
+const WORDS = `
+Hi, I'm Abhinay Katta a
+frontend-focused software engineer with a strong foundation in
+modern web technologies. I currently work as an
+SDE-1 at ScaleReal, building scalable frontend architectures. 
+I specialize in performance optimization having successfully reduced bundle sizes by 
+99% in legacy applications and led migrations to modern build systems and reusable 
+UI components.
+`;
 
 const About = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
+  useEffect(() => {
+    const unsubscribe = scrollYProgress.on("change", (e) => console.log(e));
+    return unsubscribe();
+  }, [scrollYProgress]);
   return (
-    <section className="min-h-screen h-full">
+    <section ref={ref} className="min-h-screen h-full">
       <Container id="about" wantSpacing>
         <CommentTag>about</CommentTag>
         <SectionTitle>
@@ -12,9 +37,8 @@ const About = () => {
           <br />
           <span className="italic text-accent">curious always.</span>
         </SectionTitle>
-
-        <div className="mt-12 space-y-6 text-lg leading-relaxed text-foreground/90">
-          <p>
+        <div className="mt-12 space-y-3 text-lg leading-relaxed text-foreground/90 ">
+          {/* <p>
             Hello, I&apos;m{" "}
             <strong className="font-medium">Abhinay Katta</strong>, a
             frontend-focused software engineer with a strong foundation in
@@ -39,7 +63,17 @@ const About = () => {
             My current stack revolves around React, Next.js, TypeScript, paired
             with robust state management tools like Redux, TanStack Query, and
             Zustand.
-          </p>
+          </p> */}
+
+          {WORDS.split(" ").map((word, index) => (
+            <RevealWord
+              textLength={WORDS.length}
+              key={index}
+              index={index}
+              scrollYProgress={scrollYProgress}
+              word={{ word, className: "text-lg" }}
+            />
+          ))}
         </div>
       </Container>
     </section>

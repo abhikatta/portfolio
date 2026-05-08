@@ -55,7 +55,7 @@
   --secondary-foreground: var(--ink);
   --muted: oklch(0.94 0.01 80);
   --muted-foreground: oklch(0.45 0.015 60);
-  --accent: oklch(0.62 0.21 35); /* warm vermilion */
+  --accent: oklch(58.27% 0.23912 29.223);
   --accent-foreground: var(--paper);
   --destructive: oklch(0.55 0.22 27);
   --destructive-foreground: var(--paper);
@@ -216,5 +216,5 @@
 }
 
 * {
-  cursor: url("/custom-cursor.svg");
+  cursor: url("/custom-cursor.svg"), auto;
 }
