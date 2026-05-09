@@ -1,5 +1,6 @@
 "use client";
 import Container from "@/components/ui/container";
+import { useIsMobile } from "@/hooks/use-is-mobile";
 import { motion, useScroll, useTransform, Variants } from "motion/react";
 import { useRef } from "react";
 
@@ -10,10 +11,20 @@ const Hero = () => {
     offset: ["start start", "end start"],
   });
 
-  const titleY = useTransform(scrollYProgress, [0, 1], [0, -200]);
+  const { isMobile } = useIsMobile();
+
+  const titleY = useTransform(
+    scrollYProgress,
+    [0, 1],
+    isMobile ? [0, -100] : [0, -200],
+  );
   const subY = useTransform(scrollYProgress, [0, 1], [0, -50]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.8], [1, 0.2]);
+  const scale = useTransform(
+    scrollYProgress,
+    [0, 0.8],
+    isMobile ? [1, 0.7] : [1, 0.2],
+  );
 
   const NameVariants: Variants = {
     initial: {
@@ -47,7 +58,7 @@ const Hero = () => {
 
         <motion.div
           style={{ opacity }}
-          className="relative z-10 mx-auto my-40 flex h-full w-full items-end justify-center"
+          className="relative z-1 mx-auto my-40 flex h-full w-full items-end justify-center"
         >
           <motion.div
             style={{ y: titleY, scale }}
