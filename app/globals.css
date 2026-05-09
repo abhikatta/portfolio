@@ -64,7 +64,7 @@
   --ring: var(--ink);
 }
 
-.dark {
+/* .dark {
   --paper: oklch(0.16 0.008 60);
   --ink: oklch(0.96 0.008 85);
   --rule: oklch(0.28 0.012 60);
@@ -81,12 +81,12 @@
   --secondary-foreground: var(--ink);
   --muted: oklch(0.22 0.01 60);
   --muted-foreground: oklch(0.65 0.015 75);
-  --accent: oklch(0.7 0.19 38);
+  --accent: oklch(42.097% 0.2897 264.099);
   --accent-foreground: oklch(0.16 0.008 60);
   --border: var(--rule);
   --input: var(--rule);
   --ring: var(--ink);
-}
+} */
 
 @layer base {
   * {

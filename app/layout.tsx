@@ -20,30 +20,76 @@ const syne = Syne({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://abhikatta.vercel.app"),
-  title: "Abhinay Katta",
+  title: {
+    default: "Abhinay Katta",
+    template: "%s | Abhinay Katta",
+  },
   description:
-    "Welcome to Abhinay Katta's personal portfolio. Discover projects, skills, and experiences in the software industry.",
-  keywords: "Abhinay Katta, Portfolio, Web Developer, Designer, Projects",
+    "Abhinay Katta's personal portfolio showcasing projects, skills, experience, and work in software development and design.",
+  keywords: [
+    "Abhinay Katta",
+    "Portfolio",
+    "Software Engineer",
+    "Web Developer",
+    "Frontend Engineer",
+    "React Developer",
+    "Next.js Developer",
+    "Projects",
+  ],
   authors: [{ name: "Abhinay Katta" }],
+  creator: "Abhinay Katta",
+  publisher: "Abhinay Katta",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://abhikatta.vercel.app",
+  },
   openGraph: {
     type: "website",
-    url: "https://abhikatta.vercel.app/",
+    locale: "en_IN",
+    url: "https://abhikatta.vercel.app",
+    siteName: "Abhinay Katta",
     title: "Abhinay Katta",
     description:
-      "Welcome to Abhinay Katta's personal portfolio. Discover projects, skills, and experiences in the software industry.",
-    images: ["/android-chrome-192x192.png"],
+      "Explore projects, skills, and professional experience in software development and design.",
+
+    images: [
+      {
+        url: "/embed-preview.png",
+        width: 1200,
+        height: 630,
+        alt: "Abhinay Katta Portfolio Preview",
+      },
+    ],
   },
+
   twitter: {
     card: "summary_large_image",
     title: "Abhinay Katta",
     description:
-      "Welcome to Abhinay Katta's personal portfolio. Discover projects, skills, and experiences in the software industry.",
-    images: ["/android-chrome-192x192.png"],
+      "Explore projects, skills, and professional experience in software development and design.",
+    creator: "@yourhandle",
+    images: ["/embed-preview.png"],
   },
+
   manifest: "/site.webmanifest",
+
   icons: {
     icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
+
+  category: "technology",
 };
 
 export default function RootLayout({
