@@ -1,13 +1,14 @@
 "use client";
+import { Project, projects } from "@/constants/projects";
+import { useIsMobile } from "@/hooks/use-is-mobile";
 import { cn } from "@/lib/utils";
 import { motion, useScroll, useTransform } from "motion/react";
+import Link from "next/link";
 import { memo, useRef, useState } from "react";
+import CommentTag from "./ui/comment-tag";
 import Container from "./ui/container";
 import { initialPosition, NavItem, Pill } from "./ui/follow-pill";
-import CommentTag from "./ui/comment-tag";
 import SectionTitle from "./ui/section-title";
-import { useIsMobile } from "@/hooks/use-is-mobile";
-import { Project, projects } from "@/constants/projects";
 
 interface ProjectCardProps {
   p: Project;
@@ -144,7 +145,21 @@ const Projects = () => {
             <ProjectCard key={p.title} p={p} i={i} />
           ))}
         </div>
+        <div className="relative z-10">
+          <p>
+            ...and many more on my{" "}
+            <Link
+              target="_blank"
+              rel="noreferrer"
+              className="text-accent underline-offset-4 transition-all duration-300 hover:underline"
+              href="https://github.com/abhikatta"
+            >
+              GitHub
+            </Link>
+          </p>
+        </div>
       </Container>
+      <Container className="bg-amber-200"></Container>
     </section>
   );
 };
