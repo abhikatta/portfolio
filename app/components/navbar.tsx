@@ -35,22 +35,23 @@ const Navbar = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className={cn(
-            "fixed top-0 w-full mx-auto border-ink border-b inset-x-0 z-50 backdrop-blur-sm transition-colors duration-300 ease-in-out",
+            "border-ink fixed inset-x-0 top-0 z-50 mx-auto w-full border-b backdrop-blur-sm transition-colors duration-300 ease-in-out",
             fullyScrolled ? "bg-ink/80" : "bg-paper/90",
-          )}>
+          )}
+        >
           <AnimatePresence mode="sync">
-            <div className="md:flex hidden items-center justify-center w-full gap-6 px-4 sm:px-8 py-3">
+            <div className="hidden w-full items-center justify-center gap-6 px-4 py-3 sm:px-8 md:flex">
               <a
                 href="#home"
-                scroll={true}
                 className={cn(
-                  "selection:bg-transparent font-syne md:text-4xl lg:text-5xl text-base uppercase tracking-tighter",
+                  "font-syne text-base tracking-tighter uppercase selection:bg-transparent md:text-4xl lg:text-5xl",
                   fullyScrolled ? "text-paper" : "text-ink",
-                )}>
+                )}
+              >
                 AK
                 <span className="text-accent text-8xl leading-0">.</span>
-              </>
-              <div className="flex flex-row items-center justify-center gap-6 mx-auto">
+              </a>
+              <div className="mx-auto flex flex-row items-center justify-center gap-6">
                 {navLinks.map((l) => (
                   <NavItem
                     setPosition={setPosition}
@@ -75,7 +76,7 @@ const Navbar = () => {
           </AnimatePresence>
           <motion.div
             style={{ width }}
-            className="h-[3px] bg-accent origin-left"
+            className="bg-accent h-[3px] origin-left"
           />
         </motion.nav>
       </Container>
