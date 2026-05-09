@@ -125,8 +125,8 @@ const Hero = () => {
                   <div>
                     <dt className="text-muted-foreground">focus</dt>
                     <dd>
-                      frontend architecture · performance · state · clean code ·
-                      maintainable systems
+                      frontend systems · performance · APIs · clean code ·
+                      end-to-end ownership
                     </dd>
                   </div>
                   <div>

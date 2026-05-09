@@ -12,7 +12,7 @@ export const projects: Project[] = [
     title: "Re-tro",
     tag: "WEB · COLLAB",
     description:
-      "A minimalistic collaborative retrospective app for agile teams. Real-time boards, voting, grouping.",
+      "Collaborative retrospective tool with real-time WebSocket sync, FastAPI backend, and PostgreSQL persistence. Built end-to-end and deployed on Render + Vercel.",
     demo: "https://re-tro.vercel.app",
     github: "https://github.com/abhikatta/retro-app",
     tags: ["react", "vite", "fastapi", "typescript", "postgresql", "websocket"],
@@ -21,7 +21,7 @@ export const projects: Project[] = [
     title: "JoBo",
     tag: "MOBILE · ML",
     description:
-      "React Native app that converts handwritten text to digital text using Hugging Face's TrOCR model.",
+      "React Native app that converts handwritten text to digital using Hugging Face's TrOCR model. Handles image capture, preprocessing, and inference on-device.",
     demo: "https://github.com/abhikatta/jobo",
     github: "https://github.com/abhikatta/jobo",
     tags: ["react native", "huggingface", "firebase", "android"],
@@ -39,7 +39,7 @@ export const projects: Project[] = [
     title: "Bloged",
     tag: "WEB · BLOG",
     description:
-      "A blogging platform for students and professionals to share their ideas.",
+      "Full-stack blogging platform built with Next.js, Prisma ORM, and MongoDB. Auth, CRUD, and server-side rendering.",
     demo: "https://bloged.vercel.app",
     github: "https://github.com/abhikatta/bloged",
     tags: ["nextjs", "css modules", "typescript", "prisma", "mongodb"],
@@ -57,7 +57,7 @@ export const projects: Project[] = [
     title: "TimeTableTuner",
     tag: "WEB · DATA",
     description:
-      "A Flask app that displays current time and class info pulled from an Excel sheet, cleaned with pandas.",
+      "Flask backend that parses Excel timetables with pandas and serves current class info. Data cleaning, scheduling logic, and a lightweight frontend.",
     demo: null,
     github: "https://github.com/abhikatta/TimeTableTuner",
     tags: ["python", "flask", "tailwindcss", "jquery"],

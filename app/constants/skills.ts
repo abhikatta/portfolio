@@ -42,7 +42,7 @@ export const groups = [
     items: ["Git", "Vite", "Docker"],
   },
   {
-    label: "exploring",
+    label: "building with",
     items: ["FastAPI", "Linux", "PostgreSQL", "React Native"],
   },
 ];

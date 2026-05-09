@@ -25,15 +25,18 @@ export const metadata: Metadata = {
     template: "%s | Abhinay Katta",
   },
   description:
-    "Abhinay Katta's personal portfolio showcasing projects, skills, experience, and work in software development and design.",
+    "Abhinay Katta's personal portfolio showcasing projects, skills, experience, and work in software engineering.",
   keywords: [
     "Abhinay Katta",
     "Portfolio",
     "Software Engineer",
-    "Web Developer",
     "Frontend Engineer",
     "React Developer",
-    "Next.js Developer",
+    "Web Developer",
+    "React",
+    "Next.js",
+    "Python",
+    "FastAPI",
     "Projects",
   ],
   authors: [{ name: "Abhinay Katta" }],
@@ -60,7 +63,7 @@ export const metadata: Metadata = {
     siteName: "Abhinay Katta",
     title: "Abhinay Katta",
     description:
-      "Explore projects, skills, and professional experience in software development and design.",
+      "Explore projects, skills, and professional experience in software engineering.",
 
     images: [
       {
@@ -76,7 +79,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Abhinay Katta",
     description:
-      "Explore projects, skills, and professional experience in software development and design.",
+      "Explore projects, skills, and professional experience in software engineering.",
     creator: "@abhikkatta",
     images: ["https://abhikatta.vercel.app/embed-preview.png"],
   },
@@ -123,7 +126,7 @@ export default function RootLayout({
               url: "https://abhikatta.vercel.app",
               jobTitle: "Software Engineer",
               description:
-                "Software engineer specializing in React, Next.js, and frontend development.",
+                "Software engineer building with React, Next.js, Python, and FastAPI.",
               email: "abhinaykatta97@gmail.com",
               image: "https://abhikatta.vercel.app/abhinaykatta.webp",
               knowsAbout: [
@@ -133,6 +136,7 @@ export default function RootLayout({
                 "Frontend Development",
                 "Python",
                 "FastAPI",
+                "PostgreSQL",
               ],
               sameAs: [
                 "https://github.com/abhikatta",

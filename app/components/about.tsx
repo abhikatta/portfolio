@@ -9,20 +9,20 @@ import { cn } from "@/lib/utils";
 
 const PARAGRAPHS = [
   {
-    text: `Hey, I'm Abhinay Katta, a frontend engineer based in Karimnagar, India with around 2 years of professional experience. I currently work at ScaleReal as an SDE-1, where I've owned projects end to end, from scoping requirements with clients to shipping and QA.`,
+    text: `Hey, I'm Abhinay Katta, a software engineer based in Karimnagar, India with around 2 years of professional experience. I currently work at ScaleReal as an SDE-1, where I've owned projects end to end, from scoping requirements with clients to shipping.`,
     highlights: [],
   },
   {
-    text: `Most of my work lives in React and Next.js with TypeScript. I care a lot about performance and clean code, not in a buzzword way, but in a "that 20MB SVG was tanking load times so I fixed it" way. I've also spent time modernizing legacy codebases, writing tests, and wiring up CMS integrations with Strapi and MDX.`,
+    text: `My strongest suit is frontend, React and Next.js with TypeScript specifically. I care a lot about performance and clean code, not in a buzzword way, but in a "that 20MB SVG was tanking load times so I fixed it" way. I've also spent time modernizing legacy codebases, writing tests, and wiring up CMS integrations with Strapi and MDX.`,
     highlights: ["performance", "clean", " code,"],
   },
   {
-    text: `I got into programming through game development and Python, but frontend clicked for me because the feedback loop is immediate. You build something, you see it, you feel it. That's still what drives me.`,
-    highlights: ["game", "development", "Python,", "frontend"],
+    text: `Recently I've been going deeper into the stack, building APIs with FastAPI, working with PostgreSQL, and getting more comfortable with backend systems. I like understanding the full picture, not just the layer I happen to be working on.`,
+    highlights: ["FastAPI,", "PostgreSQL,", "backend"],
   },
   {
-    text: `Outside of work I'm probably tinkering with a side project, reading about web performance, or going deeper on something in the stack I don't fully understand yet.`,
-    highlights: [],
+    text: `I got into programming through game development and Python, but building for the web clicked for me because the feedback loop is immediate. You build something, you see it, you feel it. That's still what drives me.`,
+    highlights: ["game", "development", "Python,"],
   },
   {
     text: `When I'm not at my desk I'm usually out on a solo bike ride somewhere across India, or deep into a horror film or something mind-bending like Invincible. Big fan of anything that messes with your head a little.`,

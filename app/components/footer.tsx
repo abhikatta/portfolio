@@ -23,7 +23,7 @@ const Footer = () => {
     [0.8, 1],
     isMobile ? [-10, 0] : [-3, 0],
   );
-
+  const year = new Date().getFullYear();
   return (
     <section
       ref={ref}
@@ -80,7 +80,7 @@ const Footer = () => {
         </div>
 
         <p className="text-paper mt-10 text-xs opacity-70">
-          Constructed with structural honesty · © 2026 AK
+          Constructed with structural honesty · &copy; {year} AK
         </p>
       </Container>
     </section>

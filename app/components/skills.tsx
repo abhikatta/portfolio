@@ -119,9 +119,6 @@ const Skills = () => {
 
           <div className="mx-auto mt-24 w-full max-w-2xl">
             <CommentTag>in detail</CommentTag>
-            <p className="text-xs">
-              my default settings for building something new:
-            </p>
             <div className="hairline mt-6 border-t">
               {groups.map((g) => (
                 <div
