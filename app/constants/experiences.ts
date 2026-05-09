@@ -1,14 +1,21 @@
-export const experiences = [
+export interface Experience {
+  title: string;
+  company: string;
+  period: string;
+  points: string[];
+}
+
+export const experiences: Experience[] = [
   {
     title: "SDE - 1",
     company: "ScaleReal",
     period: "Sep 2024 — Present",
     points: [
-      "Reduced a 20 MB SVG asset to 180 KB by splitting raster layers into optimised PNGs — restored fast loads with zero visual regression.",
-      "Migrated multiple production codebases to Vite with AI-assisted refactoring, shipped without major regressions.",
-      "Solely managed requirements, architecture, and delivery across multiple client projects.",
-      "Built a configurable multi-step onboarding flow with Next.js and Form.io supporting schema-driven validation.",
-      "Integrated Strapi and MDX into Next.js projects using SSG/ISR for seamless content updates.",
+      "Traced a performance issue back to a single 20MB SVG killing load times. Split it up, optimized it down to 180KB, zero visual difference.",
+      "Migrated multiple production codebases to modern tooling using AI-assisted refactoring. Shipped cleanly with no major regressions.",
+      "Owned multiple client projects end to end, requirements, architecture, stakeholder calls, and delivery.",
+      "Built a configurable multi-step onboarding flow with Next.js and Form.io with schema-driven validation.",
+      "Integrated Strapi and MDX into Next.js projects using SSG and ISR so content updates don't need a redeployment.",
     ],
   },
   {
@@ -16,9 +23,9 @@ export const experiences = [
     company: "ScaleReal",
     period: "Mar 2024 — Aug 2024",
     points: [
-      "Increased unit test coverage from ~10% to 87% across a large review platform using Jest and RTL.",
-      "Refactored Redux state slices and eliminated redundant re-renders, improving load times by 25%.",
-      "Maintained and updated the company website with new sections and UX improvements.",
+      "Took unit test coverage from ~10% to 87% across a large review platform using Jest and RTL.",
+      "Refactored Redux slices and killed redundant re-renders across key flows, shaved 25% off load times.",
+      "Maintained and improved the company website, new sections, UX fixes, the usual.",
     ],
   },
   {
@@ -26,19 +33,19 @@ export const experiences = [
     company: "Digi Frills",
     period: "Oct 2023 — Feb 2024",
     points: [
-      "Resolved 50+ issues and optimised components, reducing load times by ~15%.",
-      "Collaborated with designers to refine interfaces, improving user satisfaction by ~25%.",
-      "Debugged critical issues across product features, improving overall application stability.",
+      "Fixed 50+ bugs and optimized components, brought load times down by ~15%.",
+      "Worked closely with designers to tighten up interfaces, user satisfaction went up ~25% based on feedback.",
+      "Debugged critical issues across existing features and left the codebase more stable than I found it.",
     ],
   },
   {
-    title: "trying every interest in college",
-    company: "(self employed ig)",
+    title: "Trying every interest in college",
+    company: "self employed ig",
     period: "Mar 2020 — Oct 2023",
     points: [
       "Worked on a bunch of side projects with python, unity, react, react native etc",
-      "Built couple of games using unity",
-      "Almost built a full working 3d shooter game but my laptop crashed due to certain experiments trying to setup linux",
+      "Built a couple of games in Unity, actually finished ones too.",
+      "Almost shipped a full 3D shooter until my laptop died mid Linux experiment. RIP.",
     ],
   },
 ];

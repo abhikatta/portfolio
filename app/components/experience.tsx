@@ -1,22 +1,43 @@
 "use client";
-import { experiences } from "@/constants/experiences";
-import { motion, useScroll, useTransform } from "motion/react";
-import { useRef } from "react";
+import { type Experience, experiences } from "@/constants/experiences";
+import { motion, MotionValue, useScroll, useTransform } from "motion/react";
+import { memo, useRef } from "react";
 import Container from "./ui/container";
 import CommentTag from "./ui/comment-tag";
 import SectionTitle from "./ui/section-title";
 
-function ExperienceRow({
-  exp,
-  index,
-}: {
-  exp: (typeof experiences)[number];
+interface ExperienceLiProps {
+  i: number;
+  p: Experience["points"][0];
+  scrollYProgress: MotionValue<number>;
+}
+
+interface ExperienceRowProps {
+  exp: Experience;
   index: number;
-}) {
+}
+
+const ExperienceLi = memo(({ i, p, scrollYProgress }: ExperienceLiProps) => {
+  const opacity = useTransform(scrollYProgress, [0, 0.3 + i * 0.05], [0, 1]);
+  const x = useTransform(scrollYProgress, [0, 0.2 + i * 0.1], [-120, 0]);
+  return (
+    <motion.li
+      style={{ x, opacity }}
+      transition={{ delay: i * 0.05 }}
+      className="font-display flex gap-3 text-base leading-relaxed"
+    >
+      <span className="text-accent shrink-0">→</span>
+      <span>{p}</span>
+    </motion.li>
+  );
+});
+ExperienceLi.displayName = "ExperienceLi";
+
+const ExperienceRow = memo(({ exp, index }: ExperienceRowProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start 90%", "end 30%"],
+    offset: ["start 70%", "end 30%"],
   });
   const opacity = useTransform(scrollYProgress, [0, 0.3, 1], [0.25, 1, 1]);
   const y = useTransform(scrollYProgress, [0, 0.5], [60, 0]);
@@ -39,21 +60,13 @@ function ExperienceRow({
       </div>
       <ul className="col-span-12 space-y-3 sm:col-span-7">
         {exp.points.map((p, i) => (
-          <motion.li
-            key={i}
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ delay: i * 0.05 }}
-            className="font-display flex gap-3 text-base leading-relaxed"
-          >
-            <span className="text-accent shrink-0">→</span>
-            <span>{p}</span>
-          </motion.li>
+          <ExperienceLi scrollYProgress={scrollYProgress} key={i} p={p} i={i} />
         ))}
       </ul>
     </motion.div>
   );
-}
+});
+ExperienceRow.displayName = "ExperienceRow";
 
 const Experience = () => {
   return (

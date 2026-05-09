@@ -64,7 +64,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "/embed-preview.png",
+        url: "https://abhikatta.vercel.app/embed-preview.png",
         width: 1200,
         height: 630,
         alt: "Abhinay Katta Portfolio Preview",
@@ -77,8 +77,8 @@ export const metadata: Metadata = {
     title: "Abhinay Katta",
     description:
       "Explore projects, skills, and professional experience in software development and design.",
-    creator: "@yourhandle",
-    images: ["/embed-preview.png"],
+    creator: "@abhikkatta",
+    images: ["https://abhikatta.vercel.app/embed-preview.png"],
   },
 
   manifest: "/site.webmanifest",
@@ -90,6 +90,12 @@ export const metadata: Metadata = {
   },
 
   category: "technology",
+  other: {
+    "theme-color": "#e70000",
+  },
+  verification: {
+    google: "hm8I5fmrlai0lhGG_bhmtd3ETpBfdYAWea6rVGQnD5o",
+  },
 };
 
 export default function RootLayout({
@@ -107,6 +113,35 @@ export default function RootLayout({
       )}
     >
       <body className="flex min-h-full flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Abhinay Katta",
+              url: "https://abhikatta.vercel.app",
+              jobTitle: "Software Engineer",
+              description:
+                "Software engineer specializing in React, Next.js, and frontend development.",
+              email: "abhinaykatta97@email.com",
+              image: "https://abhikatta.vercel.app/abhinaykatta.webp",
+              knowsAbout: [
+                "React",
+                "Next.js",
+                "TypeScript",
+                "Frontend Development",
+                "Python",
+                "FastAPI",
+              ],
+              sameAs: [
+                "https://github.com/abhikatta",
+                "https://linkedin.com/in/abhinaykatta",
+                "https://twitter.com/abhikkatta",
+              ],
+            }),
+          }}
+        />
         <LenisWrapper>
           <Navbar />
           {children}

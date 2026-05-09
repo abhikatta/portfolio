@@ -10,7 +10,7 @@ export const socials: Social[] = [
   },
   {
     label: "GitHub",
-    href: "https://github.com/abhinaykatta",
+    href: "https://github.com/abhikatta",
   },
   {
     label: "Resume",

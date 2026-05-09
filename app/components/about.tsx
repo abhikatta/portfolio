@@ -1,84 +1,90 @@
 "use client";
 import { useScroll } from "motion/react";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import CommentTag from "./ui/comment-tag";
 import Container from "./ui/container";
 import RevealWord from "./ui/reveal-word";
 import SectionTitle from "./ui/section-title";
-// import { WORDS } from "@/constants/about";
+import { cn } from "@/lib/utils";
 
-const WORDS = `
-Hi, I'm Abhinay Katta a
-frontend-focused software engineer with a strong foundation in
-modern web technologies. I currently work as an
-SDE-1 at ScaleReal, building scalable frontend architectures. 
-I specialize in performance optimization having successfully reduced bundle sizes by 
-99% in legacy applications and led migrations to modern build systems and reusable 
-UI components.
-`;
+const PARAGRAPHS = [
+  {
+    text: `Hey, I'm Abhinay Katta, a frontend engineer based in Karimnagar, India with around 2 years of professional experience. I currently work at ScaleReal as an SDE-1, where I've owned projects end to end, from scoping requirements with clients to shipping and QA.`,
+    highlights: [],
+  },
+  {
+    text: `Most of my work lives in React and Next.js with TypeScript. I care a lot about performance and clean code, not in a buzzword way, but in a "that 20MB SVG was tanking load times so I fixed it" way. I've also spent time modernizing legacy codebases, writing tests, and wiring up CMS integrations with Strapi and MDX.`,
+    highlights: ["performance", "clean", " code,"],
+  },
+  {
+    text: `I got into programming through game development and Python, but frontend clicked for me because the feedback loop is immediate. You build something, you see it, you feel it. That's still what drives me.`,
+    highlights: ["game", "development", "Python,", "frontend"],
+  },
+  {
+    text: `Outside of work I'm probably tinkering with a side project, reading about web performance, or going deeper on something in the stack I don't fully understand yet.`,
+    highlights: [],
+  },
+  {
+    text: `When I'm not at my desk I'm usually out on a solo bike ride somewhere across India, or deep into a horror film or something mind-bending like Invincible. Big fan of anything that messes with your head a little.`,
+    highlights: ["Invincible."],
+  },
+];
 
 const About = () => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start start", "end start"],
+    offset: ["start -0.2", "end 115%"], // stop animation just 15% below the last point of the ref
   });
 
-  useEffect(() => {
-    const unsubscribe = scrollYProgress.on("change", (e) => console.log(e));
-    return unsubscribe();
-  }, [scrollYProgress]);
-  return (
-    <section
-      ref={ref}
-      className="flex h-full min-h-screen flex-col items-center justify-center"
-    >
-      <Container id="about" wantSpacing>
-        <CommentTag>about</CommentTag>
-        <SectionTitle>
-          Engineer first,
-          <br />
-          <span className="text-accent italic">curious always.</span>
-        </SectionTitle>
-        <div className="text-foreground/90 mt-12 space-y-3 text-lg leading-relaxed">
-          {/* <p>
-            Hello, I&apos;m{" "}
-            <strong className="font-medium">Abhinay Katta</strong>, a
-            frontend-focused software engineer with a strong foundation in
-            modern web technologies. I currently work as an{" "}
-            <span className="text-accent text-base">SDE-1 at ScaleReal</span>,
-            building scalable frontend architectures.
-          </p>
-          <p>
-            I specialize in{" "}
-            <span className="text-accent">performance optimization</span> —
-            having successfully reduced bundle sizes by{" "}
-            <strong className="font-medium">99%</strong> in legacy applications
-            and led migrations to modern build systems and reusable UI
-            components.
-          </p>
-          <p>
-            I started my journey with game development and Python, but quickly
-            discovered my passion for building fast, intuitive, and
-            high-performing web experiences and mobile applications.
-          </p>
-          <p>
-            My current stack revolves around React, Next.js, TypeScript, paired
-            with robust state management tools like Redux, TanStack Query, and
-            Zustand.
-          </p> */}
+  const allWords = PARAGRAPHS.flatMap((para) => {
+    const words = para.text.trim().split(/\s+/);
+    return words.map((word, i) => ({
+      word,
+      isFirstWordOfParagraph: i === 0,
+      isHighlighted: para.highlights.some(
+        (h) => word.replace(/[^a-zA-Z]/g, "").toLowerCase() === h.toLowerCase(), // incase i messed up the case sensitivity
+      ),
+    }));
+  });
 
-          {WORDS.split(" ").map((word, index) => (
-            <RevealWord
-              textLength={WORDS.length}
-              key={index}
-              index={index}
-              scrollYProgress={scrollYProgress}
-              word={{ word, className: "text-lg" }}
-            />
-          ))}
-        </div>
-      </Container>
+  return (
+    <section ref={ref} className="h-auto xl:h-[500vh]">
+      <div className="flex h-full flex-col items-center justify-start xl:sticky xl:top-0 xl:h-screen xl:justify-center">
+        <Container id="about" wantSpacing>
+          <CommentTag>about</CommentTag>
+          <SectionTitle>
+            Engineer first,
+            <br />
+            <span className="text-accent italic">curious always.</span>
+          </SectionTitle>
+          <div className="flex flex-wrap items-center justify-start xl:hidden">
+            {PARAGRAPHS.map((p, index) => (
+              <span key={index} className="mt-6">
+                {p.text}
+              </span>
+            ))}
+          </div>
+          <div className="text-foreground/90 hidden text-lg xl:block">
+            {allWords.map((wordObj, index) => (
+              <RevealWord
+                textLength={allWords.length}
+                key={index}
+                index={index}
+                scrollYProgress={scrollYProgress}
+                word={{
+                  word: wordObj.word,
+                  className: cn(
+                    wordObj.isFirstWordOfParagraph && "ml-8",
+                    wordObj.isHighlighted && "text-accent font-medium",
+                  ),
+                }}
+                isFirstWordOfParagraph={wordObj.isFirstWordOfParagraph}
+              />
+            ))}
+          </div>
+        </Container>
+      </div>
     </section>
   );
 };
