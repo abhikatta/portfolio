@@ -2,32 +2,32 @@ export type Skills = Array<{ label: string; weight: "BLACK" | "ITALIC" }>;
 
 export const skills = [
   "React",
-  "Next.js",
+  "Next",
   "TypeScript",
-  "Django",
-  "TailwindCSS",
-  "Redux",
-  "Zustand",
   "TanStack Query",
+  "TailwindCSS",
+  "Zustand",
   "Zod",
+  "Redux",
+  "Django",
 ];
 
 export const skills2 = [
+  "SCSS",
+  "Strapi",
+  "Vitest",
   "shadcn/ui",
   "Mantine",
-  "SCSS",
-  "Jest",
   "Docker",
-  "Vitest",
+  "Bash",
   "FastAPI",
   "Motion",
-  "Strapi",
 ];
 
 export const groups = [
   {
     label: "core",
-    items: ["React.js", "Next.js", "TypeScript"],
+    items: ["React", "Next", "TypeScript", "Python"],
   },
   {
     label: "styling",
@@ -35,14 +35,14 @@ export const groups = [
   },
   {
     label: "state",
-    items: ["Redux", "Zustand", "TanStack Query"],
+    items: ["Zustand", "TanStack Query"],
   },
   {
     label: "tooling",
-    items: ["Git", "Vite", "Webpack"],
+    items: ["Git", "Vite", "Docker"],
   },
   {
     label: "exploring",
-    items: ["React Native", "FastAPI", "Python", "PostgreSQL"],
+    items: ["FastAPI", "Linux", "PostgreSQL", "React Native"],
   },
 ];

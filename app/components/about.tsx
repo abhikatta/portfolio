@@ -29,7 +29,9 @@ const About = () => {
     return unsubscribe();
   }, [scrollYProgress]);
   return (
-    <section ref={ref} className="min-h-screen h-full">
+    <section
+      ref={ref}
+      className="min-h-screen items-center justify-center flex flex-col h-full">
       <Container id="about" wantSpacing>
         <CommentTag>about</CommentTag>
         <SectionTitle>

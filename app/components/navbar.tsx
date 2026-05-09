@@ -1,12 +1,11 @@
 "use client";
 import { initialPosition, NavItem, Pill } from "@/components/ui/follow-pill";
-import { navLinks } from "@/constants/nav";
 import { AnimatePresence, motion, useScroll, useTransform } from "motion/react";
-import Link from "next/link";
-import { useEffect, useState } from "react";
+import { navLinks } from "@/constants/nav";
+import { cn } from "@/lib/utils";
 import Menu from "./menu";
 import Container from "./ui/container";
-import { cn } from "@/lib/utils";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const { scrollYProgress } = useScroll();
@@ -41,15 +40,16 @@ const Navbar = () => {
           )}>
           <AnimatePresence mode="sync">
             <div className="md:flex hidden items-center justify-center w-full gap-6 px-4 sm:px-8 py-3">
-              <Link
-                href="/"
+              <a
+                href="#home"
+                scroll={true}
                 className={cn(
                   "selection:bg-transparent font-syne md:text-4xl lg:text-5xl text-base uppercase tracking-tighter",
                   fullyScrolled ? "text-paper" : "text-ink",
                 )}>
                 AK
                 <span className="text-accent text-8xl leading-0">.</span>
-              </Link>
+              </>
               <div className="flex flex-row items-center justify-center gap-6 mx-auto">
                 {navLinks.map((l) => (
                   <NavItem

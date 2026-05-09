@@ -46,7 +46,7 @@ const SkillLabels = memo(({ skills }: { skills: string[] }) =>
         scale: 1.15,
       }}
       transition={{ type: "spring", stiffness: 400, damping: 20 }}
-      className="text-xs uppercase border-2 border-ink px-3 py-1.5 text-ink bg-paper">
+      className="text-xs uppercase border-2 border-ink h-8 items-center justify-center flex px-3 py-1.5 text-ink bg-paper">
       {s}
     </motion.span>
   )),
