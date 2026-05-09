@@ -52,6 +52,14 @@ const About = () => {
     <section ref={ref} className="h-auto xl:h-[500vh]">
       <div className="flex h-full flex-col items-center justify-start xl:sticky xl:top-0 xl:h-screen xl:justify-center">
         <Container id="about" wantSpacing>
+          <div
+            className="pointer-events-none absolute inset-0 opacity-[0.07]"
+            style={{
+              backgroundImage:
+                "linear-gradient(to right, currentColor 1px, transparent 1px), linear-gradient(to bottom, currentColor 1px, transparent 1px)",
+              backgroundSize: "9vh 9vh",
+            }}
+          />
           <CommentTag>about</CommentTag>
           <SectionTitle>
             Engineer first,

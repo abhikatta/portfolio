@@ -9,7 +9,7 @@ const SectionTitle = ({
     <h2
       {...props}
       className={cn(
-        "font-syne mt-4 text-4xl font-black md:text-6xl",
+        "font-syne mt-4 text-3xl font-black md:text-6xl",
         className,
       )}
     >

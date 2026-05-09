@@ -14,7 +14,7 @@ export const socials: Social[] = [
   },
   {
     label: "Resume",
-    href: "/Abhinay_Katta_Resume.pdf",
+    href: "/Abhinay_Katta.pdf",
   },
 ];
 

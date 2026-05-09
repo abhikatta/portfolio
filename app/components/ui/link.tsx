@@ -1,3 +1,4 @@
+"use client";
 import { cn } from "@/lib/utils";
 import { CustomLinkProps } from "@/types";
 import { motion } from "motion/react";

@@ -1,10 +1,10 @@
 "use client";
 import { HamburgerMenuIcon } from "@/components/ui/icons";
 import { navLinks } from "@/constants/nav";
+import { socials } from "@/constants/socials";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
-import Container from "./ui/container";
 import CustomLink from "./ui/link";
 
 const Menu = () => {
@@ -20,18 +20,13 @@ const Menu = () => {
   }, [isOpen]);
 
   return (
-    <Container
-      className={cn(
-        "flex w-full flex-col items-start justify-start lg:hidden",
-        isOpen && "bg-paper fixed z-999",
-      )}
-    >
-      <div className="fixed z-99 mt-8 flex size-15 items-center justify-center rounded-sm p-4 backdrop-blur-sm">
+    <section>
+      <div className="fixed z-99 mt-4 ml-4 flex size-13 items-center justify-center rounded-sm p-3 backdrop-blur-sm lg:hidden">
         <button onClick={toggleMenu} className="size-full">
           <HamburgerMenuIcon isOpen={isOpen} />
         </button>
       </div>
-      <AnimatePresence>
+      <AnimatePresence mode="sync">
         {isOpen && (
           <motion.div
             exit={{
@@ -43,22 +38,40 @@ const Menu = () => {
             animate={{
               opacity: 1,
             }}
-            className="z-999 my-30 flex h-screen min-h-screen w-full flex-col items-start justify-start gap-10 px-4"
+            className={cn(
+              "bg-paper flex h-full w-fit flex-col items-start gap-10 px-4 lg:hidden",
+              isOpen && "fixed z-10 h-screen w-full",
+            )}
           >
-            {navLinks.map((nav) => (
-              <CustomLink
-                key={nav.href}
-                onClick={toggleMenu}
-                href={nav.href}
-                className="py-2 text-3xl"
-              >
-                {nav.label}
-              </CustomLink>
-            ))}
+            <div className="flex flex-1 flex-col items-start justify-center gap-4">
+              {navLinks.map((nav) => (
+                <CustomLink
+                  key={nav.href}
+                  onClick={toggleMenu}
+                  href={nav.href}
+                  className="py-2 text-3xl"
+                >
+                  {nav.label}
+                </CustomLink>
+              ))}
+            </div>
+
+            <div className="mb-[5vh] flex items-start justify-center gap-3">
+              {socials.map((link) => (
+                <CustomLink
+                  key={link.href}
+                  onClick={toggleMenu}
+                  href={link.href}
+                  className="py-2 text-sm"
+                >
+                  {link.label} ↗
+                </CustomLink>
+              ))}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </Container>
+    </section>
   );
 };
 
