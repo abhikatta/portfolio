@@ -124,7 +124,7 @@ export default function RootLayout({
               jobTitle: "Software Engineer",
               description:
                 "Software engineer specializing in React, Next.js, and frontend development.",
-              email: "abhinaykatta97@email.com",
+              email: "abhinaykatta97@gmail.com",
               image: "https://abhikatta.vercel.app/abhinaykatta.webp",
               knowsAbout: [
                 "React",
