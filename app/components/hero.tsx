@@ -34,10 +34,10 @@ const Hero = () => {
     }),
   };
   return (
-    <section id="home" ref={ref} className="h-screen min-h-full relative">
-      <Container className="h-full my-0 lg:my-0 flex flex-col items-center justify-center">
+    <section id="home" ref={ref} className="relative h-screen min-h-full">
+      <Container className="my-0 flex h-full flex-col items-center justify-center lg:my-0">
         <div
-          className="absolute inset-0 pointer-events-none opacity-[0.07]"
+          className="pointer-events-none absolute inset-0 opacity-[0.07]"
           style={{
             backgroundImage:
               "linear-gradient(to right, currentColor 1px, transparent 1px), linear-gradient(to bottom, currentColor 1px, transparent 1px)",
@@ -47,10 +47,12 @@ const Hero = () => {
 
         <motion.div
           style={{ opacity }}
-          className="flex h-full my-40 items-end w-full justify-center mx-auto relative z-10">
+          className="relative z-10 mx-auto my-40 flex h-full w-full items-end justify-center"
+        >
           <motion.div
             style={{ y: titleY, scale }}
-            className="absolute bottom-0 left-0">
+            className="absolute bottom-0 left-0"
+          >
             <motion.span
               variants={{
                 initial: { opacity: 0 },
@@ -58,11 +60,12 @@ const Hero = () => {
               }}
               initial="initial"
               animate="animate"
-              className="inline-block text-2xl min-[390px]:text-3xl md:text-4xl font-syne tracking-tighter">
+              className="font-syne inline-block text-2xl tracking-tighter min-[390px]:text-3xl md:text-4xl"
+            >
               hi, my name is
             </motion.span>
 
-            <h1 className="flex flex-col w-full">
+            <h1 className="flex w-full flex-col">
               <span>
                 {"Abhinay".split("").map((letter, index) => (
                   <motion.span
@@ -72,7 +75,8 @@ const Hero = () => {
                     custom={index}
                     key={index}
                     viewport={{ once: true }}
-                    className="inline-block text-4xl min-[390px]:text-5xl md:text-6xl lg:text-9xl uppercase font-black font-syne tracking-tighter">
+                    className="font-syne inline-block text-4xl font-black tracking-tighter uppercase min-[390px]:text-5xl md:text-6xl lg:text-9xl"
+                  >
                     {letter}
                   </motion.span>
                 ))}
@@ -86,7 +90,8 @@ const Hero = () => {
                     custom={7 + index}
                     key={index}
                     viewport={{ once: true }}
-                    className="inline-block italic text-4xl min-[390px]:text-5xl md:text-6xl lg:text-9xl uppercase font-black font-syne tracking-tighter text-accent">
+                    className="font-syne text-accent inline-block text-4xl font-black tracking-tighter uppercase italic min-[390px]:text-5xl md:text-6xl lg:text-9xl"
+                  >
                     {letter}
                   </motion.span>
                 ))}
@@ -94,13 +99,14 @@ const Hero = () => {
             </h1>
           </motion.div>
 
-          <motion.div style={{ y: subY }} className=" absolute top-0 right-0">
+          <motion.div style={{ y: subY }} className="absolute top-0 right-0">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}>
-              <aside className="md:pl-[33px] md:border-l hairline">
-                <dl className="space-y-5 max-w-md text-sm">
+              transition={{ delay: 0.6 }}
+            >
+              <aside className="hairline md:border-l md:pl-[33px]">
+                <dl className="max-w-md space-y-5 text-sm">
                   <div>
                     <dt className="text-muted-foreground">role</dt>
                     <dd>SDE-1 @ ScaleReal</dd>
@@ -120,8 +126,8 @@ const Hero = () => {
                     <dt className="text-muted-foreground">status</dt>
                     <dd className="flex items-center gap-2">
                       <span className="relative flex h-2 w-2">
-                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
-                        <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
+                        <span className="bg-accent absolute inline-flex h-full w-full animate-ping rounded-full opacity-75" />
+                        <span className="bg-accent relative inline-flex h-2 w-2 rounded-full" />
                       </span>
                       open to interesting work
                     </dd>

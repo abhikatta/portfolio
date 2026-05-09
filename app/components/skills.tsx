@@ -15,16 +15,18 @@ const SkillMarqueeStrip = memo(
     return (
       <motion.div
         style={{ x }}
-        className="flex gap-4 whitespace-nowrap mt-4 will-change-transform">
+        className="mt-4 flex gap-4 whitespace-nowrap will-change-transform"
+      >
         {skills.map((s, i) => (
           <span
             key={s}
             className={cn(
-              "font-primary text-[12vw] lg:text-[8vw] leading-none uppercase tracking-tighter",
+              "font-primary text-[12vw] leading-none tracking-tighter uppercase lg:text-[8vw]",
               i % 2 === 0
                 ? "text-ink font-black"
                 : "text-accent font-thin italic",
-            )}>
+            )}
+          >
             {s}
             {i !== skills.length - 1 && (
               <span className="text-stamp mx-4">·</span>
@@ -46,7 +48,8 @@ const SkillLabels = memo(({ skills }: { skills: string[] }) =>
         scale: 1.15,
       }}
       transition={{ type: "spring", stiffness: 400, damping: 20 }}
-      className="text-xs uppercase border-2 border-ink h-8 items-center justify-center flex px-3 py-1.5 text-ink bg-paper">
+      className="border-ink text-ink bg-paper flex h-8 items-center justify-center border-2 px-3 py-1.5 text-xs uppercase"
+    >
       {s}
     </motion.span>
   )),
@@ -78,12 +81,13 @@ const Skills = () => {
       <Container
         wantSpacing
         id="skills"
-        className="sticky top-[76px] max-w-screen min-h-screen h-full overflow-hidden">
+        className="sticky top-[76px] h-full min-h-screen max-w-screen overflow-hidden"
+      >
         <CurveText
           svgTextItemsCount={20}
           svgTextColor="black"
           scrollYProgress={scrollYProgress}
-          className="top-0 text-2xl "
+          className="top-0 text-2xl"
           svgTextDisplacement={14}
           svgTextClassName="text-5xl"
           {...(isMobile ? { height: "400" } : {})}
@@ -98,7 +102,7 @@ const Skills = () => {
           }
         />
 
-        <Container wantSpacing className="overflow-hidden relative pt-20">
+        <Container wantSpacing className="relative overflow-hidden pt-20">
           <CommentTag>skills</CommentTag>
           <SectionTitle>
             The stack, <br />
@@ -108,22 +112,23 @@ const Skills = () => {
           <SkillMarqueeStrip x={row1X} skills={skills} />
           <SkillMarqueeStrip x={row2X} skills={skills2} />
 
-          <div className="w-full mx-auto mt-12 flex flex-wrap items-center 2xl:justify-between gap-2">
+          <div className="mx-auto mt-12 flex w-full flex-wrap items-center gap-2 2xl:justify-between">
             <SkillLabels skills={skills} />
             <SkillLabels skills={skills2} />
           </div>
 
-          <div className="mt-24 w-full max-w-2xl mx-auto">
+          <div className="mx-auto mt-24 w-full max-w-2xl">
             <CommentTag>in detail</CommentTag>
             <p className="text-xs">
               my default settings for building something new:
             </p>
-            <div className="mt-6  border-t hairline">
+            <div className="hairline mt-6 border-t">
               {groups.map((g) => (
                 <div
                   key={g.label}
-                  className="flex flex-row justify-start gap-4 border-b hairline py-6">
-                  <span className="min-w-30 text-base text-accent">
+                  className="hairline flex flex-row justify-start gap-4 border-b py-6"
+                >
+                  <span className="text-accent min-w-30 text-base">
                     ./{g.label}
                   </span>
                   <div className="flex flex-wrap gap-2">

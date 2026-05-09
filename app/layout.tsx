@@ -58,8 +58,9 @@ export default function RootLayout({
         "h-full antialiased",
         syne.variable,
         jetbrainsMono.variable,
-      )}>
-      <body className="min-h-full flex flex-col">
+      )}
+    >
+      <body className="flex min-h-full flex-col">
         <LenisWrapper>
           <Navbar />
           {children}

@@ -15,7 +15,7 @@ export const initialPosition: Position = {
 };
 
 export const Pill = memo((position: Position) => (
-  <motion.div className="absolute z-1 bg-accent" animate={{ ...position }} />
+  <motion.div className="bg-accent absolute z-1" animate={{ ...position }} />
 ));
 
 export const NavItem = memo(
@@ -46,7 +46,7 @@ export const NavItem = memo(
     const hidePill = () => setPosition((prev) => ({ ...prev, opacity: 0 }));
 
     return (
-      <div className="flex h-auto z-2 w-fit flex-row items-start justify-between lg:items-center">
+      <div className="z-2 flex h-auto w-fit flex-row items-start justify-between lg:items-center">
         <CustomLink
           ref={ref}
           onMouseEnter={getPropertiesForPill}
@@ -57,13 +57,14 @@ export const NavItem = memo(
           }}
           onMouseLeave={hidePill}
           className={cn(
-            "flex flex-row px-1.5 py-2 whitespace-nowrap mix-blend-difference border-none",
+            "flex flex-row border-none px-1.5 py-2 whitespace-nowrap mix-blend-difference",
             pathname.replace("/", "") === nav.href ? "border" : "",
             className,
           )}
           href={nav.href}
           openInNewTab={openInNewTab}
-          {...props}>
+          {...props}
+        >
           {nav.label}
         </CustomLink>
       </div>

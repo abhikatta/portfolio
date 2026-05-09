@@ -8,7 +8,7 @@ const CommentTag = ({
   className?: string;
 }) => {
   return (
-    <p className={cn("text-xs uppercase tracking-widest mb-10", className)}>
+    <p className={cn("mb-10 text-xs tracking-widest uppercase", className)}>
       {"// "}
       {children}
     </p>

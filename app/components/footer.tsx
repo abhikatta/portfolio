@@ -27,38 +27,42 @@ const Footer = () => {
   return (
     <section
       ref={ref}
-      className="bg-ink min-h-screen h-full relative flex flex-col items-center justify-center">
-      <Container id="contact" wantSpacing className="lg:py-0 scroll-mt-0">
+      className="bg-ink relative flex h-full min-h-screen flex-col items-center justify-center"
+    >
+      <Container id="contact" wantSpacing className="scroll-mt-0 lg:py-0">
         <CommentTag className="text-paper">end of file</CommentTag>
         <motion.div
           style={{ scale, rotate: rot }}
-          className="origin-left w-full">
-          <h2 className="font-syne text-paper text-2xl w-fit min-[390px]:text-3xl md:text-5xl xl:text-9xl leading-[0.85] font-black uppercase tracking-tighter">
+          className="w-full origin-left"
+        >
+          <h2 className="font-syne text-paper w-fit text-2xl leading-[0.85] font-black tracking-tighter uppercase min-[390px]:text-3xl md:text-5xl xl:text-9xl">
             Let&apos;s
             <br />
             <span className="text-accent">make</span> something.
           </h2>
         </motion.div>
 
-        <div className="mt-15 flex w-full flex-col lg:flex-row gap-6 items-end justify-between">
-          <div className="flex flex-col gap-4 items-start justify-center">
+        <div className="mt-15 flex w-full flex-col items-end justify-between gap-6 lg:flex-row">
+          <div className="flex flex-col items-start justify-center gap-4">
             <Link
               href={`mailto:${mailTo}`}
-              className="text-paper text-base md:text-lg underline underline-offset-8 decoration-2 hover:text-accent hover:decoration-accent transition-colors">
+              className="text-paper hover:text-accent hover:decoration-accent text-base underline decoration-2 underline-offset-8 transition-colors md:text-lg"
+            >
               {mailTo}
             </Link>
             <Link
-              className="text-paper text-sm lg:text-base hover:text-accent hover:decoration-accent transition-colors"
-              href="tel:+919182848361">
+              className="text-paper hover:text-accent hover:decoration-accent text-sm transition-colors lg:text-base"
+              href="tel:+919182848361"
+            >
               +91 9182848361
             </Link>
-            <p className="mt-6 text-paper text-xs lg:uppercase opacity-70 max-w-md">
+            <p className="text-paper mt-6 max-w-md text-xs opacity-70 lg:uppercase">
               Currently looking for new opportunities. Full-time role offers,
               project collaborations, or even a coffee chat are welcome!
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center justify-start md:justify-end w-full gap-4">
+          <div className="flex w-full flex-wrap items-center justify-start gap-4 md:justify-end">
             {socials.map(({ label, href }) => (
               <NavItem
                 openInNewTab
@@ -75,7 +79,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <p className="mt-10 text-paper text-xs opacity-70">
+        <p className="text-paper mt-10 text-xs opacity-70">
           Constructed with structural honesty · © 2026 AK
         </p>
       </Container>

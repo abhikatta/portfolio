@@ -51,7 +51,8 @@ export const HamburgerMenuIcon = ({
         "relative flex h-full w-full flex-col justify-center gap-y-2",
         isOpen ? "items-center" : "",
         className,
-      )}>
+      )}
+    >
       <AnimatePresence mode="wait">
         {!isOpen ? (
           <>

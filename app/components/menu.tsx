@@ -22,10 +22,11 @@ const Menu = () => {
   return (
     <Container
       className={cn(
-        "flex flex-col items-start justify-start w-full lg:hidden",
-        isOpen && "fixed z-999 bg-paper",
-      )}>
-      <div className="backdrop-blur-sm size-15 mt-8 z-99 p-4 fixed rounded-sm flex items-center justify-center">
+        "flex w-full flex-col items-start justify-start lg:hidden",
+        isOpen && "bg-paper fixed z-999",
+      )}
+    >
+      <div className="fixed z-99 mt-8 flex size-15 items-center justify-center rounded-sm p-4 backdrop-blur-sm">
         <button onClick={toggleMenu} className="size-full">
           <HamburgerMenuIcon isOpen={isOpen} />
         </button>
@@ -42,13 +43,15 @@ const Menu = () => {
             animate={{
               opacity: 1,
             }}
-            className="h-screen w-full min-h-screen items-start px-4 justify-start gap-10 my-30 flex flex-col z-999 ">
+            className="z-999 my-30 flex h-screen min-h-screen w-full flex-col items-start justify-start gap-10 px-4"
+          >
             {navLinks.map((nav) => (
               <CustomLink
                 key={nav.href}
                 onClick={toggleMenu}
                 href={nav.href}
-                className="text-3xl py-2">
+                className="py-2 text-3xl"
+              >
                 {nav.label}
               </CustomLink>
             ))}

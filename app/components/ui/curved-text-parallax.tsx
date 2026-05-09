@@ -51,12 +51,14 @@ export const CurveText = ({
       fill="none"
       {...props}
       className={cn("absolute top-0", props.className)}
-      xmlns="http://www.w3.org/2000/svg">
+      xmlns="http://www.w3.org/2000/svg"
+    >
       {svgPath}
       <text
         ref={ref}
         className={cn("font-syne text-4xl", svgTextClassName)}
-        fill={svgTextColor || "white"}>
+        fill={svgTextColor || "white"}
+      >
         {[...Array(svgTextItemsCount)].map((_, index) => (
           <textPath key={index} href={`#${svgPathHref}`}>
             {topLine}

@@ -9,9 +9,10 @@ const SectionTitle = ({
     <h2
       {...props}
       className={cn(
-        "mt-4 font-syne font-black text-4xl md:text-6xl",
+        "font-syne mt-4 text-4xl font-black md:text-6xl",
         className,
-      )}>
+      )}
+    >
       {children}
     </h2>
   );

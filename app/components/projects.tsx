@@ -47,18 +47,19 @@ const ProjectCard = memo(({ p, i }: ProjectCardProps) => {
     <motion.div
       ref={ref}
       style={{ rotate, y }}
-      className={cn("group bg-paper/50", isEven ? "" : "lg:mt-32")}>
-      <div className="border-2 border-ink shadow-[14px_14px_0_0_rgba(24,24,24)] group-hover:shadow-brutal-accent transition-shadow duration-300">
-        <div className="border-b-2 border-ink flex justify-between items-center px-4 py-2  text-[10px] uppercase font-bold">
+      className={cn("group bg-paper/50", isEven ? "" : "lg:mt-32")}
+    >
+      <div className="border-ink group-hover:shadow-brutal-accent border-2 shadow-[14px_14px_0_0_rgba(24,24,24)] transition-shadow duration-300">
+        <div className="border-ink flex items-center justify-between border-b-2 px-4 py-2 text-[10px] font-bold uppercase">
           <span className="text-accent">0{i + 1}</span>
           <span>{p.tag}</span>
           <div className="flex gap-1">
-            <span className="size-2.5 rounded-full bg-accent" />
-            <span className="size-2.5 rounded-full bg-ink/30" />
-            <span className="size-2.5 rounded-full bg-ink/30" />
+            <span className="bg-accent size-2.5 rounded-full" />
+            <span className="bg-ink/30 size-2.5 rounded-full" />
+            <span className="bg-ink/30 size-2.5 rounded-full" />
           </div>
         </div>
-        <div className="aspect-5/3 bg-secondary relative overflow-hidden">
+        <div className="bg-secondary relative aspect-5/3 overflow-hidden">
           <div
             className="absolute inset-0 opacity-30"
             style={{
@@ -67,17 +68,17 @@ const ProjectCard = memo(({ p, i }: ProjectCardProps) => {
             }}
           />
           <div className="absolute inset-0 flex items-center justify-center">
-            <span className="font-display text-[14vw] lg:text-7xl font-black tracking-tighter uppercase opacity-10">
+            <span className="font-display text-[14vw] font-black tracking-tighter uppercase opacity-10 lg:text-7xl">
               {p.title}
             </span>
           </div>
-          <div className="absolute bottom-3 left-3  text-[10px] uppercase opacity-60">
+          <div className="absolute bottom-3 left-3 text-[10px] uppercase opacity-60">
             FIG. {i + 1}
           </div>
         </div>
-        <div className="p-6 border-t-2 border-ink">
-          <div className="flex flex-col md:flex-row justify-between items-baseline gap-3">
-            <h3 className="font-display text-4xl font-black uppercase tracking-tighter leading-none">
+        <div className="border-ink border-t-2 p-6">
+          <div className="flex flex-col items-baseline justify-between gap-3 md:flex-row">
+            <h3 className="font-display text-4xl leading-none font-black tracking-tighter uppercase">
               {p.title}
             </h3>
             <div className="flex gap-3 text-xs font-bold uppercase">
@@ -107,14 +108,15 @@ const ProjectCard = memo(({ p, i }: ProjectCardProps) => {
               <Pill {...position} />
             </div>
           </div>
-          <p className="mt-4 font-display text-base leading-snug opacity-80">
+          <p className="font-display mt-4 text-base leading-snug opacity-80">
             {p.description}
           </p>
           <div className="mt-5 flex flex-wrap gap-1.5">
             {p.tags.map((t) => (
               <span
                 key={t}
-                className="text-[10px] uppercase border border-dashed border-ink px-2 py-0.5">
+                className="border-ink border border-dashed px-2 py-0.5 text-[10px] uppercase"
+              >
                 {t}
               </span>
             ))}
@@ -137,7 +139,7 @@ const Projects = () => {
           <br />
           <span className="text-accent italic">experiments.</span>
         </SectionTitle>
-        <div className="mt-30 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+        <div className="mt-30 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20">
           {projects.map((p, i) => (
             <ProjectCard key={p.title} p={p} i={i} />
           ))}

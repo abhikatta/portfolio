@@ -31,15 +31,16 @@ const About = () => {
   return (
     <section
       ref={ref}
-      className="min-h-screen items-center justify-center flex flex-col h-full">
+      className="flex h-full min-h-screen flex-col items-center justify-center"
+    >
       <Container id="about" wantSpacing>
         <CommentTag>about</CommentTag>
         <SectionTitle>
           Engineer first,
           <br />
-          <span className="italic text-accent">curious always.</span>
+          <span className="text-accent italic">curious always.</span>
         </SectionTitle>
-        <div className="mt-12 space-y-3 text-lg leading-relaxed text-foreground/90 ">
+        <div className="text-foreground/90 mt-12 space-y-3 text-lg leading-relaxed">
           {/* <p>
             Hello, I&apos;m{" "}
             <strong className="font-medium">Abhinay Katta</strong>, a

@@ -28,10 +28,11 @@ const CustomLink = forwardRef<HTMLAnchorElement, CustomLinkProps>(
           boxShadow: "unset",
         }}
         className={cn(
-          "text-xs md:text-sm uppercase font-bold border border-paper px-5 py-0 bg-ink text-paper transition-colors",
+          "border-paper bg-ink text-paper border px-5 py-0 text-xs font-bold uppercase transition-colors md:text-sm",
           className,
         )}
-        {...props}>
+        {...props}
+      >
         {children}
       </motion.a>
     );

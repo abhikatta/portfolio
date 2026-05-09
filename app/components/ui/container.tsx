@@ -9,11 +9,12 @@ const Container = forwardRef<
     <section
       ref={ref}
       className={cn(
-        "mx-auto max-w-[1720px] w-full px-6 flex flex-col items-start justify-center lg:scroll-mt-[15vh]",
-        wantSpacing && "py-12 my-10 lg:my-20",
+        "mx-auto flex w-full max-w-[1720px] flex-col items-start justify-center px-6 lg:scroll-mt-[15vh]",
+        wantSpacing && "my-10 py-12 lg:my-20",
         className,
       )}
-      {...props}>
+      {...props}
+    >
       {children}
     </section>
   );

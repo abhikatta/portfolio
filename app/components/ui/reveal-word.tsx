@@ -38,7 +38,8 @@ const RevealWord = memo(
     return (
       <motion.p
         style={{ opacity }}
-        className={cn("mr-3 text-3xl inline-block", word.className)}>
+        className={cn("mr-3 inline-block text-3xl", word.className)}
+      >
         {word.word}
       </motion.p>
     );
