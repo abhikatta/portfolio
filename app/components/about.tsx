@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 
 const PARAGRAPHS = [
   {
-    text: `Hey, I'm Abhinay Katta, a software engineer based in Karimnagar, India with around 2 years of professional experience. I currently work at ScaleReal as an SDE-1, where I've owned projects end to end, from scoping requirements with clients to shipping.`,
+    text: `Hey, I'm Abhinay Katta, a software engineer based in Telangana, India with around 2 years of professional experience. I currently work at ScaleReal as an SDE-1, where I've owned projects end to end, from scoping requirements with clients to shipping.`,
     highlights: [],
   },
   {
