@@ -22,7 +22,7 @@ export const projects: Project[] = [
     tag: "MOBILE · ML",
     description:
       "React Native app that converts handwritten text to digital using Hugging Face's TrOCR model. Handles image capture, preprocessing, and inference on-device.",
-    demo: "https://github.com/abhikatta/jobo",
+    demo: null,
     github: "https://github.com/abhikatta/jobo",
     tags: ["react native", "huggingface", "firebase", "android"],
   },
@@ -40,7 +40,7 @@ export const projects: Project[] = [
     tag: "WEB · BLOG",
     description:
       "Full-stack blogging platform built with Next.js, Prisma ORM, and MongoDB. Auth, CRUD, and server-side rendering.",
-    demo: "https://bloged.vercel.app",
+    demo: null,
     github: "https://github.com/abhikatta/bloged",
     tags: ["nextjs", "css modules", "typescript", "prisma", "mongodb"],
   },
