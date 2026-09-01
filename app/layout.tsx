@@ -3,6 +3,7 @@ import LenisWrapper from "@/components/LenisWrapper";
 import Navbar from "@/components/navbar";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { JetBrains_Mono, Syne } from "next/font/google";
 import "./globals.css";
 
@@ -146,6 +147,7 @@ export default function RootLayout({
             }),
           }}
         />
+        <Analytics />
         <LenisWrapper>
           <Navbar />
           {children}
