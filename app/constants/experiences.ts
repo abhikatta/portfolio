@@ -11,11 +11,13 @@ export const experiences: Experience[] = [
     company: "ScaleReal",
     period: "Sep 2024 — Present",
     points: [
-      "Traced a performance issue back to a single 20MB SVG killing load times. Split it up, optimized it down to 180KB, zero visual difference.",
+      "Rebuilt a mocked-data prototype into a shipping Electron/React desktop app with extended features over 2.5 months as sole frontend engineer, decomposing a 6,000-line monolithic canvas file into a maintainable component structure and removing dead code and mock data.",
+      "Designed and built multi-workspace GitHub authentication supporting OAuth device flow, personal access tokens, and anonymous workspaces, with isolated sessions so users could switch accounts without cross-contaminating tokens or usage history.",
+      "Used react-scan to catch a 25fps rendering regression in the visualization canvas, traced it to box-shadow and animated SVG elements forcing expensive repaints, and fixed it with opacity-based animation, recovering full frame rate with no visible UI change.",
+      "Traced a performance issue back to a single 20MB SVG killing load times. Split it up, optimized it down to 180KB with no visual difference.",
       "Migrated multiple production codebases to modern tooling using AI-assisted refactoring. Shipped cleanly with no major regressions.",
       "Owned multiple client projects end to end, requirements, architecture, stakeholder calls, and delivery.",
-      "Built a configurable multi-step onboarding flow with Next.js and Form.io with schema-driven validation.",
-      "Integrated Strapi and MDX into Next.js projects using SSG and ISR so content updates don't need a redeployment.",
+      "Built a configurable multi-step onboarding flow with Form.io supporting schema-driven validation, and integrated Strapi and MDX using SSG and ISR for content updates without redeployment.",
     ],
   },
   {
