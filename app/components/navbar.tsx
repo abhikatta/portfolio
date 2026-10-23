@@ -6,13 +6,15 @@ import { cn } from "@/lib/utils";
 import Menu from "./menu";
 import Container from "./ui/container";
 import { useEffect, useState } from "react";
+import { PiixPal } from "piixpal/react";
+import { useIsMobile } from "@/hooks/use-is-mobile";
 
 const Navbar = () => {
   const { scrollYProgress } = useScroll();
   const width = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
   const [position, setPosition] = useState(initialPosition);
   const [fullyScrolled, setFullyScrolled] = useState(false);
-
+  const { isMobile } = useIsMobile();
   useEffect(() => {
     width.on("change", (val) => {
       const percentage = parseInt(val.split("%")[0].toString());
@@ -71,6 +73,7 @@ const Navbar = () => {
                 className={navItemClassName}
                 setPosition={setPosition}
               />
+              {!isMobile && <PiixPal pal="thread" />}
             </div>
             <Pill key={"pill"} {...position} />
           </AnimatePresence>

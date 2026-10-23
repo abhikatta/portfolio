@@ -26,6 +26,9 @@ importers:
       next-sitemap:
         specifier: ^4.2.3
         version: 4.2.3(next@16.3.3(@babel/core@7.29.7)(@types/node@26.4.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))
+      piixpal:
+        specifier: ^0.4.0
+        version: 0.4.0(react@19.2.8)
       react:
         specifier: 19.2.8
         version: 19.2.8
@@ -1875,6 +1878,20 @@ packages:
   picomatch@4.0.7:
     resolution: {integrity: sha512-qcJu88Q2IWqJsDD529JKMdwGm/dvInW4HvQnRwiH9JtihJvzGOscDtHE3x1pBKeUOTysQ8kVmLnJ2kJu7yhcGA==}
     engines: {node: '>=12'}
+
+  piixpal@0.4.0:
+    resolution: {integrity: sha512-KvWiYCtQxPgDb+7frJGnhtqxyijlSbNY9IZx34WUnInEdIDbELQhRLk0A1XqR3UgBKq3LukGmd8fVdoXLKn1xw==}
+    peerDependencies:
+      react: '>=17'
+      svelte: '>=3'
+      vue: '>=3'
+    peerDependenciesMeta:
+      react:
+        optional: true
+      svelte:
+        optional: true
+      vue:
+        optional: true
 
   possible-typed-array-names@1.1.0:
     resolution: {integrity: sha512-/+5VFTchJDoVj3bhoqi6UeymcD00DAwb1nJwamzPvHEszJ4FpF6SNNbUbOS8yI56qHzdV8eK0qEfOSiodkTdxg==}
@@ -4033,6 +4050,10 @@ snapshots:
   picomatch@2.3.2: {}
 
   picomatch@4.0.7: {}
+
+  piixpal@0.4.0(react@19.2.8):
+    optionalDependencies:
+      react: 19.2.8
 
   possible-typed-array-names@1.1.0: {}
 

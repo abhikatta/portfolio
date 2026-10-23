@@ -1,12 +1,13 @@
 "use client";
 import CommentTag from "@/components/ui/comment-tag";
 import { mailTo, socials } from "@/constants/socials";
+import { useIsMobile } from "@/hooks/use-is-mobile";
 import { motion, useScroll, useTransform } from "motion/react";
 import Link from "next/link";
 import { useRef, useState } from "react";
 import Container from "./ui/container";
 import { initialPosition, NavItem, Pill } from "./ui/follow-pill";
-import { useIsMobile } from "@/hooks/use-is-mobile";
+import { PiixPal } from "piixpal/react";
 
 const Footer = () => {
   const [position, setPosition] = useState(initialPosition);
@@ -41,7 +42,6 @@ const Footer = () => {
             <span className="text-accent">make</span> something.
           </h2>
         </motion.div>
-
         <div className="mt-15 flex w-full flex-col items-end justify-between gap-6 lg:flex-row">
           <div className="flex flex-col items-start justify-center gap-4">
             <Link
@@ -62,7 +62,8 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="flex w-full flex-wrap items-center justify-start gap-4 md:justify-end">
+          <div className="flex w-fit flex-wrap items-center justify-start gap-4 md:justify-end">
+            <PiixPal pal="roomba" />
             {socials.map(({ label, href }) => (
               <NavItem
                 openInNewTab
@@ -78,7 +79,6 @@ const Footer = () => {
             <Pill {...position} />
           </div>
         </div>
-
         <p className="text-paper mt-10 text-xs opacity-70">
           Constructed with structural honesty · &copy; {year} AK
         </p>

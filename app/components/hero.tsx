@@ -2,6 +2,7 @@
 import Container from "@/components/ui/container";
 import { useIsMobile } from "@/hooks/use-is-mobile";
 import { motion, useScroll, useTransform, Variants } from "motion/react";
+import { PiixPal } from "piixpal/react";
 import { useRef } from "react";
 
 const Hero = () => {
@@ -45,7 +46,7 @@ const Hero = () => {
     }),
   };
   return (
-    <section id="home" ref={ref} className="relative h-screen min-h-full">
+    <section id="home" ref={ref} className="relative h-screen min-h-full z-0">
       <Container className="my-0 flex h-full flex-col items-center justify-center lg:my-0">
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.07]"
@@ -55,7 +56,6 @@ const Hero = () => {
             backgroundSize: "9vh 9vh",
           }}
         />
-
         <motion.div
           style={{ opacity }}
           className="relative z-1 mx-auto my-40 flex h-full w-full items-end justify-center"
@@ -71,8 +71,9 @@ const Hero = () => {
               }}
               initial="initial"
               animate="animate"
-              className="font-syne inline-block text-2xl tracking-tighter min-[390px]:text-3xl md:text-4xl"
+              className="font-syne inline-block text-2xl leading-3.5 tracking-tighter min-[390px]:text-3xl md:text-4xl"
             >
+              <PiixPal pal="boing" />
               hi, my name is
             </motion.span>
 
